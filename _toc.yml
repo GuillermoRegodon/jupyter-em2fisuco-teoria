@@ -6,7 +6,15 @@ root: intro
 parts:
 - caption: Bloque I - El campo electromagnético
   chapters:
-  - file: pages/markdown
-    sections:
-    - file: pages/notebooks
-    - file: pages/markdown-notebooks
+  - file: pages/repaso_frontera.ipynb
+#     sections:
+#     - file: pages/notebooks
+#     - file: pages/markdown-notebooks
+
+# - caption: Bloque II - Formulación relativista del electromagnetismo
+#   chapters:
+#   - file: pages/page.ipynb
+
+# - caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
+#   chapters:
+#   - file: pages/page.ipynb
