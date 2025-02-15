@@ -7,6 +7,7 @@ parts:
 - caption: Bloque I - El campo electromagnético
   chapters:
   - file: pages/repaso_frontera.ipynb
+  - file: pages/potenciales.ipynb
 #     sections:
 #     - file: pages/notebooks
 #     - file: pages/markdown-notebooks
