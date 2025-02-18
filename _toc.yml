@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 parts:
+- caption: Repaso
+  chapters:
+  - file: pages/repaso_gauss_ampere
+
 - caption: Bloque I - El campo electromagnético
   chapters:
   - file: pages/repaso_frontera.ipynb
