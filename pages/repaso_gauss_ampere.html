@@ -65,6 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/repaso_gauss_ampere';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Condiciones de frontera" href="repaso_frontera.html" />
+    <link rel="prev" title="Apuntes de Electromagnetismo II" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -115,8 +117,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -170,7 +170,11 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="repaso_frontera.html">Condiciones de frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potenciales.html">Potenciales electromagnéticos</a></li>
@@ -387,7 +391,7 @@ Q_{enc} = \int_V\rho dV
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/gauss_esf_menor.png"><img alt="gauss_esf_menor.png" src="../_images/gauss_esf_menor.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">r &lt; a.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">r &lt; a.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La carga encerrada es 0, ya que la esfera es hueca, y la integral se convierte en el producto del campo eléctrico radial por la superficie:</p>
@@ -399,7 +403,7 @@ E_r 4 \pi r^2 = 0
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/gauss_esf_mayor.png"><img alt="gauss_esf_mayor.png" src="../_images/gauss_esf_mayor.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">r &gt; a.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">r &gt; a.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La carga encerrada es la carga total <span class="math notranslate nohighlight">\(Q_{enc} = \sigma S = \sigma 4 \pi a^2\)</span>:</p>
@@ -428,7 +432,7 @@ E_r 4 \pi r^2 = \frac{\sigma 4 \pi a^2}{\varepsilon_0}
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/gauss_cil_menor.png"><img alt="gauss_cil_menor.png" src="../_images/gauss_cil_menor.png" style="width: 260px;" /></a>
 <figcaption>
-<p><span class="caption-text">s &lt; a.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">s &lt; a.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La carga encerrada se calcula por integración, y aprovechando de <span class="math notranslate nohighlight">\(\rho\)</span> es constante, <span class="math notranslate nohighlight">\(Q_{enc} = \int_V \rho dV = \rho V = \rho H \pi s^2\)</span>, y la integral del vector desplazamiento se convierte en el producto del vector desplazamiento radial por la superficie <span class="math notranslate nohighlight">\(S_l\)</span> (las tapas no contribuyen a la integral):</p>
@@ -440,7 +444,7 @@ D_s H 2 \pi s = \rho H \pi s^2
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/gauss_cil_mayor.png"><img alt="gauss_cil_mayor.png" src="../_images/gauss_cil_mayor.png" style="width: 260px;" /></a>
 <figcaption>
-<p><span class="caption-text">s &gt; a.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">s &gt; a.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La carga es la del trozo de cilindro de carga <span class="math notranslate nohighlight">\(Q_{enc} = \int_V \rho dV = \rho V = \rho H \pi a^2\)</span>.</p>
@@ -463,7 +467,7 @@ D_s H 2 \pi s = \rho H \pi a^2
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/gauss_pla.png"><img alt="gauss_pla.png" src="../_images/gauss_pla.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-text">Simetría plana.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Simetría plana.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La cara <span class="math notranslate nohighlight">\(S_2\)</span> no contribuye a la integral <strong>en este caso</strong>, por que dentro del CEP, el campo debe ser nulo. La integral de la cara <span class="math notranslate nohighlight">\(S_1\)</span> es el producto, y además observamos que con signo positivo, ya que el diferencial de superficie y el campo eléctrico son positivos hacia arriba. La carga encerrada depende de la posición a la que se coloca la cara <span class="math notranslate nohighlight">\(S_1\)</span>, genéricamente en <span class="math notranslate nohighlight">\(z\)</span>, ya que no se confunde con otros parámetros del problema.</p>
@@ -578,14 +582,14 @@ I_{enc} = \int_S \vec{J} \cdot \vec{dS}
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/hilo.png"><img alt="hilo.png" src="../_images/hilo.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">Hilo de corriente.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Hilo de corriente.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>La regla de la mano derecha nos indica que el campo magnético debe girar en la dirección <span class="math notranslate nohighlight">\(\vec{u_\varphi}\)</span> de coordenadas cilíndricas. Por lo tanto, el circuito de Ampere debe seguir la misma dirección, y girar en torno al hilo. La corriente claramente atraviesa el circuito y se puede calcular. Tenemos dos posibilidades, que el radio <span class="math notranslate nohighlight">\(r\)</span> sea <span class="math notranslate nohighlight">\(r&lt;a\)</span> o <span class="math notranslate nohighlight">\(r&gt;a\)</span>.</p>
 <figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="../_images/hilo_ampere.png"><img alt="hilo_ampere.png" src="../_images/hilo_ampere.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">Hilo de corriente.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Hilo de corriente.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Con esto, la integral de Ampere es el producto del campo magnético por su longitud, mientras que la corriente total (<strong>siendo <span class="math notranslate nohighlight">\(\vec{J}\)</span> constante</strong>) es el producto de la densidad de corriente por el área. Así:</p>
@@ -598,14 +602,14 @@ B 2 \pi r &amp;= \mu_0 J \pi a^2 \quad &amp; r&gt;a
 <figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../_images/solenoide.png"><img alt="solenoide.png" src="../_images/solenoide.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">Solenoide.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Solenoide.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>¡El ciruito de Ampere anterior no sirve! La regla de la mano derecha nos dice que el campo magnético dentro del hilo debe ir en la dirección <span class="math notranslate nohighlight">\(\vec{u_z}\)</span>, por lo que el circuito de Ampere debe tener un lado en esa dirección. Para que no se extienda infinitamente, lo cerramos con lados perpendiculares, y finalmente otro lado vertical, teniendo un marco.</p>
 <figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/solenoide_ampere.png"><img alt="solenoide_ampere.png" src="../_images/solenoide_ampere.png" style="width: 250px;" /></a>
 <figcaption>
-<p><span class="caption-text">Solenoide.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Solenoide.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>De esta forma, el lado interno contribuye a la integral, mientras que los otros 3 no, ya que fuera, el campo magnético es nulo.</p>
@@ -623,14 +627,14 @@ B_z l = \mu_0 I n l
 <figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../_images/solenoide_cerr.png"><img alt="solenoide_cerr.png" src="../_images/solenoide_cerr.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-text">Solenoide cerrado.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Solenoide cerrado.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>En este caso, el campo magnético también va por el interior y es nulo fuera, igual que en el solenoide cilíndrico. Mas en concreto, por el interior y por la regla de la mano derecha, en la dirección <span class="math notranslate nohighlight">\(-\vec{u_\varphi}\)</span>, por lo que el circuito de Ampere debe tener esta dirección. Vemos que la corriente atraviesa el circuito por el interior del solenoide cerrado, y se puede calcular.</p>
 <figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="../_images/solenoide_cerr_ampere.png"><img alt="solenoide_cerr_ampere.png" src="../_images/solenoide_cerr_ampere.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-text">Solenoide cerrado.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Solenoide cerrado.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -645,14 +649,14 @@ B 2 \pi r = \mu_0 I n 2 \pi a
 <figure class="align-default" id="id14">
 <a class="reference internal image-reference" href="../_images/corriente_pla.png"><img alt="corriente_pla.png" src="../_images/corriente_pla.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-text">plano de corriente.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">plano de corriente.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Por la regla de la mano derecha, el campo magnético debe ir en la dirección <span class="math notranslate nohighlight">\(\vec{u_y}\)</span> para <span class="math notranslate nohighlight">\(z\)</span> negativos y en la dirección <span class="math notranslate nohighlight">\(-\vec{u_y}\)</span> para <span class="math notranslate nohighlight">\(z\)</span> positivos. Si suponemos que el campo magnético se reparte por igual en los dos lados, podemos decir que ambos son iguales en modulo. El circuito de Ampere debe tener dos lados en la dirección <span class="math notranslate nohighlight">\(y\)</span> que se deben cerrar con otros lados en la dirección <span class="math notranslate nohighlight">\(z\)</span>, perpendicular al campo magnético.</p>
 <figure class="align-default" id="id15">
 <a class="reference internal image-reference" href="../_images/corriente_pla_ampere.png"><img alt="corriente_pla_ampere.png" src="../_images/corriente_pla_ampere.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-text">plano de corriente.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">plano de corriente.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -694,6 +698,24 @@ B_y 2 l = \mu_0 j l
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Apuntes de Electromagnetismo II</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="repaso_frontera.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Condiciones de frontera</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
