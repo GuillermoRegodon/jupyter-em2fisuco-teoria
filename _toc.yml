@@ -12,6 +12,7 @@ parts:
   chapters:
   - file: pages/repaso_frontera.ipynb
   - file: pages/potenciales.ipynb
+  - file: pages/conservacion.ipynb
 #     sections:
 #     - file: pages/notebooks
 #     - file: pages/markdown-notebooks
