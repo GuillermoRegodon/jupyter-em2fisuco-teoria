@@ -13,9 +13,9 @@ parts:
   - file: pages/repaso_frontera.ipynb
   - file: pages/potenciales.ipynb
   - file: pages/conservacion.ipynb
-#     sections:
-#     - file: pages/notebooks
-#     - file: pages/markdown-notebooks
+    sections:
+    - file: pages/poynting_ejemplo.ipynb
+  - file: pages/ec_ondas.ipynb
 
 # - caption: Bloque II - Formulación relativista del electromagnetismo
 #   chapters:

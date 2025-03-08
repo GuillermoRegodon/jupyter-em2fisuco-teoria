@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ondas electromagnéticas &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/ec_ondas';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Ejemplos de conservación" href="poynting_ejemplo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ondas electromagnéticas</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/ec_ondas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ondas electromagnéticas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-ondas-1d-y-3d-con-direccion-arbitraria">Ecuación de ondas 1D y 3D con dirección arbitraria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fasores">Fasores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-maxwell-en-fasores">Ecuaciones de Maxwell en fasores</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ondas-electromagneticas">
+<h1>Ondas electromagnéticas<a class="headerlink" href="#ondas-electromagneticas" title="Link to this heading">#</a></h1>
+<p>Vamos a repasar los conceptos matemáticos que utilizamos para estudiar las ondas electromagnéticas de forma más ventajosa.</p>
+<section id="ecuacion-de-ondas-1d-y-3d-con-direccion-arbitraria">
+<h2>Ecuación de ondas 1D y 3D con dirección arbitraria<a class="headerlink" href="#ecuacion-de-ondas-1d-y-3d-con-direccion-arbitraria" title="Link to this heading">#</a></h2>
+<p><strong>La ecuación de ondas 1D</strong> es la siguiente:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{∂^2 f}{∂x^2} - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
+\]</div>
+<p>Y <strong>tiene por solución</strong> la siguiente función genérica.</p>
+<div class="math notranslate nohighlight">
+\[
+f(x,t) = f_1(x-ct) + f_2(x+ct)
+\]</div>
+<p>Es decir, la solución es:</p>
+<ul class="simple">
+<li><p>cualquier <strong>función <span class="math notranslate nohighlight">\(f_1\)</span></strong> (<em>suficientemente derivable</em>) <strong>que se desplaza a la derecha</strong> (<span class="math notranslate nohighlight">\(x\)</span> creciente) a medida que el tiempo avanza (cuando <span class="math notranslate nohighlight">\(t\)</span> aumenta), más</p></li>
+<li><p>otra <strong>función <span class="math notranslate nohighlight">\(f_2\)</span></strong> (<em>suficientemente derivable</em>) <strong>que se desplaza a la izquierda</strong> (<span class="math notranslate nohighlight">\(x\)</span> decreciente) a medida que el tiempo avanza (cuando <span class="math notranslate nohighlight">\(t\)</span> aumenta).</p></li>
+</ul>
+<p>Estas funciones son las que llamamos <strong>ondas progresiva y regresiva</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Podemos comprobar que es solución por simple sustitución utilizando la regla de la cadena:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂f_i}{∂x} &amp;= f_i' &amp;\quad &amp;\frac{∂^2f_i}{∂x^2} = f_i'' \\
+\frac{∂f_i}{∂t} &amp;= \pm c f_i' &amp;\quad &amp;\frac{∂^2f_i}{∂t^2} = c^2 f_i''
+\end{split}\]</div>
+<p>(<em><span class="math notranslate nohighlight">\(f_i'\)</span> y <span class="math notranslate nohighlight">\(f_i'\)</span> son las derivadas con respecto a su argumento</em>) Podemos demostrar además que es la única solución posible. Para ello, definimos las variables <span class="math notranslate nohighlight">\(\chi = x- ct\)</span> y <span class="math notranslate nohighlight">\(\eta = x + ct\)</span>. Sabemos que la única solución posible para <span class="math notranslate nohighlight">\(\frac{∂f}{∂\chi} = 0\)</span> es una función genérica que no depende de <span class="math notranslate nohighlight">\(\chi\)</span>, o lo que es lo mismo, una función <span class="math notranslate nohighlight">\(f_2(\eta)\)</span> que solo depende de <span class="math notranslate nohighlight">\(\eta\)</span>. Igualmente, <span class="math notranslate nohighlight">\(\frac{∂f}{∂\eta} = 0\)</span> tiene por solución <span class="math notranslate nohighlight">\(f_1(\chi)\)</span>. La ecuación segunda derivada siguiente tiene por única solución la suma de las dos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{∂^2 f}{∂\chi ∂\eta} = 0 \quad \rightarrow \quad f = f_1(\chi) + f_2(\eta)
+\]</div>
+<p>Solo nos queda verificar por la regla de la cadena que <span class="math notranslate nohighlight">\(\frac{∂^2 f}{∂\chi ∂\eta} = 0\)</span> es la ecuación de onda:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂f}{∂\chi} = \frac{∂f}{∂x}\frac{∂x}{∂\chi} + \frac{∂f}{∂t}\frac{∂t}{∂\chi} = \frac{∂f}{∂x} -\frac{1}{c} \frac{∂f}{∂t} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{∂g}{∂\eta} = \frac{∂g}{∂x}\frac{∂x}{∂\eta} + \frac{∂g}{∂t}\frac{∂t}{∂\eta} = \frac{∂g}{∂x} +\frac{1}{c} \frac{∂g}{∂t}
+\]</div>
+<p>Ponemos <span class="math notranslate nohighlight">\(g\)</span> en la segunda ecuación eligiendo <span class="math notranslate nohighlight">\(g = \frac{∂f}{∂\chi}\)</span> y hemos demostrado que son la misma ecuación. Por lo tanto, si <span class="math notranslate nohighlight">\(f = f_1(\chi) + f_2(\eta)\)</span> es la única solución de la ecuación <span class="math notranslate nohighlight">\(\frac{∂^2 f}{∂\chi ∂\eta} = 0\)</span>, entonces <span class="math notranslate nohighlight">\(f = f_1(x-ct) + f_2(x+ct)\)</span> es la única solución de la ecuación de onda 1D.</p>
+</div>
+<p><strong>La ecuación de ondas 3D</strong> es la siguiente:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla^2 f - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
+\]</div>
+<p>La solución 3D a priori no está relacionada con la 1D, pero <strong>vamos a ver que la relación entre ambas ecuaciones es directa si elegimos una dirección preferente</strong>, indicada por un vector <span class="math notranslate nohighlight">\(\vec{n}\)</span> cualquiera (<em>al que imponemos <span class="math notranslate nohighlight">\(|\vec{n}| = 1\)</span> por simplicidad en las expresiones posteriores</em>), y elegimos que la función <span class="math notranslate nohighlight">\(f\)</span> dependa de las variables espaciales relacionadas según:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \vec{n} \cdot \vec{r} = n_xx + n_yy + n_zz
+\]</div>
+<p>Es decir, <span class="math notranslate nohighlight">\(f(x,y,z,t) = f(\tau,t)\)</span>. De esta manera, el Laplaciano pasa a ser <span class="math notranslate nohighlight">\(\nabla^2 f = \frac{∂^2f}{∂\tau^2}\)</span> y <strong>la ecuación de ondas 3D se convierte en una ecuación de onda 1D en cualquier dirección</strong> dada por <span class="math notranslate nohighlight">\(\vec{n}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{∂^2f}{∂\tau^2} - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
+\]</div>
+<p>Como la dirección es arbitraria, y la ecuación de ondas es lineal, la suma de soluciones en distintas direcciones también es solución. Es decir, <strong>la solución de la ecuación de ondas 3D es la suma de cualquier número de ondas 1D en cualquier dirección del espacio</strong>. Dado que la onda regresiva en la dirección <span class="math notranslate nohighlight">\(\vec{n}\)</span> es igual a sustituir <span class="math notranslate nohighlight">\(\vec{n} \rightarrow -\vec{n}\)</span>, podemos olvidarnos de las ondas regresivas hasta que nos haga falta.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La demostración para pasar de la ecuación de ondas 3D a la ecuación de ondas 1D es inmediata usando la regla de la cadena. Usando <span class="math notranslate nohighlight">\(\tau = n_xx + n_yy + n_zz\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂f}{∂x} &amp;= \frac{∂f}{∂\tau}\frac{∂\tau}{∂x} = n_x\frac{∂f}{∂\tau} \\
+\frac{∂^2f}{∂x^2} &amp;= n_x^2\frac{∂^2f}{∂\tau^2} \\
+\nabla^2 f &amp;= \frac{∂^2f}{∂x^2} + \frac{∂^2f}{∂y^2} + \frac{∂^2f}{∂z^2} = (n_x^2 + n_y^2 + n_z^2) \frac{∂^2f}{∂\tau^2} = \frac{∂^2f}{∂\tau^2}
+\end{split}\]</div>
+<p>(<em>Por este motivo elegimos <span class="math notranslate nohighlight">\(\vec{n}\)</span> normalizado, <span class="math notranslate nohighlight">\(|\vec{n}|=1\)</span></em>)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Veamos la interpretación geométrica de <span class="math notranslate nohighlight">\(\tau\)</span> y de <span class="math notranslate nohighlight">\(\vec{n}\)</span>. El vector <span class="math notranslate nohighlight">\(\vec{n}\)</span> es un vector unitario arbitrario. Es más fácil probar los vectores unitarios en la dirección de los ejes. Si <span class="math notranslate nohighlight">\(\vec{n} = \vec{u_x}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \vec{n} \cdot \vec{r} = x
+\]</div>
+<p>Es decir, estamos hablando de los puntos que comparten la misma componente <span class="math notranslate nohighlight">\(x = \tau\)</span>, o lo que es lo mismo, planos perpendiculares al vector <span class="math notranslate nohighlight">\(\vec{u_x}\)</span> que se desplazan hacia <span class="math notranslate nohighlight">\(+x\)</span> cuando <span class="math notranslate nohighlight">\(\tau\)</span> aumenta. De la misma manera, los puntos <span class="math notranslate nohighlight">\(\vec{r}\)</span> que cumplen la expresión <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span> son los que comparten la misma componente en la dirección de <span class="math notranslate nohighlight">\(\vec{n}\)</span>, y además dicha componente tiene una longitud <span class="math notranslate nohighlight">\(\tau\)</span> o, dicho de otro modo, <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span> son planos que se desplazan en la dirección <span class="math notranslate nohighlight">\(\vec{n}\)</span> a medida que <span class="math notranslate nohighlight">\(\tau\)</span> aumenta.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/ondas_plano_tau.png"><img alt="ondas_plano_tau.png" src="../_images/ondas_plano_tau.png" style="width: 260px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Plano y punto <span class="math notranslate nohighlight">\(\vec{r}\)</span> en el plano con <span class="math notranslate nohighlight">\(\tau\)</span> constante .</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="fasores">
+<h2>Fasores<a class="headerlink" href="#fasores" title="Link to this heading">#</a></h2>
+<p>La solución de la ecuación de onda 3D es una función cualquiera que se desplaza en cualquier dirección (<em>nos podemos olvidar de la onda regresiva, hasta que nos haga falta</em>). Del análisis de Fourier, sabemos que cualquier función se puede representar en función de sus componentes armónicas a cada frecuencia <span class="math notranslate nohighlight">\(\omega\)</span>, y como la ecuación de ondas es lineal, <strong>si cada una de las componentes armónicas cumple la ecuación de ondas 3D, la composición también la cumple y es solución</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Por este motivo, <strong>Podemos estudiar tan solo una componente armónica de cualquier frecuencia <span class="math notranslate nohighlight">\(\omega\)</span> de forma individual</strong>.</p>
+</div>
+<p>La expresión de la componente armónica es:</p>
+<div class="math notranslate nohighlight">
+\[
+f = A \cos(\frac{\omega}{c}(\tau-ct)-\varphi)
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(\varphi\)</span> son constantes. Elegimos que el argumento esté multiplicado por <span class="math notranslate nohighlight">\(\frac{\omega}{c}\)</span> para poder poner el argumento del coseno de la forma más común, definiendo además la constante <span class="math notranslate nohighlight">\(k = \frac{\omega}{c}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\omega}{c}(\tau-ct) = k\tau - \omega t
+\]</div>
+<p>De hecho, por costumbre, como el coseno es una función par, se suele cambiar el signo también:</p>
+<div class="math notranslate nohighlight">
+\[
+f = A \cos(\omega t - k\tau + \varphi)
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Observemos que la velocidad de la onda <span class="math notranslate nohighlight">\(c\)</span> es cualquier número pero tiene que ser el que aparece en la ecuación de ondas, es decir que es único para la ecuación.</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla^2 f - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
+\]</div>
+<p>La frecuencia <span class="math notranslate nohighlight">\(\omega\)</span> es arbitraria, así que puede haber ondas con cualquier frecuencia <span class="math notranslate nohighlight">\(\omega\)</span>, pero todas a la misma velocidad, <span class="math notranslate nohighlight">\(c\)</span>. El número de onda <span class="math notranslate nohighlight">\(k\)</span> se define como una magnitud derivada de la frecuencia y la velocidad.</p>
+<div class="math notranslate nohighlight">
+\[
+k =\frac{\omega}{c}
+\]</div>
+</div>
+<p>Además, <strong>la solución es una función real pero la ecuación de ondas es perfectamente válida para números complejos</strong>, así que podemos trabajar con una exponencial compleja y tomar la parte real. Y de hecho, veremos que típicamente hablaremos simplemente del módulo de la exponencial, que será el número complejo que multiplica a la exponencial, <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+f(\tau,t) = A_0 \cos(\omega t - k \tau + \varphi) = \Re(A_0 e^{j \varphi} e^{j(\omega t - k \tau)}) = \Re(A e^{j(\omega t - k \tau)})
+\]</div>
+<p>La ventaja de usar exponenciales es que las derivadas se pueden sustituir por productos complejos.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂}{∂\tau} \left( A e^{j(\omega t - k \tau)} \right) &amp;= - j k A e^{j(\omega t - k \tau)} \\ 
+\frac{∂}{∂t} \left( A e^{j(\omega t - k \tau)} \right) &amp;= j \omega A e^{j(\omega t - k \tau)}
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Se puede demostrar la validez de usar tan solo el fasor en ecuaciones que tengan las siguientes propiedades:</p>
+<ul class="simple">
+<li><p>La solución debe ser real.</p></li>
+<li><p>Los coeficientes de función y sus derivadas son reales.</p></li>
+<li><p>La ecuación es lineal.</p></li>
+</ul>
+<p>La ecuación de ondas cumple estas propiedades:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla^2 f - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
+\]</div>
+<ul class="simple">
+<li><p>La solución es una magnituda física, y por lo tanto debe ser real.</p></li>
+<li><p>Los coeficiente son <span class="math notranslate nohighlight">\(1\)</span> o <span class="math notranslate nohighlight">\(\frac{1}{c^2}\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f_1\)</span> y <span class="math notranslate nohighlight">\(f_2\)</span> son soluciones, entonces <span class="math notranslate nohighlight">\(f_1 + f_2\)</span> también es solución.</p></li>
+</ul>
+<p>Veamos por qué se puede hacer, de una forma sencilla. El coseno se puede poner en función de dos exponenciales complejas:</p>
+<div class="math notranslate nohighlight">
+\[
+A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega t - k \tau)} + \frac{A_0}{2} e^{-j \varphi} e^{-j(\omega t - k \tau)} = \frac{A}{2} e^{j(\omega t - k \tau)} + \frac{\bar{A}}{2}  e^{-j(\omega t - k \tau)}
+\]</div>
+<p>Por lo tanto:</p>
+<ol class="arabic simple">
+<li><p>Resolvemos la ecuación para la exponencial compleja positiva: esto es más facil si podemos sustituir las derivadas por productos complejos, lo que nos dará facilmente una solución <span class="math notranslate nohighlight">\(A = A_0 e^{j\varphi}\)</span>.</p></li>
+<li><p>La exponencial compleja negativa es automáticamente solución: solo tenemos que tomar complejo conjugado en la ecuación a resolver para comprobar que <span class="math notranslate nohighlight">\(\bar{A} = A_0 e^{-j\varphi}\)</span>.</p></li>
+<li><p>La suma de ambas soluciones también es solución, así que el coseno es solución.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Si la ecuación en fasores tiene solución, entonces la onda armónica que construimos a partir de dicho fasor, también es solución</strong>.</p>
+</div>
+</div>
+</section>
+<section id="ecuaciones-de-maxwell-en-fasores">
+<h2>Ecuaciones de Maxwell en fasores<a class="headerlink" href="#ecuaciones-de-maxwell-en-fasores" title="Link to this heading">#</a></h2>
+<p>Elegimos una dirección arbitraria <span class="math notranslate nohighlight">\(\vec{n}\)</span> para la onda, de tal modo que <span class="math notranslate nohighlight">\(|\vec{n}| = 1\)</span> y <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span>, y buscamos una solución multiplicada por una función exponencial <span class="math notranslate nohighlight">\(e^{j(\omega t - kx)}\)</span>. <strong>Las ecuaciones de Maxwell son ecuaciones vectoriales: La solución es un par de vectores <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{B}\)</span></strong>. Entonces, la solución que buscamos es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{E}(\tau,t) = \vec{E} e^{j(\omega t - kx)} \\
+\vec{B}(\tau,t) = \vec{B} e^{j(\omega t - kx)}
+\end{split}\]</div>
+<p>El operador <span class="math notranslate nohighlight">\(\nabla\)</span> que aparece en las ecuaciones de Maxwell se puede poner de la siguiente manera:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla = \left( \frac{∂}{∂x}, \frac{∂}{∂y}, \frac{∂}{∂z} \right) = \left( \frac{∂}{∂\tau}\frac{∂\tau}{∂x}, \frac{∂}{∂\tau}\frac{∂\tau}{∂y}, \frac{∂}{∂\tau}\frac{∂\tau}{∂z} \right) = \left( n_x, n_y, n_z \right) \frac{∂}{∂\tau} = \vec{n}\frac{∂}{∂\tau}
+\]</div>
+<p>Para campos eléctricos y magnéticos con esta forma, la divergencia y el rotacional que pueden poner de la siguiente manera (<em><span class="math notranslate nohighlight">\(\vec{F}\)</span> puede ser <span class="math notranslate nohighlight">\(\vec{E}\)</span> o <span class="math notranslate nohighlight">\(\vec{B}\)</span></em>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\nabla \cdot \vec{F}(\tau,t) &amp;= (\vec{n} \frac{∂}{∂\tau}) \cdot \vec{F} = \vec{n} \cdot \frac{∂\vec{F}}{∂\tau} = -j k \vec{n} \cdot \vec{F}(\tau,t) \\
+\nabla \times \vec{F}(\tau,t) &amp;= (\vec{n} \frac{∂}{∂\tau}) \times \vec{F} =  \vec{n} \times \frac{∂ \vec{F}}{∂\tau} = -j k  \vec{n} \times \vec{F}(\tau,t)
+\end{split}\]</div>
+<p>Por lo que <strong>las ecuaciones de Maxwell en un medio isótropo, sin cargas libres <span class="math notranslate nohighlight">\(\rho_l\)</span> ni corrientes de conducción <span class="math notranslate nohighlight">\(\vec{J_c}\)</span>, para ondas armónicas en la dirección arbitraria <span class="math notranslate nohighlight">\(\vec{n}\)</span></strong>, son, antes de sustituir las derivadas por productos complejos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{n} \cdot \frac{∂\vec{E}(\tau,t)}{∂\tau} &amp;= 0 \\
+\vec{n} \cdot \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= 0 \\
+\vec{n} \times \frac{∂\vec{E}(\tau,t)}{∂\tau} &amp;= - \frac{∂\vec{B}(\tau,t)}{∂t} \\
+\vec{n} \times \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= \epsilon \mu \frac{∂\vec{E}(\tau,t)}{∂t} \\
+\end{split}\]</div>
+<p>Y, después de sustituir las derivadas por productos complejos, tenemos <strong>la ecuación en fasores</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-j k \vec{n} \cdot \vec{E} &amp;= 0 \\
+-j k \vec{n} \cdot \vec{B} &amp;= 0 \\
+-j k \vec{n} \times \vec{E} &amp;= - j \omega \vec{B} \\
+-j k \vec{n} \times \vec{B} &amp;= \epsilon \mu (j \omega \vec{E})
+\end{split}\]</div>
+<p>De donde obtenemos finalmente <strong>todas las propiedades que cumplen los fasores del campo eléctrico y magnético en una onda electromagnética plana</strong>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{n} \cdot \vec{E} &amp;= \vec{n} \cdot \vec{B} = 0 \\
+\vec{n} \times \vec{E} &amp;= c \vec{B} \\
+\vec{n} \times \vec{B} &amp;= \frac{1}{c} \vec{E}
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Los fasores del campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> y magnético <span class="math notranslate nohighlight">\(\vec{B}\)</span> en una onda electromagnética plana son perpendiculares a la dirección de propagación <span class="math notranslate nohighlight">\(\vec{n}\)</span> y perpendiculares entre sí</strong>.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="poynting_ejemplo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ejemplos de conservación</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-ondas-1d-y-3d-con-direccion-arbitraria">Ecuación de ondas 1D y 3D con dirección arbitraria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fasores">Fasores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-maxwell-en-fasores">Ecuaciones de Maxwell en fasores</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

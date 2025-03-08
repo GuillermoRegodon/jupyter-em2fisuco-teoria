@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Condiciones de frontera &#8212; Apuntes de Electromagnetismo II</title>
+    <title>Ejemplos de conservación &#8212; Apuntes de Electromagnetismo II</title>
   
   
   
@@ -62,11 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/repaso_frontera';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/poynting_ejemplo';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Potenciales electromagnéticos" href="potenciales.html" />
-    <link rel="prev" title="Repaso del uso de las simetrías para resolver problemas" href="repaso_gauss_ampere.html" />
+    <link rel="next" title="Ondas electromagnéticas" href="ec_ondas.html" />
+    <link rel="prev" title="Teoremas de conservación" href="conservacion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -176,10 +176,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repaso_frontera.html">Condiciones de frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potenciales.html">Potenciales electromagnéticos</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="poynting_ejemplo.html">Ejemplos de conservación</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejemplos de conservación</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="ec_ondas.html">Ondas electromagnéticas</a></li>
@@ -242,7 +242,7 @@
       
       
       
-      <li><a href="../_sources/pages/repaso_frontera.ipynb" target="_blank"
+      <li><a href="../_sources/pages/poynting_ejemplo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +318,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Condiciones de frontera</h1>
+    <h1>Ejemplos de conservación</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -328,8 +328,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leyes-de-maxwell-de-divergencia">Leyes de Maxwell de divergencia</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leyes-de-maxwell-de-rotacional">Leyes de Maxwell de rotacional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-cilindrica">Resistencia cilíndrica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductor-electrico-perfecto">Conductor Eléctrico Perfecto</a></li>
 </ul>
             </nav>
         </div>
@@ -341,137 +341,105 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="condiciones-de-frontera">
-<h1>Condiciones de frontera<a class="headerlink" href="#condiciones-de-frontera" title="Link to this heading">#</a></h1>
-<p><strong>En la descripción macro</strong> entre dos medios materiales, <em>podemos calcular la relación entre las componentes del campo electromagnético a los dos lados de la frontera</em>. Para ello, <strong>utilizamos convenientemente las leyes de Maxwell en forma integral</strong>.</p>
-<ul class="simple">
-<li><p>Las leyes de <strong>divergencia</strong> nos permiten conectar <strong>las componentes normales</strong>.</p></li>
-<li><p>Las leyes de <strong>rotacional</strong> nos permiten conectar <strong>las componentes tangenciales</strong>.</p></li>
-</ul>
-<section id="leyes-de-maxwell-de-divergencia">
-<h2>Leyes de Maxwell de divergencia<a class="headerlink" href="#leyes-de-maxwell-de-divergencia" title="Link to this heading">#</a></h2>
-<p>Veamos el procedimiento para las leyes de divergencia: para ello <strong>elegimos una superficie conveniente</strong> pequeña que tiene dos caras paralelas de área <span class="math notranslate nohighlight">\(S\)</span> a la frontera entre los dos medios, mientras que la cara lateral se puede hacer infinitamente pequeña, <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ejemplos-de-conservacion">
+<h1>Ejemplos de conservación<a class="headerlink" href="#ejemplos-de-conservacion" title="Link to this heading">#</a></h1>
+<p>Vamos a ver algunos ejemplos del teorema de Poynting y cómo comprobar la dirección del flujo de potencia electromagnética.</p>
+<section id="resistencia-cilindrica">
+<h2>Resistencia cilíndrica<a class="headerlink" href="#resistencia-cilindrica" title="Link to this heading">#</a></h2>
+<p>Supongamos que <strong>una resistencia cilíndrica</strong> de longitud <span class="math notranslate nohighlight">\(L\)</span> y tiene una diferencia de potencial <span class="math notranslate nohighlight">\(V\)</span> entre los extremos o tapas del cilíndro.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/frontera_1.png"><img alt="frontera_1.png" src="../_images/frontera_1.png" style="width: 325px;" /></a>
+<a class="reference internal image-reference" href="../_images/poynting_ejemplo_r.png"><img alt="poynting_ejemplo_r.png" src="../_images/poynting_ejemplo_r.png" style="width: 160px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Superficie conveniente para deducir condiciones de frontera.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Las leyes de divergencia se deben poner <strong>en forma integral</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_S \vec{D} \cdot \vec{dS} &amp;=  Q_{enc} \\
-\int_S \vec{B} \cdot \vec{dS} &amp;= 0
-\end{split}\]</div>
-<p>de forma que <strong>las integrales se pueden dividir en 4, de las que 2 se desprecian</strong> cuando <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>.</p>
+<p>Este es un modelo electromagnético de la resitencia <span class="math notranslate nohighlight">\(R\)</span> en el siguiente circuito.</p>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/frontera_2.png"><img alt="frontera_2.png" src="../_images/frontera_2.png" style="width: 320px;" /></a>
+<a class="reference internal image-reference" href="../_images/poynting_ejemplo_circuito.png"><img alt="poynting_ejemplo_circuito.png" src="../_images/poynting_ejemplo_circuito.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Superficie dividida en 4.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_S \vec{D} \cdot \vec{dS} &amp;= \int_{S_1} \vec{D} \cdot \vec{dS_1} + \int_{S_2} \vec{D} \cdot \vec{dS_2} \\
-\int_S \vec{B} \cdot \vec{dS} &amp;= \int_{S_1} \vec{B} \cdot \vec{dS_1} + \int_{S_2} \vec{B} \cdot \vec{dS_2}
-\end{split}\]</div>
-<p>y dado que, como se ilustra en la figura:</p>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/frontera_3.png"><img alt="frontera_3.png" src="../_images/frontera_3.png" style="width: 320px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Campo electromagnético para deducir condiciones de frontera.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Las caras son paralelas a la frontera, y por tanto el <em>diferencial de superficie es perpendicular a la frontera</em>.</p></li>
-<li><p>Son suficientemente pequeñas para considerar <em>los campos constantes</em>.</p></li>
-<li><p>Los campos (<em>como cualquier vector</em>) se pueden dividir en una componente normal <span class="math notranslate nohighlight">\(D_{1n}\)</span>, <span class="math notranslate nohighlight">\(D_{2n}\)</span>, <span class="math notranslate nohighlight">\(B_{1n}\)</span>, y <span class="math notranslate nohighlight">\(B_{2n}\)</span> y una componente tangencial perpendicular a <span class="math notranslate nohighlight">\(\vec{dS}\)</span>.</p></li>
-<li><p>Definimos la componente positiva de <span class="math notranslate nohighlight">\(D_{1n}\)</span>, <span class="math notranslate nohighlight">\(D_{2n}\)</span>, <span class="math notranslate nohighlight">\(B_{1n}\)</span>, y <span class="math notranslate nohighlight">\(B_{2n}\)</span> en la misma dirección, mientras que los diferenciales de superficie <span class="math notranslate nohighlight">\(\vec{dS_1}\)</span> y <span class="math notranslate nohighlight">\(\vec{dS_2}\)</span> son positivos hacia fuera de la superficie.</p></li>
-<li><p>El área de la cara lateral <em>es despreciable cuando <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span></em>.</p></li>
-</ul>
-<p>Tenemos que</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_S \vec{D} \cdot \vec{dS} &amp;= D_{1n}S - D_{2n}S \\
-\int_S \vec{B} \cdot \vec{dS} &amp;= B_{1n}S - B_{2n}S \\
-Q_{enc} &amp;= \sigma S
-\end{split}\]</div>
-<p>Y finalmente</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-D_{1n} - D_{2n} = \sigma \\
-B_{1n} = B_{2n}
-\end{split}\]</div>
-</section>
-<section id="leyes-de-maxwell-de-rotacional">
-<h2>Leyes de Maxwell de rotacional<a class="headerlink" href="#leyes-de-maxwell-de-rotacional" title="Link to this heading">#</a></h2>
-<p>El procedimiento para las leyes de rotacional es similar, <strong>debemos elegir un circuito de integración conveniente</strong>: elegimos un circuito que tenga dos lineas de longitud <span class="math notranslate nohighlight">\(L\)</span> paralelas a la frontera a cada lado de la misma, y los lados que los unen de longitud <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>, perpendiculares a la frontera.</p>
-<figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../_images/frontera_4.png"><img alt="frontera_4.png" src="../_images/frontera_4.png" style="width: 320px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Circuito conveniente para deducir condiciones de frontera.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Las leyes de rotacional se deben poner <strong>en forma integral</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_C \vec{E} \cdot \vec{dl} &amp;= 0 \\
-\int_C \vec{H} \cdot \vec{dl} &amp;= I_{enc}
-\end{split}\]</div>
-<p>Las integrales se dividen en 6 segmentos, de los que 4, los de longitud <span class="math notranslate nohighlight">\(h \rightarrow 0\)</span>, <strong>van a ser despreciados, por los que solo sobreviven 2</strong>:</p>
-<figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../_images/frontera_5.png"><img alt="frontera_5.png" src="../_images/frontera_5.png" style="width: 320px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Circuito dividido en 6.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_C \vec{E} \cdot \vec{dl} &amp;= \int_{C_1} \vec{E} \cdot \vec{dl_1} + \int_{C_2} \vec{E} \cdot \vec{dl_2} \\
-\int_C \vec{H} \cdot \vec{dl} &amp;= \int_{C_1} \vec{H} \cdot \vec{dl_1} + \int_{C_2} \vec{H} \cdot \vec{dl_2}
-\end{split}\]</div>
-<p>Observamos que <strong>el circuito puede estar orientado en cualquier dirección</strong>, siempre que los lados largos sean paralelos a la superficie. Nos conviene elegir un circuito perpendicular a la densidad superficial de corriente, si la hay, de forma que podamos calcular fácilmente la corriente total que atraviesa el circuito elegido como el producto <span class="math notranslate nohighlight">\(I_{enc} = jL\)</span>.</p>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../_images/frontera_6.png"><img alt="frontera_6.png" src="../_images/frontera_6.png" style="width: 320px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Circuito y la orientación de la corriente superficial.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Para calcular la integral, tenemos en cuenta, tal y como se ilutra en la figura:</p>
-<figure class="align-default" id="id7">
-<a class="reference internal image-reference" href="../_images/frontera_7.png"><img alt="frontera_7.png" src="../_images/frontera_7.png" style="width: 320px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Campo elctromagnético para deducir las condiciones de contorno.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>Los lados largos son paralelos a la frontera, y por tanto el <em>diferencial de camino es paralelo a la frontera</em>.</p></li>
-<li><p>Son suficientemente pequeños para considerar <em>los campos constantes</em>.</p></li>
-<li><p>Los campos (<em>como cualquier vector</em>) se pueden dividir en una componente normal que el perpendicular al camino de integración, y una componente tangencial <span class="math notranslate nohighlight">\(E_{1t}\)</span>, <span class="math notranslate nohighlight">\(E_{2t}\)</span>, <span class="math notranslate nohighlight">\(H_{1t}\)</span>y <span class="math notranslate nohighlight">\(H_{2t}\)</span> paralela al diferencial de camino <span class="math notranslate nohighlight">\(\vec{dl_1}\)</span> y <span class="math notranslate nohighlight">\(\vec{dl_2}\)</span>.</p></li>
-<li><p>Los diferenciales de camino <span class="math notranslate nohighlight">\(\vec{dl_1}\)</span> y <span class="math notranslate nohighlight">\(\vec{dl_2}\)</span> tienen sentido contrario.</p></li>
-</ul>
-<p>Con esto, obtenemos:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_C \vec{E} \cdot \vec{dl} &amp;= E_{1t}L - E_{2t}L \\
-\int_C \vec{H} \cdot \vec{dl} &amp;= H_{1t}L - H_{2t}L \\
-I_{enc} &amp;= jL
-\end{split}\]</div>
-<p>De donde obtenemos finalmente:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} 
-E_{1t} = E_{2t} \\
-H_{1t} - H_{2t} = j
-\end{split}\]</div>
-<p>En la expresión del campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> no tenemos problema, pero <strong>en la expresión del vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> es importante ser cuidadoso con la dirección en la que va la corriente superficial</strong>. Para tener en cuenta la dirección de la corriente superficial, se suele escribir la siguiente expresión, que es equivalente:</p>
+<p>Con esta diferencia de potencial, se creará <strong>un campo eléctrico entre los extremos de la resistencia</strong>.</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{n} \times (\vec{H_{1t}} - \vec{H_{2t}}) = \vec{j}
+E = \frac{V}{L}
 \]</div>
-<p>Por último, en este tipo de expresiones, la dirección positiva de los vectores debe estar bien definida, pero lamentablemente, <strong>es típico encontrar las expresiones de frontera de forma muy concisa sin su correspondiente definición de dirección positiva de los vectores</strong>. Por esto, <strong>es muy importante utilizar la lógica para decidir las direcciones positivas</strong>.</p>
+<p>Este campo generará <strong>la densidad de corriente <span class="math notranslate nohighlight">\(J\)</span></strong>, que podemos suponer <strong>uniforme</strong>. El campo magnético generado por una densidad de corriente uniforme es un problema que se puede resolver por Ampere. Eligiendo como circuito de Ampere una circunferencia perpendicular al eje y centrada en el mismo, en el interior del cilindro tendremos el siguiente vector <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+H2\pi s = J \pi s^2
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(s\)</span> es la coordenada radial cilíndrica, o visto de otro modo, la distancia desde el punto donde se calcula el vecotr <span class="math notranslate nohighlight">\(H\)</span> y el eje.</p>
+<p>Veamos las direcciones para poder estudiar la dirección del vector de Poynting <span class="math notranslate nohighlight">\(\vec{G}\)</span>. Usando las siguientes coordenadas, colocando la dirección <span class="math notranslate nohighlight">\(z\)</span> en la dirección de la densidad de corriente:</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/hilo.png"><img alt="hilo.png" src="../_images/hilo.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>El campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> tiene, por tanto, dirección <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{V}{L} \vec{u_z}
+\]</div>
+<p>Por la regla de la mano derecha, el vector <span class="math notranslate nohighlight">\(H\)</span> tiene el sentido de la coordenada <span class="math notranslate nohighlight">\(\phi\)</span> de cilíndricas.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{H} = \frac{Js}{2} \vec{u_\phi}
+\]</div>
+<p>Por lo que <strong>el vector de Poynting <span class="math notranslate nohighlight">\(\vec{G} = \vec{E} \times \vec{H}\)</span> resulta tener dirección hacia dentro de la resistencia</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G} = \vec{E} \times \vec{H} = \frac{VJs}{2 L}\vec{u_z} \times \vec{u_\phi} = - \frac{VJs}{2 L} \vec{u_s}
+\]</div>
+<p>Podemos observar que <strong>la potencia electromagnética entra en la resistencia</strong>. Sin embargo, los campos son constantes en estado estacionario, por lo que <strong>no hay acumulación de energía electromagnética</strong>. Tampoco la corriente está aumentando, por lo que <strong>las cargas no se están acelerando</strong>. <em><strong>La potencia que entra se está convirtiendo en calor</strong></em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>¡Es muy importante utilizar la lógica para decidir las direcciones positivas de los vectores!</strong></p>
+<p>Por las tapas entran y salen los electrones, ¡la potencia electromagnética entra desde la cara lateral, no por las tapas!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si el material tuviera conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> infinita, los electrones se acelerarían hasta que alcanzaran el final de la resistencia. <strong>En un material con conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> finita, los electrones se aceleran hasta que chocan con la red cristalina</strong> y ceden su energía cinética al material en forma de calor.</p>
+<p>Dicho de otra manera, para un sistema con pérdidas en forma de calor, <strong>el término de energía cinética <span class="math notranslate nohighlight">\(\vec{J} \cdot \vec{E}\)</span> se convierte en un término de perdidas por calor</strong>, o mejor dicho, podemos igualar la energía cinética ganada por los electrones y las perdidas de energía de los electrones por colisiones con las red cristalina, es decir, por calor.</p>
+</div>
+</section>
+<section id="conductor-electrico-perfecto">
+<h2>Conductor Eléctrico Perfecto<a class="headerlink" href="#conductor-electrico-perfecto" title="Link to this heading">#</a></h2>
+<p>Un <strong>Conductor Eléctrico Perfecto (CEP) es un material en el que las cargas tienen movilidad infinita</strong>. Si hubiera un cambio que obligara un campo eléctrico en el interior, las cargas se desplazarían de forma instantánea para compensar dicho cambio. En la escala de tiempos en los que la condición de CEP es válida, el campo eléctrico en el interior debe ser <span class="math notranslate nohighlight">\(\vec{E_{int}} = 0\)</span>. Como vemos, en el interior del CEP no puede haber carga neta, ya que eso generaría campos que se compensarían inmediatamente, por lo que igualmente la densidad de carga neta en el interior <span class="math notranslate nohighlight">\(\rho_{int} = 0\)</span>. Una vez se ha alcanzado el equilibrio, las cargas estarán estáticas, <span class="math notranslate nohighlight">\(\vec{J_{int}} = 0\)</span>, y por lo tanto no puede haber campo magnético en el interior, es decir <span class="math notranslate nohighlight">\(\vec{H_{int}} = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{E_{int}} &amp;= 0 \\
+\vec{H_{int}} &amp;= 0 \\
+\rho_{int} &amp;= 0 \\
+\vec{J_{int}} &amp;= 0
+\end{split}\]</div>
+<p>Vemos que <strong>la carga solo se puede acumular en la superficie, y la corriente solo puede circular por la superficie del CEP</strong>. Usando estas características de los CEP y las condiciones de contorno, vemos que:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{D_{n,ext}} - \vec{D_{n,int}} = \sigma \vec{n} \quad &amp;\rightarrow \quad \vec{E_{n,ext}} = \frac{\sigma}{\varepsilon} \vec{n} \neq 0 \\
+\vec{E_{t,ext}} - \vec{E_{t,int}} \quad &amp;\rightarrow \quad \vec{E_{t,ext}} = 0 \\
+\vec{B_{n,ext}} - \vec{B_{n,int}} = 0 \quad &amp;\rightarrow \quad \vec{H_{n,ext}} = 0 \\
+\vec{H_{t,ext}} - \vec{H_{t,int}} = \vec{n} \times \vec{j} \quad &amp;\rightarrow \quad \vec{H_{t,ext}} = \vec{n} \times \vec{j} \neq 0
+\end{split}\]</div>
+<p>Esto quiere decir que en la superficie de un CEP, <strong>el vector de Poynting <span class="math notranslate nohighlight">\(\vec{G_{ext}}\)</span> tiene que ser paralelo a la superficie</strong> (perpendicular a <span class="math notranslate nohighlight">\(\vec{n}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G_{ext}} = \vec{E_{ext}} \times \vec{H_{ext}} = \vec{E_{n,ext}} \times \vec{H_{t,ext}}
+\]</div>
+<p>Es decir:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G_{ext}} \perp \vec{n}
+\]</div>
+<p>Mientras que en el interior:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{G_{int}} = \vec{E_{int}} \times \vec{H_{int}} = 0
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El Conductor Electrico Perfecto se adapta con una densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> y una densidad superficial de corriente <span class="math notranslate nohighlight">\(\vec{j}\)</span> de tal forma que <strong>la potencia electromagnética no puede entrar en el CEP</strong>. Por supuesto, en el interior no se disipa calor. ¡Toda la corriente pasa por la superficie!</p>
 </div>
 </section>
 </section>
@@ -507,20 +475,20 @@ H_{1t} - H_{2t} = j
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="repaso_gauss_ampere.html"
+       href="conservacion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Repaso del uso de las simetrías para resolver problemas</p>
+        <p class="prev-next-title">Teoremas de conservación</p>
       </div>
     </a>
     <a class="right-next"
-       href="potenciales.html"
+       href="ec_ondas.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Potenciales electromagnéticos</p>
+        <p class="prev-next-title">Ondas electromagnéticas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -541,8 +509,8 @@ H_{1t} - H_{2t} = j
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leyes-de-maxwell-de-divergencia">Leyes de Maxwell de divergencia</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leyes-de-maxwell-de-rotacional">Leyes de Maxwell de rotacional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-cilindrica">Resistencia cilíndrica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductor-electrico-perfecto">Conductor Eléctrico Perfecto</a></li>
 </ul>
   </nav></div>
 
