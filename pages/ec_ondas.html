@@ -418,7 +418,7 @@ f(x,t) = f_1(x-ct) + f_2(x+ct)
 <p>Veamos la interpretación geométrica de <span class="math notranslate nohighlight">\(\tau\)</span> y de <span class="math notranslate nohighlight">\(\vec{n}\)</span>. El vector <span class="math notranslate nohighlight">\(\vec{n}\)</span> es un vector unitario arbitrario. Es más fácil probar los vectores unitarios en la dirección de los ejes. Si <span class="math notranslate nohighlight">\(\vec{n} = \vec{u_x}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\tau = \vec{n} \cdot \vec{r} = x
+\tau = \vec{n} \cdot \vec{r} = \vec{u_x} \cdot \vec{r} = x
 \]</div>
 <p>Es decir, estamos hablando de los puntos que comparten la misma componente <span class="math notranslate nohighlight">\(x = \tau\)</span>, o lo que es lo mismo, planos perpendiculares al vector <span class="math notranslate nohighlight">\(\vec{u_x}\)</span> que se desplazan hacia <span class="math notranslate nohighlight">\(+x\)</span> cuando <span class="math notranslate nohighlight">\(\tau\)</span> aumenta. De la misma manera, los puntos <span class="math notranslate nohighlight">\(\vec{r}\)</span> que cumplen la expresión <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span> son los que comparten la misma componente en la dirección de <span class="math notranslate nohighlight">\(\vec{n}\)</span>, y además dicha componente tiene una longitud <span class="math notranslate nohighlight">\(\tau\)</span> o, dicho de otro modo, <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span> son planos que se desplazan en la dirección <span class="math notranslate nohighlight">\(\vec{n}\)</span> a medida que <span class="math notranslate nohighlight">\(\tau\)</span> aumenta.</p>
 <figure class="align-default" id="id1">
@@ -480,7 +480,7 @@ f(\tau,t) = A_0 \cos(\omega t - k \tau + \varphi) = \Re(A_0 e^{j \varphi} e^{j(\
 <p>Se puede demostrar la validez de usar tan solo el fasor en ecuaciones que tengan las siguientes propiedades:</p>
 <ul class="simple">
 <li><p>La solución debe ser real.</p></li>
-<li><p>Los coeficientes de función y sus derivadas son reales.</p></li>
+<li><p>Los coeficientes de la función y sus derivadas son reales.</p></li>
 <li><p>La ecuación es lineal.</p></li>
 </ul>
 <p>La ecuación de ondas cumple estas propiedades:</p>
@@ -489,8 +489,8 @@ f(\tau,t) = A_0 \cos(\omega t - k \tau + \varphi) = \Re(A_0 e^{j \varphi} e^{j(\
 \nabla^2 f - \frac{1}{c^2} \frac{∂^2 f}{∂t^2}=0
 \]</div>
 <ul class="simple">
-<li><p>La solución es una magnituda física, y por lo tanto debe ser real.</p></li>
-<li><p>Los coeficiente son <span class="math notranslate nohighlight">\(1\)</span> o <span class="math notranslate nohighlight">\(\frac{1}{c^2}\)</span>.</p></li>
+<li><p>La solución es una magnitud física, y por lo tanto debe ser real.</p></li>
+<li><p>Los coeficientes son <span class="math notranslate nohighlight">\(1\)</span> o <span class="math notranslate nohighlight">\(\frac{1}{c^2}\)</span>.</p></li>
 <li><p>Si <span class="math notranslate nohighlight">\(f_1\)</span> y <span class="math notranslate nohighlight">\(f_2\)</span> son soluciones, entonces <span class="math notranslate nohighlight">\(f_1 + f_2\)</span> también es solución.</p></li>
 </ul>
 <p>Veamos por qué se puede hacer, de una forma sencilla. El coseno se puede poner en función de dos exponenciales complejas:</p>
@@ -501,7 +501,7 @@ A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega 
 <p>Por lo tanto:</p>
 <ol class="arabic simple">
 <li><p>Resolvemos la ecuación para la exponencial compleja positiva: esto es más facil si podemos sustituir las derivadas por productos complejos, lo que nos dará facilmente una solución <span class="math notranslate nohighlight">\(A = A_0 e^{j\varphi}\)</span>.</p></li>
-<li><p>La exponencial compleja negativa es automáticamente solución: solo tenemos que tomar complejo conjugado en la ecuación a resolver para comprobar que <span class="math notranslate nohighlight">\(\bar{A} = A_0 e^{-j\varphi}\)</span>.</p></li>
+<li><p>La exponencial compleja negativa es automáticamente solución: solo tenemos que tomar complejo conjugado en la ecuación a resolver para comprobar que <span class="math notranslate nohighlight">\(\bar{A} = A_0 e^{-j\varphi}\)</span> también es solución.</p></li>
 <li><p>La suma de ambas soluciones también es solución, así que el coseno es solución.</p></li>
 </ol>
 <div class="admonition note">
@@ -512,16 +512,16 @@ A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega 
 </section>
 <section id="ecuaciones-de-maxwell-en-fasores">
 <h2>Ecuaciones de Maxwell en fasores<a class="headerlink" href="#ecuaciones-de-maxwell-en-fasores" title="Link to this heading">#</a></h2>
-<p>Elegimos una dirección arbitraria <span class="math notranslate nohighlight">\(\vec{n}\)</span> para la onda, de tal modo que <span class="math notranslate nohighlight">\(|\vec{n}| = 1\)</span> y <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span>, y buscamos una solución multiplicada por una función exponencial <span class="math notranslate nohighlight">\(e^{j(\omega t - kx)}\)</span>. <strong>Las ecuaciones de Maxwell son ecuaciones vectoriales: La solución es un par de vectores <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{B}\)</span></strong>. Entonces, la solución que buscamos es:</p>
+<p>Elegimos una dirección arbitraria <span class="math notranslate nohighlight">\(\vec{n}\)</span> para la onda, de tal modo que <span class="math notranslate nohighlight">\(|\vec{n}| = 1\)</span> y <span class="math notranslate nohighlight">\(\tau = \vec{n} \cdot \vec{r}\)</span>, y buscamos una solución multiplicada por una función exponencial <span class="math notranslate nohighlight">\(e^{j(\omega t - k\tau)}\)</span>. <strong>Las ecuaciones de Maxwell son ecuaciones vectoriales: La solución es un par de vectores <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{B}\)</span></strong>. Entonces, la solución que buscamos es:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\vec{E}(\tau,t) = \vec{E} e^{j(\omega t - kx)} \\
-\vec{B}(\tau,t) = \vec{B} e^{j(\omega t - kx)}
+\vec{E}(\tau,t) = \vec{E} e^{j(\omega t - k\tau)} \\
+\vec{B}(\tau,t) = \vec{B} e^{j(\omega t - k\tau)}
 \end{split}\]</div>
 <p>El operador <span class="math notranslate nohighlight">\(\nabla\)</span> que aparece en las ecuaciones de Maxwell se puede poner de la siguiente manera:</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla = \left( \frac{∂}{∂x}, \frac{∂}{∂y}, \frac{∂}{∂z} \right) = \left( \frac{∂}{∂\tau}\frac{∂\tau}{∂x}, \frac{∂}{∂\tau}\frac{∂\tau}{∂y}, \frac{∂}{∂\tau}\frac{∂\tau}{∂z} \right) = \left( n_x, n_y, n_z \right) \frac{∂}{∂\tau} = \vec{n}\frac{∂}{∂\tau}
+\nabla = \left( \frac{∂}{∂x}, \frac{∂}{∂y}, \frac{∂}{∂z} \right) = \left( \frac{∂\tau}{∂x}\frac{∂}{∂\tau}, \frac{∂\tau}{∂y}\frac{∂}{∂\tau}, \frac{∂\tau}{∂z}\frac{∂}{∂\tau} \right) = \left( n_x, n_y, n_z \right) \frac{∂}{∂\tau} = \vec{n}\frac{∂}{∂\tau}
 \]</div>
 <p>Para campos eléctricos y magnéticos con esta forma, la divergencia y el rotacional que pueden poner de la siguiente manera (<em><span class="math notranslate nohighlight">\(\vec{F}\)</span> puede ser <span class="math notranslate nohighlight">\(\vec{E}\)</span> o <span class="math notranslate nohighlight">\(\vec{B}\)</span></em>):</p>
 <div class="math notranslate nohighlight">
