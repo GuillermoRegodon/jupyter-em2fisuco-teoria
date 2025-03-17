@@ -65,6 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/ec_ondas';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ondas planas en medios con pérdidas" href="mat_conductividad.html" />
     <link rel="prev" title="Ejemplos de conservación" href="poynting_ejemplo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,6 +183,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Ondas electromagnéticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat_conductividad.html">Ondas planas en medios con pérdidas</a></li>
 </ul>
 
     </div>
@@ -518,6 +520,11 @@ A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega 
 \vec{E}(\tau,t) = \vec{E} e^{j(\omega t - k\tau)} \\
 \vec{B}(\tau,t) = \vec{B} e^{j(\omega t - k\tau)}
 \end{split}\]</div>
+<p>Las derivadas con respecto al tiempo son muy fáciles, por que son las derivadas de una función exponencial (<em><span class="math notranslate nohighlight">\(\vec{F}\)</span> puede ser <span class="math notranslate nohighlight">\(\vec{E}\)</span> o <span class="math notranslate nohighlight">\(\vec{B}\)</span></em>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂\vec{F}}{∂t} = j \omega \vec{F}(\tau,t) \\
+\end{split}\]</div>
 <p>El operador <span class="math notranslate nohighlight">\(\nabla\)</span> que aparece en las ecuaciones de Maxwell se puede poner de la siguiente manera:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -535,15 +542,39 @@ A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega 
 \vec{n} \cdot \frac{∂\vec{E}(\tau,t)}{∂\tau} &amp;= 0 \\
 \vec{n} \cdot \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= 0 \\
 \vec{n} \times \frac{∂\vec{E}(\tau,t)}{∂\tau} &amp;= - \frac{∂\vec{B}(\tau,t)}{∂t} \\
-\vec{n} \times \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= \epsilon \mu \frac{∂\vec{E}(\tau,t)}{∂t} \\
+\vec{n} \times \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= \mu \varepsilon \frac{∂\vec{E}(\tau,t)}{∂t} \\
 \end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Obtener la ecuación de ondas a partir de estas expresiones es fácil si se realiza la operación <span class="math notranslate nohighlight">\(\vec{n} \times \frac{∂}{∂\tau}\)</span> sobre las expresiones de abajo:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{n} \times \frac{∂}{∂\tau} \left( \vec{n} \times \frac{∂\vec{E}(\tau,t)}{∂\tau} \right)= - \vec{n} \times \frac{∂}{∂\tau} \left( \frac{∂\vec{B}(\tau,t)}{∂t} \right)
+\]</div>
+<p>El primer miembro:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{n} \times \frac{∂}{∂\tau} \left( \vec{n} \times \frac{∂\vec{E}(\tau,t)}{∂\tau} \right) = \vec{n} \times \left( \vec{n} \times \frac{∂^2\vec{E}(\tau,t)}{∂\tau^2} \right) = \vec{n} \left( \vec{n} \cdot \frac{∂^2\vec{E}(\tau,t)}{∂\tau^2} \right) - \frac{∂^2\vec{E}(\tau,t)}{∂\tau^2} (\vec{n} \cdot \vec{n}) = - \frac{∂^2\vec{E}(\tau,t)}{∂\tau^2}
+\]</div>
+<p>El segundo miembro:</p>
+<div class="math notranslate nohighlight">
+\[
+- \vec{n} \times \frac{∂}{∂\tau} \left( \frac{∂\vec{B}(\tau,t)}{∂t} \right) = \frac{∂}{∂t} \left( - \vec{n} \times \frac{∂\vec{B(\tau,t)}}{∂\tau} \right) = -\mu \varepsilon \frac{∂^2\vec{E}(\tau,t)}{∂t^2}
+\]</div>
+<p>Con lo que, finalmente (<em>La demostración para <span class="math notranslate nohighlight">\(\vec{B}(\tau,t)\)</span> es igual</em>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{∂^2\vec{E}(\tau,t)}{∂\tau^2} -\mu \varepsilon \frac{∂^2\vec{E}(\tau,t)}{∂t^2} = 0 \\
+\frac{∂^2\vec{B}(\tau,t)}{∂\tau^2} -\mu \varepsilon \frac{∂^2\vec{B}(\tau,t)}{∂t^2} = 0
+\end{split}\]</div>
+</div>
 <p>Y, después de sustituir las derivadas por productos complejos, tenemos <strong>la ecuación en fasores</strong>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 -j k \vec{n} \cdot \vec{E} &amp;= 0 \\
 -j k \vec{n} \cdot \vec{B} &amp;= 0 \\
 -j k \vec{n} \times \vec{E} &amp;= - j \omega \vec{B} \\
--j k \vec{n} \times \vec{B} &amp;= \epsilon \mu (j \omega \vec{E})
+-j k \vec{n} \times \vec{B} &amp;= \mu \varepsilon (j \omega \vec{E})
 \end{split}\]</div>
 <p>De donde obtenemos finalmente <strong>todas las propiedades que cumplen los fasores del campo eléctrico y magnético en una onda electromagnética plana</strong>.</p>
 <div class="math notranslate nohighlight">
@@ -597,6 +628,15 @@ A_0 \cos(\omega t - k \tau + \varphi) = \frac{A_0}{2} e^{j \varphi} e^{j(\omega 
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Ejemplos de conservación</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="mat_conductividad.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ondas planas en medios con pérdidas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
