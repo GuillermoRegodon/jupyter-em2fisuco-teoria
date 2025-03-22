@@ -17,6 +17,8 @@ parts:
     - file: pages/poynting_ejemplo.ipynb
   - file: pages/ec_ondas.ipynb
   - file: pages/mat_conductividad.ipynb
+    sections:
+    - file: pages/onda.ipynb
 
 # - caption: Bloque II - Formulación relativista del electromagnetismo
 #   chapters:
