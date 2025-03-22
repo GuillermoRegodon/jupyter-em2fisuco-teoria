@@ -338,6 +338,8 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-onda-k-complejo">Número de onda <span class="math notranslate nohighlight">\(k\)</span> complejo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidad-de-fase">Velocidad de fase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecto-conjunto">Efecto conjunto</a></li>
 </ul>
             </nav>
         </div>
@@ -562,6 +564,46 @@ k \vec{n} \times \vec{E} = \omega \vec{B}
 <li><p><strong>Buen conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, y <span class="math notranslate nohighlight">\(\alpha \approx \beta\)</span>, por lo que la fase de <span class="math notranslate nohighlight">\(k\)</span> y <strong>el desfase entre <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{B}\)</span> es prácticamente <span class="math notranslate nohighlight">\(45º\)</span></strong>.</p></li>
 </ul>
 </section>
+<section id="velocidad-de-fase">
+<h2>Velocidad de fase<a class="headerlink" href="#velocidad-de-fase" title="Link to this heading">#</a></h2>
+<p>Llamamos velocidad de fase a la velocidad con la que se mueven los picos de la onda, independientemente de que su amplitud sea constante o no. En la expresión de la onda atenuada:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F}(\tau, t) = \vec{F} e^{j(\omega t - \beta \tau)}e^{-\alpha \tau}
+\]</div>
+<p>La parte oscilatoria es la exponencial compleja. Cuando no existía atenuación, la expresión del exponente era <span class="math notranslate nohighlight">\(j(\omega t - k \tau)\)</span>, que debemos recordar que venía de la solución de la ecuación de onda <span class="math notranslate nohighlight">\(f(t-\tau/c)\)</span>, pero puesto de una forma más conveniente y haciendo la definición <span class="math notranslate nohighlight">\(k = \frac{\omega}{c}\)</span>, de tal modo que <span class="math notranslate nohighlight">\(j(\omega t - k \tau) = j\omega(t - \tau/c)\)</span>. Por supuesto, la <span class="math notranslate nohighlight">\(c\)</span> e la constante que aparecía en la ecuación de ondas sin atenuación.</p>
+<p>Sin embargo, ahora la parte oscilatoria tien la expresión <span class="math notranslate nohighlight">\(j(\omega t - \beta \tau)\)</span>, y <span class="math notranslate nohighlight">\(\beta\)</span> no siempre es igual a <span class="math notranslate nohighlight">\(k\)</span>, y de hecho en general <span class="math notranslate nohighlight">\(jk = j\beta + \alpha\)</span>. Por lo tanto, el equivalente <span class="math notranslate nohighlight">\(j(\omega t - k \tau) = j\omega(t - \tau/v_f)\)</span> ya no contiene <span class="math notranslate nohighlight">\(c\)</span>, sino otra velocidad que llamamos velocidad de fase, y que no siempre coincide con la velocidad <span class="math notranslate nohighlight">\(c = \frac{1}{\mu\varepsilon}\)</span> de la ecuación de onda atenuada. La expresión de la velocidad de fase <span class="math notranslate nohighlight">\(v_f\)</span> es:</p>
+<div class="math notranslate nohighlight">
+\[
+v_f = \frac{\omega}{\beta}
+\]</div>
+<ul class="simple">
+<li><p><strong>Aislante</strong>: <span class="math notranslate nohighlight">\(k\)</span> es real, <span class="math notranslate nohighlight">\(k = \beta\)</span>, por lo que la velocidad de fase coincide con la velocidad <span class="math notranslate nohighlight">\(c\)</span> de la ecuación de onda.</p></li>
+<li><p><strong>Mal conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, pero su parte real <span class="math notranslate nohighlight">\(\beta\)</span> es muy proxima a <span class="math notranslate nohighlight">\(k\)</span>. La velocidad de fase es un poco menor que c en los malos conductores:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+v_f = \frac{\omega}{\beta} \approx \frac{\omega}{\sqrt{\mu\varepsilon}\omega \left( 1 + \frac{\sigma^2}{8 \omega^2 \varepsilon^2} \right)} \approx c \left( 1 - \frac{\sigma^2}{8 \omega^2 \varepsilon^2} \right)
+\]</div>
+<ul class="simple">
+<li><p><strong>Buen conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, y <span class="math notranslate nohighlight">\(\alpha \approx \beta \approx \sqrt{\mu \varepsilon} \omega \sqrt{\frac{\sigma}{2 \omega\varepsilon}}\)</span>. Por lo tanto, la velocidad de fase disminuye considerablemente cuando aumenta la conductividad. Esta velocidad de fase es dificil de ver en las representaciones gráficas, por que en este caso la onda está tan atenuada que es dificil de ver el pico desplazándose:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+v_f = \frac{\omega}{\beta} \approx \frac{\omega}{\sqrt{\mu \varepsilon} \omega \sqrt{\frac{\sigma}{2 \omega\varepsilon}}} = c \sqrt{\frac{2 \omega\varepsilon}{\sigma}}
+\]</div>
+</section>
+<section id="efecto-conjunto">
+<h2>Efecto conjunto<a class="headerlink" href="#efecto-conjunto" title="Link to this heading">#</a></h2>
+<p>Observamos de todo lo expuesto que varios cambios ocurren simultáneamente en una onda plana monocromática a medida que aumenta la conductividad del material. Esto quiere decir que todas las ondas electromagnéticas planas atenuadas:</p>
+<ul class="simple">
+<li><p>Tienen un desfase <span class="math notranslate nohighlight">\(\varphi_2 - \varphi_1 \neq 0\)</span> entre el campo eléctrico y el campo magnético.</p></li>
+<li><p>Tienen atenuación que aumenta con la conductividad <span class="math notranslate nohighlight">\(\sigma \uparrow \Rightarrow \alpha \uparrow\)</span>.</p></li>
+<li><p>Tienen una velocidad de fase menor que la velocidad de la onda en ausencia de conductividad, <span class="math notranslate nohighlight">\(v_f&lt;c\)</span></p></li>
+</ul>
+<p>Estos efectos se pueden ver en la animación que se encuentra en la siguiente URL:</p>
+<p><a href="https://github.com/GuillermoRegodon/jupyter-em2fisuco-teoria/blob/main/pages/onda.ipynb">onda.ipynb</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -630,6 +672,8 @@ k \vec{n} \times \vec{E} = \omega \vec{B}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-onda-k-complejo">Número de onda <span class="math notranslate nohighlight">\(k\)</span> complejo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidad-de-fase">Velocidad de fase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecto-conjunto">Efecto conjunto</a></li>
 </ul>
   </nav></div>
 
