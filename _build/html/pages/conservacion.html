@@ -481,9 +481,9 @@
 <p>Un desarrollo algo elaborado nos permite obtener finalmente la expresión integral del teorema de conservación del momento lineal.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\frac{d \vec{p}}{dt} &amp;= - \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \left( \left( \vec{E} (\nabla \cdot \vec{D} - \vec{D} \times (\nabla \times \vec{E} \right) + \left( \vec{H} (\nabla \cdot \vec{B} - \vec{B} \times (\nabla \times \vec{H} \right) \right) dV \\
-&amp;= - \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \nabla \cdot \overset\leftrightarrow{T} dV \\
-&amp;= - \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \oint_S \overset\leftrightarrow{T} \cdot \vec{dS}
+\frac{d \vec{p}}{dt} &amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \left( \left( \vec{E} (\nabla \cdot \vec{D}) - \vec{D} \times (\nabla \times \vec{E}) \right) + \left( \vec{H} (\nabla \cdot \vec{B}) - \vec{B} \times (\nabla \times \vec{H}) \right) \right) dV \\
+&amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \nabla \cdot \overset\leftrightarrow{T} dV \\
+&amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \oint_S \overset\leftrightarrow{T} \cdot \vec{dS}
 \end{split}\]</div>
 <p>Indentificamos los términos mencionados anteriormente:</p>
 <ul class="simple">
@@ -493,7 +493,7 @@
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\nabla \cdot \overset\leftrightarrow{T} &amp;= \left( \vec{E} (\nabla \cdot \vec{D} - \vec{D} \times (\nabla \times \vec{E} \right) + \left( \vec{H} (\nabla \cdot \vec{B} - \vec{B} \times (\nabla \times \vec{H} \right) \\
+\nabla \cdot \overset\leftrightarrow{T} &amp;= \left( \vec{E} (\nabla \cdot \vec{D}) - \vec{D} \times (\nabla \times \vec{E} ) \right) + \left( \vec{H} (\nabla \cdot \vec{B}) - \vec{B} \times (\nabla \times \vec{H}) \right) \\
 T_{ij} &amp;= E_iD_j + H_iB_j - \frac{1}{2}\left( E_kD_k + H_kB_k \right) \delta_{ij} \quad (\sum_k \rm {implicita}) \\
 \overset\leftrightarrow{T} &amp;= \vec{E}\vec{D} + \vec{H}\vec{B} - \frac{1}{2} \left( \vec{E} \cdot \vec{D} + \vec{H} \cdot \vec{B} \right) \overset\leftrightarrow{I} \quad (\overset\leftrightarrow{I} \rm{\space tensor \space diagonal})
 \end{split}\]</div>
@@ -512,7 +512,7 @@ T_{ij} &amp;= E_iD_j + H_iB_j - \frac{1}{2}\left( E_kD_k + H_kB_k \right) \delta
 <p>Similarmente, llegariamos a la expresión integral de la conservación del momento angular.</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{d \vec{L}}{dt} = - \int_V \left( \vec{r} \times \left( \varepsilon \mu ( \vec{E} \times \vec{H} ) \right) \right) dV + \oint_S \left( \vec{r} \times \overset\leftrightarrow{T} \right) \cdot \vec{dS}
+\frac{d \vec{L}}{dt} = - \frac{d}{dt} \int_V \left( \vec{r} \times \left( \varepsilon \mu ( \vec{E} \times \vec{H} ) \right) \right) dV + \oint_S \left( \vec{r} \times \overset\leftrightarrow{T} \right) \cdot \vec{dS}
 \]</div>
 <p>Igualemente, indentificamos los términos mencionados anteriormente:</p>
 <ul class="simple">
