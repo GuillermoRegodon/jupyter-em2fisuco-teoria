@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Ejemplos de conservación &#8212; Apuntes de Electromagnetismo II</title>
+    <title>Principios de relatividad especial &#8212; Apuntes de Electromagnetismo II</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/poynting_ejemplo';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/ppios_relatividad';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ondas electromagnéticas" href="ec_ondas.html" />
-    <link rel="prev" title="Teoremas de conservación" href="conservacion.html" />
+    <link rel="prev" title="Ejemplo de onda electromagnética atenuada" href="onda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -175,11 +174,11 @@
 <li class="toctree-l1"><a class="reference internal" href="repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="repaso_frontera.html">Condiciones de frontera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potenciales.html">Potenciales electromagnéticos</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejemplos de conservación</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="poynting_ejemplo.html">Ejemplos de conservación</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="ec_ondas.html">Ondas electromagnéticas</a></li>
@@ -189,8 +188,8 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ppios_relatividad.html">Principios de relatividad especial</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Principios de relatividad especial</a></li>
 </ul>
 
     </div>
@@ -250,7 +249,7 @@
       
       
       
-      <li><a href="../_sources/pages/poynting_ejemplo.ipynb" target="_blank"
+      <li><a href="../_sources/pages/ppios_relatividad.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -313,9 +312,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -326,20 +323,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejemplos de conservación</h1>
+    <h1>Principios de relatividad especial</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-cilindrica">Resistencia cilíndrica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductor-electrico-perfecto">Conductor Eléctrico Perfecto</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -349,107 +337,133 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejemplos-de-conservacion">
-<h1>Ejemplos de conservación<a class="headerlink" href="#ejemplos-de-conservacion" title="Link to this heading">#</a></h1>
-<p>Vamos a ver algunos ejemplos del teorema de Poynting y cómo comprobar la dirección del flujo de potencia electromagnética.</p>
-<section id="resistencia-cilindrica">
-<h2>Resistencia cilíndrica<a class="headerlink" href="#resistencia-cilindrica" title="Link to this heading">#</a></h2>
-<p>Supongamos que <strong>una resistencia cilíndrica</strong> de longitud <span class="math notranslate nohighlight">\(L\)</span> y tiene una diferencia de potencial <span class="math notranslate nohighlight">\(V\)</span> entre los extremos o tapas del cilíndro.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="principios-de-relatividad-especial">
+<h1>Principios de relatividad especial<a class="headerlink" href="#principios-de-relatividad-especial" title="Link to this heading">#</a></h1>
+<p>Los postulados de Einstein, en torno a los que se construye la relatividad especial son los siguientes:</p>
+<ol class="arabic simple">
+<li><p>Las leyes físicas son las mismas en todos los sistemas de referencia inerciales (o SRI).</p></li>
+<li><p>La velocidad de la luz <span class="math notranslate nohighlight">\(c\)</span> es la misma desde todos los sistemas de referencia inerciales (o SRI).</p></li>
+</ol>
+<p>Esto tiene como consecuencia varias cosas importantes:</p>
+<ol class="arabic simple">
+<li><p><strong>La dilatación temporal</strong>: Si la diferencia de tiempo que pasa entre dos eventos es <span class="math notranslate nohighlight">\(\Delta t'\)</span> desde un SRI en el que la posición donde ocurren los eventos es la misma, entonces la diferencia de tiempo <span class="math notranslate nohighlight">\(\Delta t\)</span> que pasa entre los dos eventos visto desde un SRI en el que los eventos pasa en posiciones distintas es mayor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\Delta t = \gamma \Delta t'
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>La contracción espacial</strong>: Si la longitud de un objeto que se mide desde un SRI en el que el objeto está en reposo es <span class="math notranslate nohighlight">\(\Delta x'\)</span>, la longitud del objeto <span class="math notranslate nohighlight">\(\Delta x\)</span> visto desde un SRI en el que el objeto está en movimiento es menor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\Delta x = \frac{\Delta x'}{\gamma}
+\]</div>
+<p>Con <span class="math notranslate nohighlight">\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)</span>, con <span class="math notranslate nohighlight">\(\beta = \frac{v}{c}\)</span> el módulo de la velocidad relativa entre los dos SRI en unidades de <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>El punto de vista de una partícula</strong></p>
+<p>Los efectos relativistas de contracción espacial y dilatación temporal tienen una aplicación práctica importante cuando el sistema de referencia SRI’ en movimiento está pegado a una partícula que se mueve a velocidad relativista respesto a nuestro sistema de referencia SRI en el laboratorio. <strong>Si el tiempo de vida medio de una partícula es <span class="math notranslate nohighlight">\(t_{1/2}\)</span>, y la partícula se desplaza a velocidad <span class="math notranslate nohighlight">\(v\)</span> medido en SRI, desde SRI el tiempo de vida medio es <span class="math notranslate nohighlight">\(\gamma t_{1/2}\)</span></strong>.</p>
+<p>El efecto de contracción espacial dice que la partícula vería el laboratorio mas corto (<em>en la dirección de su desplazamiento</em>) en el mismo factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+</div>
+<p>Estas transformaciones de distancias y tiempos se pueden poner de forma simétrica como una transformación de coordenadas, conocida como <strong>Transformación de Lorentz</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+ct' &amp;= \gamma(ct - \beta x) \\
+x' &amp;= \gamma(x - \beta ct)
+\end{split}\]</div>
+<p>La transformación de Lorentz era conocidad antes de los postulados de la relatividad y el trabajo de Einstein: La transformación de Lorentz se dedujo matemáticamente como la transformación necesaria para que la ley de inducción de Faraday fuera independiente del sistema de referencia. El hecho de que se deduzca a partir de los postulados de Einstein da justificación y validez a dichos postulados.</p>
+<p>El último efecto relativista, que es de hecho el más fundamental, es <strong>la rotura de la simultaneidad</strong>. Para verlo, vamos a dibujar el Diagrama de Minkowski, que es simplemente un eje de coordenadas cartesianos en el que la ordenada es el tiempo (<em>multiplicado por c para que tenga unidades de distancia</em>). Es este diagrama, la trayectoria de un haz de luz a velocidad <span class="math notranslate nohighlight">\(c\)</span> es una recta inclinada <span class="math notranslate nohighlight">\(45º\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+ct = x
+\]</div>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/poynting_ejemplo_r.png"><img alt="poynting_ejemplo_r.png" src="../_images/poynting_ejemplo_r.png" style="width: 160px;" /></a>
+<a class="reference internal image-reference" href="../_images/minkowski_1.png"><img alt="minkowski_1.png" src="../_images/minkowski_1.png" style="width: 325px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Diagrama de Minkowski y haz de luz.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Este es un modelo electromagnético de la resitencia <span class="math notranslate nohighlight">\(R\)</span> en el siguiente circuito.</p>
+<p>Los ejes <span class="math notranslate nohighlight">\(x',ct'\)</span> del SRI’ vistos desde el SRI están inclinados. Para obtener la expresión del eje <span class="math notranslate nohighlight">\(ct'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span>, impongo que <span class="math notranslate nohighlight">\(x'=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+x' = 0 \Rightarrow ct = \frac{x}{\beta} 
+\]</div>
+<p>Igualmente, obtenemos la expresión del eje <span class="math notranslate nohighlight">\(x'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span> imponiendo que <span class="math notranslate nohighlight">\(ct'=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+ct' = 0 \Rightarrow ct = \beta x
+\]</div>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/poynting_ejemplo_circuito.png"><img alt="poynting_ejemplo_circuito.png" src="../_images/poynting_ejemplo_circuito.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/minkowski_2.png"><img alt="minkowski_2.png" src="../_images/minkowski_2.png" style="width: 325px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Diagrama de Minkowski y ejes de SRI’.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Con esta diferencia de potencial, se creará <strong>un campo eléctrico entre los extremos de la resistencia</strong>.</p>
-<div class="math notranslate nohighlight">
-\[
-E = \frac{V}{L}
-\]</div>
-<p>Este campo generará <strong>la densidad de corriente <span class="math notranslate nohighlight">\(J\)</span></strong>, que podemos suponer <strong>uniforme</strong>. El campo magnético generado por una densidad de corriente uniforme es un problema que se puede resolver por Ampere. Eligiendo como circuito de Ampere una circunferencia perpendicular al eje y centrada en el mismo, en el interior del cilindro tendremos el siguiente vector <span class="math notranslate nohighlight">\(H\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-H2\pi s = J \pi s^2
-\]</div>
-<p>Donde <span class="math notranslate nohighlight">\(s\)</span> es la coordenada radial cilíndrica, o visto de otro modo, la distancia desde el punto donde se calcula el vecotr <span class="math notranslate nohighlight">\(H\)</span> y el eje.</p>
-<p>Veamos las direcciones para poder estudiar la dirección del vector de Poynting <span class="math notranslate nohighlight">\(\vec{G}\)</span>. Usando las siguientes coordenadas, colocando la dirección <span class="math notranslate nohighlight">\(z\)</span> en la dirección de la densidad de corriente:</p>
+<p>Ahora es fácil comprobar que <strong>dos eventos que ocurren simultáneamente desde SRI, no ocurren simultáneamente desde SRI’</strong>. Al revés también ocurre, que dos eventos que ocurren simultáneamente desde SRI’, no ocurren simultáneamente desde SRI.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/hilo.png"><img alt="hilo.png" src="../_images/hilo.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/minkowski_3.png"><img alt="minkowski_3.png" src="../_images/minkowski_3.png" style="width: 625px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Diagrama de Minkowski y simultaneidad.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>El campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> tiene, por tanto, dirección <span class="math notranslate nohighlight">\(z\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{E} = \frac{V}{L} \vec{u_z}
-\]</div>
-<p>Por la regla de la mano derecha, el vector <span class="math notranslate nohighlight">\(H\)</span> tiene el sentido de la coordenada <span class="math notranslate nohighlight">\(\phi\)</span> de cilíndricas.</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{H} = \frac{Js}{2} \vec{u_\phi}
-\]</div>
-<p>Por lo que <strong>el vector de Poynting <span class="math notranslate nohighlight">\(\vec{G} = \vec{E} \times \vec{H}\)</span> resulta tener dirección hacia dentro de la resistencia</strong>.</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{G} = \vec{E} \times \vec{H} = \frac{VJs}{2 L}\vec{u_z} \times \vec{u_\phi} = - \frac{VJs}{2 L} \vec{u_s}
-\]</div>
-<p>Podemos observar que <strong>la potencia electromagnética entra en la resistencia</strong>. Sin embargo, los campos son constantes en estado estacionario, por lo que <strong>no hay acumulación de energía electromagnética</strong>. Tampoco la corriente está aumentando, por lo que <strong>las cargas no se están acelerando</strong>. <em><strong>La potencia que entra se está convirtiendo en calor</strong></em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Por las tapas entran y salen los electrones, ¡la potencia electromagnética entra desde la cara lateral, no por las tapas!</p>
+<p>Con la rotura de la simultaneidad, podemos explicar muchas aparentes paradojas de la relatividad:</p>
+<ul class="simple">
+<li><p>Cuando un objeto <span class="math notranslate nohighlight">\(A\)</span> se mueve con velocidad relativista <span class="math notranslate nohighlight">\(v\)</span> con respecto a otro <span class="math notranslate nohighlight">\(B\)</span>, el segundo, <span class="math notranslate nohighlight">\(B\)</span>, se mueve con velocidad relativista <span class="math notranslate nohighlight">\(-v\)</span> con respecto al primero <span class="math notranslate nohighlight">\(A\)</span>. ¿Cómo es posible que <span class="math notranslate nohighlight">\(A\)</span> vea más corto a <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(B\)</span> vea más corto a <span class="math notranslate nohighlight">\(A\)</span>? <strong>Por que los instantes temporales en los que <span class="math notranslate nohighlight">\(A\)</span> mira la parte de delante y de atrás de <span class="math notranslate nohighlight">\(B\)</span> no coinciden con los instantes temporales en los que <span class="math notranslate nohighlight">\(B\)</span> mira sus propios extremos, y viceversa</strong>. Si pusieramos relojes en los extremos de los objetos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>, La sincronía entre los relojes depende de quién los mira. Claro, entonces <span class="math notranslate nohighlight">\(B\)</span> podría pensar <em>“<span class="math notranslate nohighlight">\(A\)</span> piensa que soy más corto de lo que realmente soy porque mide mal la distancia entre mis extremos”</em>. Pero por el primer postulado de Einstein: <strong>Los dos puntos de vista son válidos y cumplen con todas las leyes de la física</strong>.</p></li>
+</ul>
+</div>
+<p>La transoformación de Lorentz tiene un último resultado importante: En una transformación de Lorentz, se conserva la siguiente expresión, llamada intervalo:</p>
+<div class="math notranslate nohighlight">
+\[
+c^2t^2 - x^2 = c^2t'^2 - x'^2
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>El punto de vista de una partícula</strong></p>
+<p>El intervalo y la conservación del intervalo en una transformación relativista es muy importante porque el momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> es un vector relativista de componentes <span class="math notranslate nohighlight">\(E/c = \gamma m c\)</span> en la dirección del eje <span class="math notranslate nohighlight">\(ct\)</span>, y <span class="math notranslate nohighlight">\(p = \gamma m v\)</span> en la dirección <span class="math notranslate nohighlight">\(x\)</span> (<em>ver siguiente nota</em>).</p>
+<p>Por lo tanto, en una transformación de Lorentz, lo que se conserva es el intervalo del momento relativista:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{E^2}{c^2} - p^2 = \frac{E'^2}{c^2} - p'^2
+\]</div>
+<p>En particular, desde el SRI’ pegado a la partícula, está en reposo (<em><span class="math notranslate nohighlight">\(p'=0\)</span>, y su energía es la energía de reposo <span class="math notranslate nohighlight">\(E' = E_0 = mc^2\)</span></em>), por lo que:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{E_0^2}{c^2} = m c
+\]</div>
+<p>Si realizamos la transformación relativista para ver la partícula desde nuestro SRI en el laboratorio, obtenemos la siguiente expresión:</p>
+<div class="math notranslate nohighlight">
+\[
+E^2 - p^2 c^2 = m^2 c^4
+\]</div>
+<p><strong>Esta es una de las expresiones más utilizadas en física de partículas relativistas, por que relaciona correctamente magnitudes que podemos medir desde nuestro SRI del laboratorio</strong>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Si el material tuviera conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> infinita, los electrones se acelerarían hasta que alcanzaran el final de la resistencia. <strong>En un material con conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> finita, los electrones se aceleran hasta que chocan con la red cristalina</strong> y ceden su energía cinética al material en forma de calor.</p>
-<p>Dicho de otra manera, para un sistema con pérdidas en forma de calor, <strong>el término de energía cinética <span class="math notranslate nohighlight">\(\vec{J} \cdot \vec{E}\)</span> se convierte en un término de perdidas por calor</strong>, o mejor dicho, podemos igualar la energía cinética ganada por los electrones y las perdidas de energía de los electrones por colisiones con las red cristalina, es decir, por calor.</p>
-</div>
-</section>
-<section id="conductor-electrico-perfecto">
-<h2>Conductor Eléctrico Perfecto<a class="headerlink" href="#conductor-electrico-perfecto" title="Link to this heading">#</a></h2>
-<p>Un <strong>Conductor Eléctrico Perfecto (CEP) es un material en el que las cargas tienen movilidad infinita</strong>. Si hubiera un cambio que obligara un campo eléctrico en el interior, las cargas se desplazarían de forma instantánea para compensar dicho cambio. En la escala de tiempos en los que la condición de CEP es válida, el campo eléctrico en el interior debe ser <span class="math notranslate nohighlight">\(\vec{E_{int}} = 0\)</span>. Como vemos, en el interior del CEP no puede haber carga neta, ya que eso generaría campos que se compensarían inmediatamente, por lo que igualmente la densidad de carga neta en el interior <span class="math notranslate nohighlight">\(\rho_{int} = 0\)</span>. Una vez se ha alcanzado el equilibrio, las cargas estarán estáticas, <span class="math notranslate nohighlight">\(\vec{J_{int}} = 0\)</span>, y por lo tanto no puede haber campo magnético en el interior, es decir <span class="math notranslate nohighlight">\(\vec{H_{int}} = 0\)</span>.</p>
+<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> asociado a una partícula se deduce de la definición de momento en función de la velocidad, y la definición de la velocidad en función del tiempo propio de la partícula, que es el tiempo desde su propio sistema de referencia:</p>
+<div class="math notranslate nohighlight">
+\[
+d\tau = dt' = \frac{dt}{\gamma}
+\]</div>
+<p>La velocidad relativista <span class="math notranslate nohighlight">\(\vec{U}\)</span> es, por tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{U} = \frac{(cdt, dx)}{d\tau} = \left( c\frac{dt}{d\tau}, \frac{dx}{d\tau} \right) = \left( c\frac{dt}{d\tau}, \frac{dx}{dt}\frac{dt}{d\tau} \right) = ( \gamma c, \gamma v)
+\]</div>
+<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> se obtiene multiplicando por la masa de la partícula <span class="math notranslate nohighlight">\(\vec{P} = ( \gamma m c, \gamma m v)\)</span>. El uso de la energía <span class="math notranslate nohighlight">\(E/c\)</span> en la coordenada temporal <span class="math notranslate nohighlight">\(\gamma m c\)</span> es una idea que no se puede justificar a priori, pero que da uno de los resultados más conocidos de Einstein:</p>
+<div class="math notranslate nohighlight">
+\[
+\gamma m c = \frac{E}{c} \Rightarrow E_0 = E_{(v=0)} = mc^2
+\]</div>
+<p>Sin embargo, se justifica a posteriori, dado que si llamamos energía cinética a la energía adicional que posee la partícula debido a su movimiento, entonces obtenemos una expresión que se puede aproximar a la energía cinética clásica cuando las velocidades son pequeñas. De esta manera, la definición de la coordenada temporal <span class="math notranslate nohighlight">\(E/c\)</span> del momento relativista está justificada.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\vec{E_{int}} &amp;= 0 \\
-\vec{H_{int}} &amp;= 0 \\
-\rho_{int} &amp;= 0 \\
-\vec{J_{int}} &amp;= 0
+E_k &amp;= E - E_0 = \gamma mc^2 - mc^2 \\
+E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
 \end{split}\]</div>
-<p>Vemos que <strong>la carga solo se puede acumular en la superficie, y la corriente solo puede circular por la superficie del CEP</strong>. Usando estas características de los CEP y las condiciones de contorno, vemos que:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{D_{n,ext}} - \vec{D_{n,int}} = \sigma \vec{n} \quad &amp;\rightarrow \quad \vec{E_{n,ext}} = \frac{\sigma}{\varepsilon} \vec{n} \neq 0 \\
-\vec{E_{t,ext}} - \vec{E_{t,int}} \quad &amp;\rightarrow \quad \vec{E_{t,ext}} = 0 \\
-\vec{B_{n,ext}} - \vec{B_{n,int}} = 0 \quad &amp;\rightarrow \quad \vec{H_{n,ext}} = 0 \\
-\vec{H_{t,ext}} - \vec{H_{t,int}} = \vec{n} \times \vec{j} \quad &amp;\rightarrow \quad \vec{H_{t,ext}} = \vec{n} \times \vec{j} \neq 0
-\end{split}\]</div>
-<p>Esto quiere decir que en la superficie de un CEP, <strong>el vector de Poynting <span class="math notranslate nohighlight">\(\vec{G_{ext}}\)</span> tiene que ser paralelo a la superficie</strong> (perpendicular a <span class="math notranslate nohighlight">\(\vec{n}\)</span>).</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{G_{ext}} = \vec{E_{ext}} \times \vec{H_{ext}} = \vec{E_{n,ext}} \times \vec{H_{t,ext}}
-\]</div>
-<p>Es decir:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{G_{ext}} \perp \vec{n}
-\]</div>
-<p>Mientras que en el interior:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{G_{int}} = \vec{E_{int}} \times \vec{H_{int}} = 0
-\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>El Conductor Electrico Perfecto se adapta con una densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> y una densidad superficial de corriente <span class="math notranslate nohighlight">\(\vec{j}\)</span> de tal forma que <strong>la potencia electromagnética no puede entrar en el CEP</strong>. Por supuesto, en el interior no se disipa calor. ¡Toda la corriente pasa por la superficie!</p>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -483,22 +497,13 @@ H2\pi s = J \pi s^2
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="conservacion.html"
+       href="onda.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Teoremas de conservación</p>
+        <p class="prev-next-title">Ejemplo de onda electromagnética atenuada</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="ec_ondas.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ondas electromagnéticas</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -506,23 +511,6 @@ H2\pi s = J \pi s^2
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-cilindrica">Resistencia cilíndrica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductor-electrico-perfecto">Conductor Eléctrico Perfecto</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
