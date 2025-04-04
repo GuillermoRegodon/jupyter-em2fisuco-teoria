@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ejemplos de relatividad especial &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/ej_relatividad';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Principios de relatividad especial" href="ppios_relatividad.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ppios_relatividad.html">Principios de relatividad especial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/ej_relatividad.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ejemplos de relatividad especial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viajar-hasta-el-fin-del-universo">Viajar hasta el fin del universo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-del-granjero-y-su-hija">Paradoja del granjero y su hija</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-de-los-gemelos">Paradoja de los gemelos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ejemplos-de-relatividad-especial">
+<h1>Ejemplos de relatividad especial<a class="headerlink" href="#ejemplos-de-relatividad-especial" title="Link to this heading">#</a></h1>
+<section id="viajar-hasta-el-fin-del-universo">
+<h2>Viajar hasta el fin del universo<a class="headerlink" href="#viajar-hasta-el-fin-del-universo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Supongamos que una viajera quiere llegar a una galaxia que esta a 100 años-luz. Emprende un viaje hasta allí en una nave espacial. Desde el Sistema de Referencia Inercial (SRI) de la tierra de donde parte, pasarán más de 100 años hasta que llegue, debido a que su velocidad <span class="math notranslate nohighlight">\(v\)</span> debe ser inferior a la velocidad de la luz <span class="math notranslate nohighlight">\(c\)</span>. Sin embargo, el trascurso del tiempo en la nave espacial es más lento debido al efecto relativista de dilatación temporal, por lo que cuando el tiempo de la viajera haya trascurrido un año, en el SRI de la tierra habrán transcurrido varios años, dependiendo de la velocidad <span class="math notranslate nohighlight">\(v\)</span> y del valor de <span class="math notranslate nohighlight">\(\gamma\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\Delta t = \gamma \Delta t'
+\]</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/relat_11.png"><img alt="relat_11.png" src="../_images/relat_11.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">SRI de la tierra y la galaxia.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Es decir, <strong>para cuando la viajera haya envejecido un año, en la tierra podrían haber pasado muchos años</strong>. Si <span class="math notranslate nohighlight">\(\gamma = 100\)</span>, la viajera habrá recorrido 100 años-luz, percibiendo que ha pasado solo algo más de un año.</p>
+<p>Desde el Sistema de Referencia Inercial de la nave (<em>después de que haya alcanzado su velocidad constante de tal modo que <span class="math notranslate nohighlight">\(\gamma = 100\)</span></em>) es la distancia entre la tierra y la galaxia la que parece haberse recortado. Desde su SRI, son la tierra y la galaxia las que se desplazan. <strong>Desde la tierra parece que la galaxia está a 100 años-luz, mientras que desde la nave parece estar a tan solo un año-luz, debido al efecto relativista de la contracción espacial</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta x = \frac{\Delta x'}{\gamma}
+\]</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/relat_12.png"><img alt="relat_12.png" src="../_images/relat_12.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">SRI de la nave.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Por lo tanto, si vamos suficientemente rápido, podríamos llegar a cualquier punto del universo antes de morir de viejos, aunque estuvieran a millones de años-luz de distancia. Por supuesto, el tiempo en la tierra seguiría avanzando. Este efecto se ha comprobado experimentalmente, verificando que el tiempo de semidesintegración de las partículas es mayor si se desplazan más rápido.</p>
+</section>
+<section id="paradoja-del-granjero-y-su-hija">
+<h2>Paradoja del granjero y su hija<a class="headerlink" href="#paradoja-del-granjero-y-su-hija" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Un granjero tiene una escalera que, después de entrar en el granero en el que quiere guardarla, sobresale un poco y no permite cerrar la puerta. Con el objetivo de poder cerrar la puerta, le pide a su hija que se aproxime al granero a una velocidad relativista <span class="math notranslate nohighlight">\(v\)</span>, para que desde el Sistema de Referencia Inercial (SRI) del granero en el que él se encuentra, la escalera se acorte por el efecto relativista de contracción espacial, y así él pueda cerrar la puerta.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\Delta x = \frac{\Delta x'}{\gamma}
+\]</div>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/relat_21.png"><img alt="relat_21.png" src="../_images/relat_21.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">SRI del granero.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Sin embargo, la hija del granjero le responde que, desde su propio Sistema de Referencia Inercial después de alcanzar la velocidad relativista <span class="math notranslate nohighlight">\(v\)</span> necesaria, es el granero el que se aproxima a ella, por lo que el granero es el que se acorta por efecto relativista de contracción espacial. De esta forma, la escalera no puede entrar en el granero.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/relat_22.png"><img alt="relat_22.png" src="../_images/relat_22.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">SRI de la escalera.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Ambos tienen razón</strong>. La aparente paradoja ocurre por la rotura de la simultaneidad. Podemos distinguir dos eventos: A) el contacto del extremo derecho de la escalera con el fondo del granero, y B) el paso del principio de la escalera por debajo del umbral de la puerta del granero. Si la escalera entra en el granero a una velocidad no relativista, ambos suceso ocurren prácticamente a la vez. Si pusieramos dos relojes sincronizados tanto al principio como al final de la escalera, y otro par en la pared y en la puerta del granero, veriamos la rotura de la sincronía:</p>
+<ol class="arabic simple">
+<li><p>Si la escalera se aproxima a velocidad relativista, el granjero desde el SRI del granero ve que el evento B ocurre antes que el A. El granjero verá los relojes del granero sincronizados, pero verá los relojes de la escalera desincronizados.</p></li>
+<li><p>Para la hija, desde el SRI de la escalera, el evento A ocurre antes que el B. Los relojes de la escalera estarán sincronizados pero los relojes del granero estarán desincronizados.</p></li>
+</ol>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/relat_23.png"><img alt="relat_23.png" src="../_images/relat_23.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">SRIs y simultaneidad.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>El resultado final debemos dejarlo a la imaginación, ya que la colisión ocurrirá seguro, y sus consecuencias dependerán de la resistencia a la rotura y de la flexibilidad de tanto la pared del granero como de la escalera.</p>
+</section>
+<section id="paradoja-de-los-gemelos">
+<h2>Paradoja de los gemelos<a class="headerlink" href="#paradoja-de-los-gemelos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Un viajero espacial tiene una hermana melliza cuando emprende un viaje a velocidad relativista. Después de haber recorrido una cierta distancia vuelve a la tierra y se reencuentra con su hermana. El viajero ha envejecido menos que su hermana. Mientras que para él ha pasado un año, en la tierra han pasado dos. Esto se explica por el efecto de dilatación temporal. El tiempo que desde el Sistema de Referencia de la nave es un año, desde el Sistema de Referencia Inercial (SRI) de la tierra son 2 años.</p></li>
+</ul>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/relat_31.png"><img alt="relat_31.png" src="../_images/relat_31.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">SRI del granero.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Cabe preguntarse: Desde el Sistema de Referencia de la nave es la tierra la que se aleja y se acerca. ¿Por qué no es el tiempo de la tierra el que pasa más lento? Aquí ocurre una sutileza, y es que la nave ha tenido que dar la vuelta, por lo que en algún punto de su trayectoria, ha tenido que sufrir una aceleración y por lo tanto convertirse en un Sistema de Referencia No Inercial (SRNI).</p>
+<ol class="arabic simple">
+<li><p>Durante la primera parte del trayecto, mientras se aleja a velocidad constante, desde el SRI de la tierra, el tiempo en la nave avanza más lento, mientras que desde el SRI de la nave, el tiempo de la tierra avanza más lento.</p></li>
+<li><p>En la maniobra acelerada para dar la vuelta, el tiempo en la nave transcurre de una manera que no se puede explicar por la teoría de la relatividad especial, que sólo trata con SRI. <strong>El viajero en la nave sabe que está en un SRNI mientras realiza la maniobra, porque percibe fuerzas no inerciales</strong>, mientras que la hermana en la tierra sabe que está en un SRI porque no es capaz de medir fuerzas no inerciales.</p></li>
+<li><p>Durante el retorno a la tierra, vuelve a ocurrir lo mismo que el la primera parte, desde el SRI de la tierra, el tiempo en la nave avanza más lento, mientras que desde el SRI de la nave, el tiempo de la tierra avanza más lento.</p></li>
+</ol>
+<p>Es la aceleración la que rompe la simetría de las trayectorias y es el hermano viajero el que tiene un tiempo que ha avanzado más lento que el de su hermana en la tierra. Este efecto se ha comprobado experimentalmente, poniendo un reloj perfectamente sincronizado con otro y colocando uno de los dos relojes en una nave que va a dar vueltas alrededor de la tierra (<em>movimiento acelerado</em>). Se ha comprobado que el reloj acelerado tuvo un retraso medible con respecto al reloj de la tierra.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ppios_relatividad.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Principios de relatividad especial</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viajar-hasta-el-fin-del-universo">Viajar hasta el fin del universo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-del-granjero-y-su-hija">Paradoja del granjero y su hija</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-de-los-gemelos">Paradoja de los gemelos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

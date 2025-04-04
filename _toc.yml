@@ -23,6 +23,8 @@ parts:
 - caption: Bloque II - Formulación relativista del electromagnetismo
   chapters:
   - file: pages/ppios_relatividad.ipynb
+    sections:
+    - file: pages/ej_relatividad.ipynb
 
 # - caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
 #   chapters:
