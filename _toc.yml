@@ -25,6 +25,7 @@ parts:
   - file: pages/ppios_relatividad.ipynb
     sections:
     - file: pages/ej_relatividad.ipynb
+  - file: pages/tensores.ipynb
 
 # - caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
 #   chapters:
