@@ -194,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="tensores.html">Tensores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -378,7 +382,7 @@
 \[
 \int_S \vec{E} \cdot \vec{dS} = \frac{Q_{enc}}{\varepsilon}
 \]</div>
-<p>En el caso del vacio, simplemente usamos la permitividad eléctrica del vacio:</p>
+<p>En el caso del vacío, simplemente usamos la permitividad eléctrica del vacío:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_S \vec{E} \cdot \vec{dS} = \frac{Q_{enc}}{\varepsilon_0}
@@ -398,10 +402,10 @@ Q_{enc} = \int_V\rho dV
 <p>En problemas de electrostática, solo podemos tener 3 simetrías que cumplen estas condiciones:</p>
 <section id="simetria-esferica">
 <h3>Simetría esférica<a class="headerlink" href="#simetria-esferica" title="Link to this heading">#</a></h3>
-<p>Calculamos, por ejemplo, el campo eléctrico generado por una esfera hueca de carga con densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> en el vacio. La simetría esférica implica que las superficies que debemos elegir son esferas.</p>
+<p>Calculamos, por ejemplo, el campo eléctrico generado por una esfera hueca de carga con densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> en el vacío. La simetría esférica implica que las superficies que debemos elegir son esferas.</p>
 <ul class="simple">
 <li><p>El campo eléctrico es radial <span class="math notranslate nohighlight">\(\vec{E} = E_r\vec{u_r}\)</span>.</p></li>
-<li><p>El diferencial de superficie tambien es radial <span class="math notranslate nohighlight">\(\vec{dS} = dS \vec{u_r}\)</span>.</p></li>
+<li><p>El diferencial de superficie también es radial <span class="math notranslate nohighlight">\(\vec{dS} = dS \vec{u_r}\)</span>.</p></li>
 <li><p>La superficie total de la superficie de Gauss es <span class="math notranslate nohighlight">\(4 \pi r^2\)</span>.</p></li>
 </ul>
 <p>La esfera <span class="math notranslate nohighlight">\(S\)</span> puede tener un radio menor o mayor que el radio <span class="math notranslate nohighlight">\(a\)</span> de la esfera de carga. Para radio <span class="math notranslate nohighlight">\(r&lt;a\)</span>:</p>
@@ -431,7 +435,7 @@ E_r 4 \pi r^2 = \frac{\sigma 4 \pi a^2}{\varepsilon_0}
 </section>
 <section id="simetria-cilindrica">
 <h3>Simetría cilíndrica<a class="headerlink" href="#simetria-cilindrica" title="Link to this heading">#</a></h3>
-<p>Calculamos, por ejemplo, el campo eléctrico generado por un cilindro de densidad de carga <span class="math notranslate nohighlight">\(\rho\)</span> y permitividad eléctrica <span class="math notranslate nohighlight">\(\varepsilon\)</span> en el interior (el cilindro es no hueco) y vacio en el exterior. Los superficies que cumplen la simetría son cilindros de altura <span class="math notranslate nohighlight">\(H\)</span>:</p>
+<p>Calculamos, por ejemplo, el campo eléctrico generado por un cilindro de densidad de carga <span class="math notranslate nohighlight">\(\rho\)</span> y permitividad eléctrica <span class="math notranslate nohighlight">\(\varepsilon\)</span> en el interior (el cilindro es no hueco) y vacío en el exterior. Los superficies que cumplen la simetría son cilindros de altura <span class="math notranslate nohighlight">\(H\)</span>:</p>
 <ul class="simple">
 <li><p>El vector desplazamiento debe ser radial <span class="math notranslate nohighlight">\(\vec{D} = D_s\vec{u_s}\)</span>.</p></li>
 <li><p>El diferencial de superficie lateral es <span class="math notranslate nohighlight">\(dS_l = s \space ds \space dz \vec{u_s}\)</span>.</p></li>
@@ -472,7 +476,7 @@ D_s H 2 \pi s = \rho H \pi a^2
 </section>
 <section id="simetria-plana">
 <h3>Simetría plana<a class="headerlink" href="#simetria-plana" title="Link to this heading">#</a></h3>
-<p>En estos casos, tenemos el problema de que el sistema se extiende hasta el infinito, por lo que no se puede usar como referencia que el campo en el infinito es cero. <em>Si se puede decir: en la dirección perpendicular a los planos, si la carga neta de todo el sistema es nula, en el infinito el campo vale 0</em>, como pasa en un condensador plano-paralelo. Vamos a resolver otro ejemplo distinto: La mitad del espacio <span class="math notranslate nohighlight">\(z&lt;0\)</span> es de conductor elétrico perfecto (CEP) sin carga, y la otra mitad <span class="math notranslate nohighlight">\(z&gt;0\)</span> tiene una densidad de carga <span class="math notranslate nohighlight">\(\rho = \rho_0 e^{-z/l}\)</span> en el vacio que decrece exponencialmente, con <span class="math notranslate nohighlight">\(\rho_0\)</span> y <span class="math notranslate nohighlight">\(l\)</span> constantes.</p>
+<p>En estos casos, tenemos el problema de que el sistema se extiende hasta el infinito, por lo que no se puede usar como referencia que el campo en el infinito es cero. <em>Si se puede decir: en la dirección perpendicular a los planos, si la carga neta de todo el sistema es nula, en el infinito el campo vale 0</em>, como pasa en un condensador plano-paralelo. Vamos a resolver otro ejemplo distinto: La mitad del espacio <span class="math notranslate nohighlight">\(z&lt;0\)</span> es de conductor eléctrico perfecto (CEP) sin carga, y la otra mitad <span class="math notranslate nohighlight">\(z&gt;0\)</span> tiene una densidad de carga <span class="math notranslate nohighlight">\(\rho = \rho_0 e^{-z/l}\)</span> en el vacío que decrece exponencialmente, con <span class="math notranslate nohighlight">\(\rho_0\)</span> y <span class="math notranslate nohighlight">\(l\)</span> constantes.</p>
 <ul class="simple">
 <li><p>El campo eléctrico es perpendicular a los planos de simetría <span class="math notranslate nohighlight">\(\vec{E} = E_z \vec{u_z}\)</span>.</p></li>
 <li><p>Las superficies con simetría deben ser perpendiculares a los planos de la dirección simétrica. La forma da igual, mientras su superficie total <span class="math notranslate nohighlight">\(S_p\)</span> sea constante. El diferencial de superficie es, por tanto, <span class="math notranslate nohighlight">\(dS \vec{u_z}\)</span>.</p></li>
@@ -555,7 +559,7 @@ E_z &amp;= -\frac{\sigma}{2 \varepsilon_0} \quad &amp;z&lt;0
 </section>
 <section id="magnetostatica-ley-de-ampere">
 <h2>Magnetostática: Ley de Ampere<a class="headerlink" href="#magnetostatica-ley-de-ampere" title="Link to this heading">#</a></h2>
-<p>En magentostática, la ecuación que nos permite aprovechar la simetría es la de la ley de Ampere en forma integral:</p>
+<p>En magnetostática, la ecuación que nos permite aprovechar la simetría es la de la ley de Ampere en forma integral:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_C \vec{H} \cdot \vec{dl} = I_{enc}
@@ -565,7 +569,7 @@ E_z &amp;= -\frac{\sigma}{2 \varepsilon_0} \quad &amp;z&lt;0
 \[
 \int_C \vec{B} \cdot \vec{dl} = \mu I_{enc}
 \]</div>
-<p>En el caso del vacio, simplemente usamos la permeabilidad magnética del vacio:</p>
+<p>En el caso del vacío, simplemente usamos la permeabilidad magnética del vacío:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_C \vec{B} \cdot \vec{dl} = \mu_0 I_{enc}
@@ -595,7 +599,7 @@ I_{enc} = \int_S \vec{J} \cdot \vec{dS}
 <li><p>Corriente a lo largo del eje.</p></li>
 <li><p>Corriente alrededor del eje.</p></li>
 </ul>
-<p>El primer caso sería un hilo de corriente. Por ejemplo, supongamos que tenemos el hilo cilindrico de radio <span class="math notranslate nohighlight">\(a\)</span> con densidad de corriente <span class="math notranslate nohighlight">\(\vec{J}\)</span> uniforme a lo largo del hilo.</p>
+<p>El primer caso sería un hilo de corriente. Por ejemplo, supongamos que tenemos el hilo cilíndrico de radio <span class="math notranslate nohighlight">\(a\)</span> con densidad de corriente <span class="math notranslate nohighlight">\(\vec{J}\)</span> uniforme a lo largo del hilo.</p>
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/hilo.png"><img alt="hilo.png" src="../_images/hilo.png" style="width: 250px;" /></a>
 <figcaption>
@@ -622,7 +626,7 @@ B 2 \pi r &amp;= \mu_0 J \pi a^2 \quad &amp; r&gt;a
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Solenoide.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>¡El ciruito de Ampere anterior no sirve! La regla de la mano derecha nos dice que el campo magnético dentro del hilo debe ir en la dirección <span class="math notranslate nohighlight">\(\vec{u_z}\)</span>, por lo que el circuito de Ampere debe tener un lado en esa dirección. Para que no se extienda infinitamente, lo cerramos con lados perpendiculares, y finalmente otro lado vertical, teniendo un marco.</p>
+<p>¡El circuito de Ampere anterior no sirve! La regla de la mano derecha nos dice que el campo magnético dentro del hilo debe ir en la dirección <span class="math notranslate nohighlight">\(\vec{u_z}\)</span>, por lo que el circuito de Ampere debe tener un lado en esa dirección. Para que no se extienda infinitamente, lo cerramos con lados perpendiculares, y finalmente otro lado vertical, teniendo un marco.</p>
 <figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/solenoide_ampere.png"><img alt="solenoide_ampere.png" src="../_images/solenoide_ampere.png" style="width: 250px;" /></a>
 <figcaption>
@@ -632,9 +636,9 @@ B 2 \pi r &amp;= \mu_0 J \pi a^2 \quad &amp; r&gt;a
 <p>De esta forma, el lado interno contribuye a la integral, mientras que los otros 3 no, ya que fuera, el campo magnético es nulo.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Demostremos que el campo magnético fuera del solenoide es nulo. Si supusieramos que el campo magnético fuera no es nulo, veremos que debe ser constante. Podemos despues hacer que el lado exterior tienda a infinito. Entonces comprobaremos que el valor fuera debe coincidir con el valor en infinito, es decir, nulo.</p>
+<p>Demostremos que el campo magnético fuera del solenoide es nulo. Si supusiéramos que el campo magnético fuera no es nulo, veremos que debe ser constante. Podemos después hacer que el lado exterior tienda a infinito. Entonces comprobaremos que el valor fuera debe coincidir con el valor en infinito, es decir, nulo.</p>
 </div>
-<p>La corriente que atraviesa el circuito también es facil, con el número de vueltas por unidad de longitud.</p>
+<p>La corriente que atraviesa el circuito también es fácil, con el número de vueltas por unidad de longitud.</p>
 <div class="math notranslate nohighlight">
 \[
 B_z l = \mu_0 I n l

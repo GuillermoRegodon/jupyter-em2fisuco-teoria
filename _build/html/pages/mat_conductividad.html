@@ -194,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="tensores.html">Tensores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -387,7 +391,7 @@ jk = \alpha + j\beta
 <li><p>Estudiamos cualquier función o forma de onda a partir de sus <strong>componentes armónicas de Fourier</strong>, es decir, una onda armónica de frecuencia <span class="math notranslate nohighlight">\(\omega\)</span>.</p></li>
 <li><p>La solución es la parte real de una exponencial compleja, por lo que <strong>trabajamos directamente con la exponencial compleja</strong>, o más bien con su módulo, en nuestro caso un vector.</p></li>
 </ul>
-<p>De forma que <span class="math notranslate nohighlight">\(\vec{E} = \vec{E_0} e^{\varphi_1}\)</span> y <span class="math notranslate nohighlight">\(\vec{B} = \vec{B_0} e^{\varphi_2}\)</span> representan la onda armónica en la dirección <span class="math notranslate nohighlight">\(\vec{n}\)</span>, y todas las ondas armónicas en todas las direcciones posibles son la solución más general de las ecuaciones de Maxwell en un medio homogéneo e isótropo.</p>
+<p>De forma que <span class="math notranslate nohighlight">\(\vec{E} = \vec{E_0} e^{\varphi_1}\)</span> y <span class="math notranslate nohighlight">\(\vec{B} = \vec{B_0} e^{\varphi_2}\)</span> representan la onda armónica en la dirección <span class="math notranslate nohighlight">\(\vec{n}\)</span>, y todas las ondas armónicas en todas las direcciones posibles son la solución más general de las ecuaciones de Maxwell en un medio homogéneo e isoótropo.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A las constantes <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\beta\)</span> se les llama <strong>constantes de atenuación y de fase</strong>, respectivamente.</p>
@@ -402,7 +406,7 @@ jk = \alpha + j\beta
 \vec{n} \times \frac{∂\vec{E}(\tau,t)}{∂\tau} &amp;= - \frac{∂\vec{B}(\tau,t)}{∂t} \\
 \vec{n} \times \frac{∂\vec{B}(\tau,t)}{∂\tau} &amp;= \mu \vec{J_c} + \mu \varepsilon \frac{∂\vec{E}(\tau,t)}{∂t} \\
 \end{split}\]</div>
-<p>Podemos distiguir los materiales con cargas que pueden moverse en dos tipos:</p>
+<p>Podemos distinguir los materiales con cargas que pueden moverse en dos tipos:</p>
 <ul class="simple">
 <li><p><strong>Materiales en los que las cargas son libres y tiene movilidad infinita</strong>. Es el caso del interior de los Conductores Eléctricos Perfectos o CEP, que se estudian de otras maneras (<em>cuasiestática</em>, Poisson, condiciones de frontera…) y por los que <strong>no puede propagarse una onda electromagnética</strong>.</p></li>
 <li><p><strong>Materiales en los que las cargas se pueden acelerar, pero que antes o después chocan contra la red cristalina</strong> y que, por lo tanto, cederán toda la energía cinética ganada a la red cristalina de átomos que conforman el material. En esto materiales, <strong>se cumple la ley de Ohm</strong>.</p></li>
@@ -468,7 +472,7 @@ jk = \alpha + j\beta
 \[
 \tan\delta = \frac{\sigma}{\omega \varepsilon}
 \]</div>
-<p>Es el número adimensional que <strong>determína si el material es o no buen conductor</strong>.</p>
+<p>Es el número adimensional que <strong>determina si el material es o no buen conductor</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La tangente de pérdidas es la tangente (<em>negativa</em>) del número complejo que multiplica la parte temporal de la ecuación de ondas en fasores:</p>
@@ -562,7 +566,7 @@ jk = \alpha + j\beta
 <p>A partir de estas expresiones, <strong>podemos deducir algunas propiedades</strong> que no podíamos ver fácilmente hasta ahora.</p>
 <ul class="simple">
 <li><p>El campo eléctrico, el campo magnético y la dirección de propagación <strong>siguen siendo perpendiculares</strong>.</p></li>
-<li><p><strong>El campo eléctrico y el magnético no estan en fase</strong>. Esto se deduce por que la fase de los fasores de <span class="math notranslate nohighlight">\(\vec{E}\)</span> y de <span class="math notranslate nohighlight">\(\vec{B}\)</span> no son las mismas. Veamos que de la tercera expresión:</p></li>
+<li><p><strong>El campo eléctrico y el magnético no están en fase</strong>. Esto se deduce por que la fase de los fasores de <span class="math notranslate nohighlight">\(\vec{E}\)</span> y de <span class="math notranslate nohighlight">\(\vec{B}\)</span> no son las mismas. Veamos que de la tercera expresión:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -591,14 +595,14 @@ v_f = \frac{\omega}{\beta}
 \]</div>
 <ul class="simple">
 <li><p><strong>Aislante</strong>: <span class="math notranslate nohighlight">\(k\)</span> es real, <span class="math notranslate nohighlight">\(k = \beta\)</span>, por lo que la velocidad de fase coincide con la velocidad <span class="math notranslate nohighlight">\(c\)</span> de la ecuación de onda.</p></li>
-<li><p><strong>Mal conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, pero su parte real <span class="math notranslate nohighlight">\(\beta\)</span> es muy proxima a <span class="math notranslate nohighlight">\(k\)</span>. La velocidad de fase es un poco menor que c en los malos conductores:</p></li>
+<li><p><strong>Mal conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, pero su parte real <span class="math notranslate nohighlight">\(\beta\)</span> es muy próxima a <span class="math notranslate nohighlight">\(k\)</span>. La velocidad de fase es un poco menor que c en los malos conductores:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
 v_f = \frac{\omega}{\beta} \approx \frac{\omega}{\sqrt{\mu\varepsilon}\omega \left( 1 + \frac{\sigma^2}{8 \omega^2 \varepsilon^2} \right)} \approx c \left( 1 - \frac{\sigma^2}{8 \omega^2 \varepsilon^2} \right)
 \]</div>
 <ul class="simple">
-<li><p><strong>Buen conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, y <span class="math notranslate nohighlight">\(\alpha \approx \beta \approx \sqrt{\mu \varepsilon} \omega \sqrt{\frac{\sigma}{2 \omega\varepsilon}}\)</span>. Por lo tanto, la velocidad de fase disminuye considerablemente cuando aumenta la conductividad. Esta velocidad de fase es dificil de ver en las representaciones gráficas, por que en este caso la onda está tan atenuada que es dificil de ver el pico desplazándose:</p></li>
+<li><p><strong>Buen conductor</strong>: <span class="math notranslate nohighlight">\(k\)</span> es complejo, y <span class="math notranslate nohighlight">\(\alpha \approx \beta \approx \sqrt{\mu \varepsilon} \omega \sqrt{\frac{\sigma}{2 \omega\varepsilon}}\)</span>. Por lo tanto, la velocidad de fase disminuye considerablemente cuando aumenta la conductividad. Esta velocidad de fase es difícil de ver en las representaciones gráficas, por que en este caso la onda está tan atenuada que es difícil de ver el pico desplazándose:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[

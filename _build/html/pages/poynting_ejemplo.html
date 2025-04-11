@@ -194,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="tensores.html">Tensores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -358,14 +362,14 @@
 <p>Vamos a ver algunos ejemplos del teorema de Poynting y cómo comprobar la dirección del flujo de potencia electromagnética.</p>
 <section id="resistencia-cilindrica">
 <h2>Resistencia cilíndrica<a class="headerlink" href="#resistencia-cilindrica" title="Link to this heading">#</a></h2>
-<p>Supongamos que <strong>una resistencia cilíndrica</strong> de longitud <span class="math notranslate nohighlight">\(L\)</span> y tiene una diferencia de potencial <span class="math notranslate nohighlight">\(V\)</span> entre los extremos o tapas del cilíndro.</p>
+<p>Supongamos que <strong>una resistencia cilíndrica</strong> de longitud <span class="math notranslate nohighlight">\(L\)</span> y tiene una diferencia de potencial <span class="math notranslate nohighlight">\(V\)</span> entre los extremos o tapas del cilindro.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/poynting_ejemplo_r.png"><img alt="poynting_ejemplo_r.png" src="../_images/poynting_ejemplo_r.png" style="width: 160px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 21 </span><span class="caption-text">Resistencia con forma cilíndrica.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Este es un modelo electromagnético de la resitencia <span class="math notranslate nohighlight">\(R\)</span> en el siguiente circuito.</p>
+<p>Este es un modelo electromagnético de la resistencia <span class="math notranslate nohighlight">\(R\)</span> en el siguiente circuito.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/poynting_ejemplo_circuito.png"><img alt="poynting_ejemplo_circuito.png" src="../_images/poynting_ejemplo_circuito.png" style="width: 200px;" /></a>
 <figcaption>
@@ -382,7 +386,7 @@ E = \frac{V}{L}
 \[
 H2\pi s = J \pi s^2
 \]</div>
-<p>Donde <span class="math notranslate nohighlight">\(s\)</span> es la coordenada radial cilíndrica, o visto de otro modo, la distancia desde el punto donde se calcula el vecotr <span class="math notranslate nohighlight">\(H\)</span> y el eje.</p>
+<p>Donde <span class="math notranslate nohighlight">\(s\)</span> es la coordenada radial cilíndrica, o visto de otro modo, la distancia desde el punto donde se calcula el vector <span class="math notranslate nohighlight">\(H\)</span> y el eje.</p>
 <p>Veamos las direcciones para poder estudiar la dirección del vector de Poynting <span class="math notranslate nohighlight">\(\vec{G}\)</span>. Usando las siguientes coordenadas, colocando la dirección <span class="math notranslate nohighlight">\(z\)</span> en la dirección de la densidad de corriente:</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/hilo.png"><img alt="hilo.png" src="../_images/hilo.png" style="width: 300px;" /></a>
@@ -451,7 +455,7 @@ H2\pi s = J \pi s^2
 \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>El Conductor Electrico Perfecto se adapta con una densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> y una densidad superficial de corriente <span class="math notranslate nohighlight">\(\vec{j}\)</span> de tal forma que <strong>la potencia electromagnética no puede entrar en el CEP</strong>. Por supuesto, en el interior no se disipa calor. ¡Toda la corriente pasa por la superficie!</p>
+<p>El Conductor Eléctrico Perfecto se adapta con una densidad superficial de carga <span class="math notranslate nohighlight">\(\sigma\)</span> y una densidad superficial de corriente <span class="math notranslate nohighlight">\(\vec{j}\)</span> de tal forma que <strong>la potencia electromagnética no puede entrar en el CEP</strong>. Por supuesto, en el interior no se disipa calor. ¡Toda la corriente pasa por la superficie!</p>
 </div>
 </section>
 </section>

@@ -65,6 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/tensores';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ejemplos de aplicación" href="ej_tensores.html" />
     <link rel="prev" title="Ejemplos de relatividad especial" href="ej_relatividad.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -193,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tensores</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tensores</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -341,6 +346,11 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-del-cambio-de-coordenadas">Esquema del cambio de coordenadas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial-en-un-punto">Espacio vectorial en un punto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante">Formulación covariante</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delta-de-kronecker">Delta de Kronecker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-metrico">Tensor métrico</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -361,7 +371,7 @@
 <p><span class="caption-number">Fig. 34 </span><span class="caption-text">Vector en distintos sitemas de referencia, cambia sus componentes.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Cuando decimos que cambia apropiadamente, queremos decir que <strong>si una ley o principio tiene una expresión, la expresión es la misma independientemente del SR</strong>. Por ejemplo, la suma de vectores tiene la misma expresión indpendientemente del SR, aunque los vectores de la base cambien.</p>
+<p>Cuando decimos que cambia apropiadamente, queremos decir que <strong>si una ley o principio tiene una expresión, la expresión es la misma independientemente del SR</strong>. Por ejemplo, la suma de vectores tiene la misma expresión independientemente del SR, aunque los vectores de la base cambien.</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{v} = \vec{u} + \vec{w}
@@ -371,7 +381,7 @@
 \[
 \vec{v} = A \vec{u}
 \]</div>
-<p>Dado que <span class="math notranslate nohighlight">\(\vec{u}\)</span> y <span class="math notranslate nohighlight">\(\vec{v}\)</span> cambian con el sistema de referencia, si <span class="math notranslate nohighlight">\(A\)</span> tambien cambia de forma que la ecuación sigue siendo válida, entonces <span class="math notranslate nohighlight">\(A\)</span> es un tensor. Por ejemplo, la matriz identidad es un tensor, por que la expresión <span class="math notranslate nohighlight">\(\vec{v} = I \vec{v}\)</span> es válida en todos los SR.</p>
+<p>Dado que <span class="math notranslate nohighlight">\(\vec{u}\)</span> y <span class="math notranslate nohighlight">\(\vec{v}\)</span> cambian con el sistema de referencia, si <span class="math notranslate nohighlight">\(A\)</span> también cambia de forma que la ecuación sigue siendo válida, entonces <span class="math notranslate nohighlight">\(A\)</span> es un tensor. Por ejemplo, la matriz identidad es un tensor, por que la expresión <span class="math notranslate nohighlight">\(\vec{v} = I \vec{v}\)</span> es válida en todos los SR.</p>
 <section id="esquema-del-cambio-de-coordenadas">
 <h2>Esquema del cambio de coordenadas<a class="headerlink" href="#esquema-del-cambio-de-coordenadas" title="Link to this heading">#</a></h2>
 <p>Desde el punto de vista más general, vamos a definir dos sistemas de coordenadas <span class="math notranslate nohighlight">\(\{x^1, x^2, ... x^n\}\)</span> y <span class="math notranslate nohighlight">\(\{x'^1, x'^2, ... x'^n\}\)</span> de forma que conocemos la relación entre ellos, es decir, las expresiones son conocidas:</p>
@@ -383,7 +393,7 @@ x^i &amp;= x^i(x'^1, x'^2, ... x'^n) \quad &amp;i \in \{1,2...n\} \\
 <p>El esquema que vamos a seguir es el siguiente:</p>
 <ol class="arabic simple">
 <li><p><strong>Definimos los dos sistemas de coordenadas y su relación entre ellos</strong>.</p></li>
-<li><p><strong>Definimos, para un punto del espacio, los vectores de la base del espacio vectorial en dicho punto</strong>. La definición va a ser la más natural que permitirá que los cambios de SR sean lo más sencillos posibles: esto implica que las bases, muchas veces no serán ortogonales u ortonormales.</p></li>
+<li><p><strong>Definimos, para un punto del espacio, los vectores de la base del espacio vectorial en dicho punto</strong>. La definición va a ser la más natural que permitirá que los cambios de SR sean lo más sencillos posibles: esto implica que las bases muchas veces no serán ortogonales u ortonormales.</p></li>
 <li><p><strong>Demostramos la transformación que debe tener un objeto matemático en dicho espacio vectorial</strong>. El objetivo es definir las expresiones de una forma completamente general e independiente del SR.</p></li>
 </ol>
 <p>Vamos a utilizar el conocido <strong>convenio de suma de Einstein</strong>, que tiene la ventaja de que las expresiones van a ser más sencillas.</p>
@@ -438,7 +448,7 @@ f:U \rightarrow \mathcal{R} \quad / f(x,y,x) = x + 2y + 3z
 <p><span class="caption-number">Fig. 37 </span><span class="caption-text">Bases naturales en coordenadas curvilineas genéricas.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Por supuesto, el vetor <span class="math notranslate nohighlight">\(\vec{v}\)</span> se puede poner en ambas bases. Notamos sus componentes <span class="math notranslate nohighlight">\(v^i\)</span> y <span class="math notranslate nohighlight">\(v'^i\)</span>, usando el convenio de suma de Einstein.</p>
+<p>Por supuesto, el vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> se puede poner en ambas bases. Notamos sus componentes <span class="math notranslate nohighlight">\(v^i\)</span> y <span class="math notranslate nohighlight">\(v'^i\)</span>, usando el convenio de suma de Einstein.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{v} &amp;= v^i \vec{e_i} = v^i \frac{\partial{\vec{r}}}{\partial x^i} \\
@@ -483,7 +493,7 @@ r &amp;= \sqrt{x^2 + y^2}           \quad &amp; x &amp;= r \cos\theta\\
 \vec{e_r} &amp;= \frac{\partial{\vec{r}}}{\partial r} = (\cos\theta, \sin\theta)\\
 \vec{e_\theta} &amp;= \frac{\partial{\vec{r}}}{\partial \theta} = (-r\sin\theta, r\cos\theta)
 \end{split}\]</div>
-<p>No coinciden exactamente con los vectores de la base en polares, sino que la relacion es <span class="math notranslate nohighlight">\(\vec{e^r} = \vec{u_r}\)</span> y <span class="math notranslate nohighlight">\(\vec{e^\theta} = r\vec{u_\theta}\)</span>. La base natural es por lo tanto, ortogonal pero no ortonormal. Las parciales para la transformación contravariante desde cartesianas a polares son:</p>
+<p>No coinciden exactamente con los vectores de la base en polares, sino que la relación es <span class="math notranslate nohighlight">\(\vec{e_r} = \vec{u_r}\)</span> y <span class="math notranslate nohighlight">\(\vec{e_\theta} = r\vec{u_\theta}\)</span>. La base natural es por lo tanto, ortogonal pero no ortonormal. Las parciales para la transformación contravariante desde cartesianas a polares son:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left( \begin{array}{cc} \frac{\partial{r}}{\partial x} &amp; \frac{\partial{r}}{\partial y} \\ \frac{\partial{\theta}}{\partial x} &amp; \frac{\partial{\theta}}{\partial y} \end{array} \right) = \left( \begin{array}{cc} \frac{x}{\sqrt{x^2 + y^2}} &amp; \frac{y}{\sqrt{x^2 + y^2}} \\ -\frac{y}{x^2 + y^2} &amp; \frac{x}{x^2 + y^2} \end{array} \right) = \left( \begin{array}{cc} \cos\theta &amp; \sin\theta \\ -\frac{\sin\theta}{r} &amp; \frac{\cos\theta}{r} \end{array} \right)
@@ -525,7 +535,7 @@ v^\theta &amp;= \frac{\partial{\theta}}{\partial x}v^x + \frac{\partial{\theta}}
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Podemos usar cualquier otro conjunto de coordenadas que quisieramos inventar:</p>
+<p>Podemos usar cualquier otro conjunto de coordenadas que quisiéramos inventar:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 u &amp;= x      \quad &amp; x &amp;= u \\
@@ -537,7 +547,7 @@ w &amp;= x - y  \quad &amp; y &amp;= u + w
 \vec{e_u} &amp;= \frac{\partial \vec{r}}{\partial u} = (1,1) \\
 \vec{e_w} &amp;= \frac{\partial \vec{r}}{\partial w} = (0,1)
 \end{split}\]</div>
-<p>En este caso, las coordenadas <span class="math notranslate nohighlight">\(u\)</span> y <span class="math notranslate nohighlight">\(w\)</span> no son curvilineas, por lo que la transformación no depende del punto <span class="math notranslate nohighlight">\(\vec{r}\)</span>. Las parciales de la transformación contravariante son:</p>
+<p>En este caso, las coordenadas <span class="math notranslate nohighlight">\(u\)</span> y <span class="math notranslate nohighlight">\(w\)</span> no son curvilíneas, por lo que la transformación no depende del punto <span class="math notranslate nohighlight">\(\vec{r}\)</span>. Las parciales de la transformación contravariante son:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left( \begin{array}{cc} \frac{\partial{u}}{\partial x} &amp; \frac{\partial{u}}{\partial y} \\ \frac{\partial{w}}{\partial x} &amp; \frac{\partial{w}}{\partial y} \end{array} \right) = \left( \begin{array}{cc} 1 &amp; 0 \\ -1 &amp; 1 \end{array} \right)
@@ -561,6 +571,92 @@ v^w &amp;= \frac{\partial{w}}{\partial x} v^x + \frac{\partial{w}}{\partial y} v
 </figure>
 </div>
 </section>
+<section id="formulacion-covariante">
+<h2>Formulación covariante<a class="headerlink" href="#formulacion-covariante" title="Link to this heading">#</a></h2>
+<p>La ventaja de las expresiones tensoriales es que son invariantes con el cambio de coordenadas. En Física, los cambios de coordenadas lo podemos entender como cambios en el Sistema de Referencia (SR). Uno de los principios que han guiado el desarrollo de la relatividad en sus dos facetas, especial y general, es que las leyes físicas deben ser independientes del SR, por lo que <strong>la notación tensorial dará expresiones independientes del SR</strong>. Además, como sabemos cómo transformar un sistema de coordenadas a otro, podemos relacionar las magnitudes en distintos SR.</p>
+<p>Vamos a completar los elementos que nos hacen falta para tener una notación tensorial completa:</p>
+<section id="delta-de-kronecker">
+<h3>Delta de Kronecker<a class="headerlink" href="#delta-de-kronecker" title="Link to this heading">#</a></h3>
+<p>Definimos la Delta de Kronecker de la forma estándar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\delta_i^j = \begin{cases} 1 &amp;i=j \\ 0 &amp;i\neq j \end{cases}
+\end{split}\]</div>
+<p>Vamos a observar que hay una igualdad que sale a menudo y que permite simplificar a la Delta.</p>
+<div class="math notranslate nohighlight">
+\[
+\delta_i^j = \frac{\partial x^i}{\partial x^j} = \frac{\partial x^i}{\partial x'^k}\frac{\partial x'^k}{\partial x^j}
+\]</div>
+<p>También, por la propia definición, cualquier tensor cambia de indice con la Delta:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_i &amp;= v_j \delta_i^j \\
+v^j &amp;= v^i \delta_i^j
+\end{split}\]</div>
+</section>
+<section id="tensor-metrico">
+<h3>Tensor métrico<a class="headerlink" href="#tensor-metrico" title="Link to this heading">#</a></h3>
+<p>El tensor métrico se define a partir de los vectores de la base natural:</p>
+<div class="math notranslate nohighlight">
+\[
+g_{ij} = \vec{e_i} \cdot \vec{e_j}
+\]</div>
+<p>Aparece naturalmente cuando calculamos el producto escalar entre dos vectores:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{u} \cdot \vec{v} = \left( u^i \vec{e_i} \right) \cdot \left( v^j \vec{e_j} \right) = u^i v^j \left(\vec{e_i} \cdot \vec{e_j} \right) = u^i g_{ij} v^j
+\]</div>
+<p>Utilizamos esta expresión para definir la componente covariente de un vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>, según la expresión <span class="math notranslate nohighlight">\(v_i = g_{ij} v^j\)</span>, de tal forma que:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{u} \cdot \vec{v} = u^i g_{ij} v^j = u^i v_j = u_j v^j
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El tensor métrico <span class="math notranslate nohighlight">\(g_{ij}\)</span> baja un índice de un tensor.</p>
+</div>
+<p>El tensor métrico 2-contravariante se define a partir del tensor métrico:</p>
+<div class="math notranslate nohighlight">
+\[
+g_{ik} g^{kj} = \delta_i^j
+\]</div>
+<p>En esta expresión, lo podemos ver como matrices, por lo que sería la matriz inversa. Usando la definición sucesivamente podemos obtener:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{u} \cdot \vec{v} = u^i g_{ij} v^j = u^i g_{ik}\delta_j^k v^j = u^i g_{ik} g^{kl} g_{lj} v^j = u_k g^{kl} v_l
+\]</div>
+<p>Y podemos identificar:</p>
+<div class="math notranslate nohighlight">
+\[
+v^i = g^{ij} v_j
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El tensor métrico 2-contrvariante <span class="math notranslate nohighlight">\(g^{ij}\)</span> sube un índice de un tensor.</p>
+</div>
+<p>Finalmente, podemos definir la base contravariante, de la siguiente forma:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{e_i} \cdot \vec{e^j} = \delta_i^j
+\]</div>
+<p>La base covariante se puede obtener usando el tensor métrico:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{e_i} \cdot \vec{e^j} = \delta_i^j = g_{ik}g^{kj} = \vec{e_i} \cdot \vec{e_k} g^{kj}
+\]</div>
+<p>Con lo que identificamos <span class="math notranslate nohighlight">\(\vec{e^j} = \vec{e_k} g^{kj}\)</span>. Se puede verificar que las componentes covariantes de un vector son las componentes en esta base:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{v} = v^i \vec{e_i} = v^i \delta_i^j \vec{e_j} = v^i g_{ik}g^{kj} \vec{e_j} = v_k \vec{e^k}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>En general no existen unas “<em>coordenadas covariantes</em>” a partir de las que obtener los vectores de la base contravariante.</p>
+</div>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -602,6 +698,15 @@ v^w &amp;= \frac{\partial{w}}{\partial x} v^x + \frac{\partial{w}}{\partial y} v
         <p class="prev-next-title">Ejemplos de relatividad especial</p>
       </div>
     </a>
+    <a class="right-next"
+       href="ej_tensores.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ejemplos de aplicación</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -621,6 +726,11 @@ v^w &amp;= \frac{\partial{w}}{\partial x} v^x + \frac{\partial{w}}{\partial y} v
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-del-cambio-de-coordenadas">Esquema del cambio de coordenadas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial-en-un-punto">Espacio vectorial en un punto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante">Formulación covariante</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delta-de-kronecker">Delta de Kronecker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-metrico">Tensor métrico</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
