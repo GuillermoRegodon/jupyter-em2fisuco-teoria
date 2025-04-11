@@ -344,6 +344,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacion-de-los-campos">Transformación de los campos</a></li>
 </ul>
             </nav>
         </div>
@@ -561,6 +562,27 @@ K^0 = \frac{d(\gamma mc)}{d\tau} = q U_\beta F^{0\beta} = -q \gamma \vec{v} \cdo
 <p>Y por lo tanto, la energía en reposo para <span class="math notranslate nohighlight">\(\gamma=1\)</span> nos ofrece la famosa ecuación de Einstein, <span class="math notranslate nohighlight">\(E = mc^2\)</span>.</p>
 </div>
 </section>
+<section id="transformacion-de-los-campos">
+<h2>Transformación de los campos<a class="headerlink" href="#transformacion-de-los-campos" title="Link to this heading">#</a></h2>
+<p>Hemos visto que todo el electromagnetismo se puede escribir en forma tensorial independiente del SR bajo la transformación de Lorentz. Por lo tanto, si cambiamos el SR los campos transformados nuevos van a cumplir las leyes del electromagnetismo en el nuevo SR. La transformación la da la regla de la transformación de Lorentz sobre el tensor de campo electromagnético <span class="math notranslate nohighlight">\(F^{\alpha\beta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+F'^{\alpha\beta} = \frac{\partial x'^\alpha}{\partial x^\mu}\frac{\partial x'^\beta}{\partial x^\nu}F^{\mu\nu}
+\]</div>
+<p>Realizando el cálculo con cuidado, podemos identificar las componentes de <span class="math notranslate nohighlight">\(F'^{\alpha\beta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{E'} &amp;= \gamma(\vec{E} + \vec{v}\times\vec{B}) - \frac{\gamma^2}{\gamma+1} \frac{\vec{v}}{c^2}(\vec{v}\cdot\vec{E}) \\
+\vec{B'} &amp;= \gamma(\vec{B} + \frac{\vec{v}}{c^2}\times\vec{E}) - \frac{\gamma^2}{\gamma+1} \frac{\vec{v}}{c^2}(\vec{v}\cdot\vec{B})
+\end{split}\]</div>
+<p>Ademas, cualquier contracción sobre cualquier expresión tensorial se conserva en la transformación (<em>Igual que pasa con <span class="math notranslate nohighlight">\(v^iv_i\)</span>, el módulo de un vector en el espacio, o el intervalo en el espacio-tiempo relativista</em>). Con el tensor de campo electromagnético tenemos dos contracciones posibles independientes.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F^{\alpha\beta}F_{\alpha\beta} \quad \Rightarrow \quad 2 \left( B^2 - \frac{E^2}{c^2} \right) \\
+F^{\alpha\beta}g_{\alpha\beta} \quad \Rightarrow \quad -4\frac{\vec{E}\cdot\vec{B}}{c}
+\end{split}\]</div>
+<p>Esto también se puede aprovechar al realizar los cambios de SR. Por ejemplo, una onda plana (<span class="math notranslate nohighlight">\(\vec{E}\cdot\vec{B} = 0\)</span>) es una onda plana en todos los SR.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -620,6 +642,7 @@ K^0 = \frac{d(\gamma mc)}{d\tau} = q U_\beta F^{0\beta} = -q \gamma \vec{v} \cdo
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacion-de-los-campos">Transformación de los campos</a></li>
 </ul>
   </nav></div>
 
