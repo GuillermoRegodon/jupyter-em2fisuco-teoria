@@ -194,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="tensores.html">Tensores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -380,14 +384,14 @@
 \varphi = \int\frac{\rho(\vec{r'})}{4 \pi \varepsilon_0 |\vec{r} - \vec{r'}|}
 \]</div>
 <ul class="simple">
-<li><p>Dado que se define a partir del campo electrico a través de su derivada, no es único, ya que sumar una constante permite obtener el mismo campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span>.</p></li>
+<li><p>Dado que se define a partir del campo eléctrico a través de su derivada, no es único, ya que sumar una constante permite obtener el mismo campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span>.</p></li>
 </ul>
 <p>Aplicando esta definición a la ley de Gauss en el caso de electrostática:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot \vec{E} = - \nabla^2 \varphi = \frac{\rho}{\varepsilon_0}
 \]</div>
-<p>Por lo que tenemos <strong>una ecuación que se puede plantear para obtener el potencial <span class="math notranslate nohighlight">\(\varphi\)</span></strong>. Es una ecuación muy estudiada, <em>que aparece en muchas ramas de las matemáticas y la física</em>. Tiene la gran ventaja de que <em>solo tiene un grado de libertad para cada punto del espacio</em>, mientras que la ley de Gauss para el campo eléctrico tiene 3 grados de libertad para cada punto del espacio, <em>haciendo que sea más facil de resolver</em>.</p>
+<p>Por lo que tenemos <strong>una ecuación que se puede plantear para obtener el potencial <span class="math notranslate nohighlight">\(\varphi\)</span></strong>. Es una ecuación muy estudiada, <em>que aparece en muchas ramas de las matemáticas y la física</em>. Tiene la gran ventaja de que <em>solo tiene un grado de libertad para cada punto del espacio</em>, mientras que la ley de Gauss para el campo eléctrico tiene 3 grados de libertad para cada punto del espacio, <em>haciendo que sea más fácil de resolver</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>En electrostática</strong>:</p>
@@ -464,7 +468,7 @@
 \[
 \nabla \cdot \vec{E} = -\nabla^2 \varphi = \frac{\rho}{\varepsilon_0}
 \]</div>
-<p>Esta ecuación se deduce facilmente a partir de la ley de Gauss. <strong>Pero en electromagnetismo, la ecuación es incompleta</strong>. La completamos:</p>
+<p>Esta ecuación se deduce fácilmente a partir de la ley de Gauss. <strong>Pero en electromagnetismo, la ecuación es incompleta</strong>. La completamos:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \nabla \cdot \vec{E} = -\nabla \cdot \left( -\varphi - \frac{\partial \vec{A}}{\partial t} \right) = \frac{\rho}{\varepsilon_0} \\
@@ -522,7 +526,7 @@
 <li><p>Imponemos alguna condición ventajosa para que las ecuaciones generales de los potenciales sean más fáciles de resolver.</p></li>
 <li><p>Comprobamos que existe un <span class="math notranslate nohighlight">\(C(\vec{r}, t)\)</span> que permite que la simplificación sea factible.</p></li>
 </ul>
-<p><strong>Observamos que lal ecuaciones generales de los potenciales son válidas para todos los pares de potenciales <span class="math notranslate nohighlight">\(\varphi\)</span> y <span class="math notranslate nohighlight">\(\vec{A}\)</span>, mientras que las expresiones simplificadas solo vas a ser válidas para unos pocos</strong>. Esta transformación es lo que llamamos <em>gauge</em> o <em>calibración</em>.</p>
+<p><strong>Observamos que las ecuaciones generales de los potenciales son válidas para todos los pares de potenciales <span class="math notranslate nohighlight">\(\varphi\)</span> y <span class="math notranslate nohighlight">\(\vec{A}\)</span>, mientras que las expresiones simplificadas solo vas a ser válidas para unos pocos</strong>. Esta transformación es lo que llamamos <em>gauge</em> o <em>calibración</em>.</p>
 </section>
 <section id="gauge-de-coulomb">
 <h2>Gauge de Coulomb<a class="headerlink" href="#gauge-de-coulomb" title="Link to this heading">#</a></h2>
@@ -547,7 +551,7 @@
 \nabla \cdot \vec{A} = - \nabla^2 C(\vec{r},t)
 \]</div>
 <p>El miembro de la izquierda es cualquier potencial válido, y el de la derecha es una ecuación de Poisson que siempre tiene solución, por lo que los potenciales <span class="math notranslate nohighlight">\(\varphi'\)</span> y <span class="math notranslate nohighlight">\(\vec{A'}\)</span> con <span class="math notranslate nohighlight">\(\nabla \cdot \vec{A'} = 0\)</span> siempre se pueden obtener de un par de potenciales válidos <span class="math notranslate nohighlight">\(\varphi\)</span> y <span class="math notranslate nohighlight">\(\vec{A}\)</span>.</p>
-<p><strong>El gauge de Coulomb tiene la ventaja de que el potencial escalar <span class="math notranslate nohighlight">\(\varphi\)</span> se resuelve igual que el electrostática</strong>. La otra ecuación es un poco más fea, pero también es una ecuación escudiada y con solución.</p>
+<p><strong>El gauge de Coulomb tiene la ventaja de que el potencial escalar <span class="math notranslate nohighlight">\(\varphi\)</span> se resuelve igual que el electrostática</strong>. La otra ecuación es un poco más fea, pero también es una ecuación estudiada y con solución.</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla^2 \vec{A} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{A}}{\partial t^2} = -\mu_0 \vec{J} + \nabla \left( \mu_0 \varepsilon_0 \frac{\partial \varphi}{\partial t} \right)
@@ -564,7 +568,7 @@
 </section>
 <section id="gauge-de-lorentz">
 <h2>Gauge de Lorentz<a class="headerlink" href="#gauge-de-lorentz" title="Link to this heading">#</a></h2>
-<p>El gauge de Lorentz surge de observar que si el paréntesis en la ecuación de los potenciales en función de la corriente fuera nulo, se simplificaría a una ecuación de onda no homogénea. Si se cummple:</p>
+<p>El gauge de Lorentz surge de observar que si el paréntesis en la ecuación de los potenciales en función de la corriente fuera nulo, se simplificaría a una ecuación de onda no homogénea. Si se cumple:</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla \cdot \vec{A} + \mu_0 \varepsilon_0 \frac{\partial \varphi}{\partial t} = 0
@@ -574,7 +578,7 @@
 \[
 \nabla^2 \vec{A} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{A}}{\partial t^2} = -\mu_0 \vec{J}
 \]</div>
-<p>De la misma forma que antes, si aplico la divergencia sobre la ecuación de la transformación, me queda una ecuación de Poisson que siempre tiene solución, por lo que al igual que antes, a partir de cualquier par de potenciales validos, se puede obtener un par de poteniales que cumpla el gauge de Lorentz. La otra ecuación para los potenciales <strong>¡resulta ser otra ecuación de onda! ¡Además con la velocidad de la luz como velocidad de propagación!</strong>.</p>
+<p>De la misma forma que antes, si aplico la divergencia sobre la ecuación de la transformación, me queda una ecuación de Poisson que siempre tiene solución, por lo que al igual que antes, a partir de cualquier par de potenciales validos, se puede obtener un par de potenciales que cumpla el gauge de Lorentz. La otra ecuación para los potenciales <strong>¡resulta ser otra ecuación de onda! ¡Además con la velocidad de la luz como velocidad de propagación!</strong>.</p>
 <div class="math notranslate nohighlight">
 \[
 \nabla^2 \varphi - \mu_0 \varepsilon_0 \frac{\partial^2 \varphi}{\partial t^2} = -\frac{\rho}{\varepsilon_0}

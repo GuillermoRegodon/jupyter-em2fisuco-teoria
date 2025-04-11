@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Principios de relatividad especial &#8212; Apuntes de Electromagnetismo II</title>
+    <title>Relatividad en notación tensorial &#8212; Apuntes de Electromagnetismo II</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/ppios_relatividad';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/relat_tensorial';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ejemplos de relatividad especial" href="ej_relatividad.html" />
-    <link rel="prev" title="Ejemplo de onda electromagnética atenuada" href="onda.html" />
+    <link rel="prev" title="Ejemplos de aplicación" href="ej_tensores.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -190,7 +189,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Principios de relatividad especial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
@@ -198,7 +197,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -258,7 +257,7 @@
       
       
       
-      <li><a href="../_sources/pages/ppios_relatividad.ipynb" target="_blank"
+      <li><a href="../_sources/pages/relat_tensorial.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +320,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -332,11 +333,19 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principios de relatividad especial</h1>
+    <h1>Relatividad en notación tensorial</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -346,135 +355,212 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="principios-de-relatividad-especial">
-<h1>Principios de relatividad especial<a class="headerlink" href="#principios-de-relatividad-especial" title="Link to this heading">#</a></h1>
-<p>Los postulados de Einstein, en torno a los que se construye la relatividad especial son los siguientes:</p>
-<ol class="arabic simple">
-<li><p>Las leyes físicas son las mismas en todos los sistemas de referencia inerciales (o SRI).</p></li>
-<li><p>La velocidad de la luz <span class="math notranslate nohighlight">\(c\)</span> es la misma desde todos los sistemas de referencia inerciales (o SRI).</p></li>
-</ol>
-<p>Esto tiene como consecuencia varias cosas importantes:</p>
-<ol class="arabic simple">
-<li><p><strong>La dilatación temporal</strong>: Si la diferencia de tiempo que pasa entre dos eventos es <span class="math notranslate nohighlight">\(\Delta t'\)</span> desde un SRI en el que la posición donde ocurren los eventos es la misma, entonces la diferencia de tiempo <span class="math notranslate nohighlight">\(\Delta t\)</span> que pasa entre los dos eventos visto desde un SRI en el que los eventos pasa en posiciones distintas es mayor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\Delta t = \gamma \Delta t'
-\]</div>
-<ol class="arabic simple" start="2">
-<li><p><strong>La contracción espacial</strong>: Si la longitud de un objeto que se mide desde un SRI en el que el objeto está en reposo es <span class="math notranslate nohighlight">\(\Delta x'\)</span>, la longitud del objeto <span class="math notranslate nohighlight">\(\Delta x\)</span> visto desde un SRI en el que el objeto está en movimiento es menor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\Delta x = \frac{\Delta x'}{\gamma}
-\]</div>
-<p>Con <span class="math notranslate nohighlight">\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)</span>, con <span class="math notranslate nohighlight">\(\beta = \frac{v}{c}\)</span> el módulo de la velocidad relativa entre los dos SRI en unidades de <span class="math notranslate nohighlight">\(c\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="relatividad-en-notacion-tensorial">
+<h1>Relatividad en notación tensorial<a class="headerlink" href="#relatividad-en-notacion-tensorial" title="Link to this heading">#</a></h1>
+<p>Todo lo visto sobre tensores sigue siendo válido para el espacio, pero hasta ahora no hemos considerado el tiempo como otra coordenada. De hecho, <strong>en la relatividad de Galileo el tiempo y el espacio están completamente desacoplados y no tiene sentido pensar en un espacio-tiempo de Galileo</strong>. Se pueden dibujar diagramas de espacio frente a tiempo, pero las coordenadas espaciales y el tiempo son totalmente independientes. Sin embargo, en la transformación de Lorentz se considera que el tiempo influye en la transformación de las coordenadas espaciales.</p>
+<p>Para poder utilizar la notación tensorial para la relatividad, <strong>debemos definir el tensor métrico a partir de la expresión que sabemos que es invariante</strong>. Esto hace que sean las propiedades geométricas del espacio-tiempo las que dictaminen cuál es el tensor métrico.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>El punto de vista de una partícula</strong></p>
-<p>Los efectos relativistas de contracción espacial y dilatación temporal tienen una aplicación práctica importante cuando el sistema de referencia SRI’ en movimiento está pegado a una partícula que se mueve a velocidad relativista respesto a nuestro sistema de referencia SRI en el laboratorio. <strong>Si el tiempo de vida medio de una partícula es <span class="math notranslate nohighlight">\(t_{1/2}\)</span>, y la partícula se desplaza a velocidad <span class="math notranslate nohighlight">\(v\)</span> medido en SRI, desde SRI el tiempo de vida medio es <span class="math notranslate nohighlight">\(\gamma t_{1/2}\)</span></strong>.</p>
-<p>El efecto de contracción espacial dice que la partícula vería el laboratorio mas corto (<em>en la dirección de su desplazamiento</em>) en el mismo factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
-</div>
-<p>Estas transformaciones de distancias y tiempos se pueden poner de forma simétrica como una transformación de coordenadas, conocida como <strong>Transformación de Lorentz</strong>:</p>
+<p>Veamos que las condiciones geométricas del espacio son las que definien el tensor métrico. Por ejemplo, en el espacio tridimensional, los vectores tienen que cumplir que su módulo y su dirección no cambian con el sistema de referencia. La dirección la entendemos en el sentido de el ángulo que forma un vector con otro. Esto es lo mismo que decir que <strong>en el espacio tridimensional, el resultado de obtener el producto escalar de dos vectores se conserva cuando se cambian las coordenadas</strong>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-ct' &amp;= \gamma(ct - \beta x) \\
-x' &amp;= \gamma(x - \beta ct)
+\vec{v} \cdot \vec{v} &amp;= v^2\\
+\vec{a} \cdot \vec{b} &amp;= ab \cos{\alpha}
 \end{split}\]</div>
-<p>La transformación de Lorentz era conocida antes de los postulados de la relatividad y el trabajo de Einstein: La transformación de Lorentz se dedujo matemáticamente como la transformación necesaria para que la ley de inducción de Faraday fuera independiente del sistema de referencia. El hecho de que se deduzca a partir de los postulados de Einstein da justificación y validez a dichos postulados.</p>
-<p>El último efecto relativista, que es de hecho el más fundamental, es <strong>la rotura de la simultaneidad</strong>. Para verlo, vamos a dibujar el Diagrama de Minkowski, que es simplemente un eje de coordenadas cartesianos en el que la ordenada es el tiempo (<em>multiplicado por c para que tenga unidades de distancia</em>). Es este diagrama, la trayectoria de un haz de luz a velocidad <span class="math notranslate nohighlight">\(c\)</span> es una recta inclinada <span class="math notranslate nohighlight">\(45º\)</span>.</p>
+<p><strong>Efectivamente, el producto escalar se puede escribir en forma tensorial de forma que es invariante con el cambio de sistema de coordenadas</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
-ct = x
+\vec{a} \cdot \vec{b} = a^ig_{ij}b^j
 \]</div>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/minkowski_1.png"><img alt="minkowski_1.png" src="../_images/minkowski_1.png" style="width: 325px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Diagrama de Minkowski y haz de luz.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Los ejes <span class="math notranslate nohighlight">\(x',ct'\)</span> del SRI’ vistos desde el SRI están inclinados. Para obtener la expresión del eje <span class="math notranslate nohighlight">\(ct'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span>, impongo que <span class="math notranslate nohighlight">\(x'=0\)</span>.</p>
+</div>
+<p>En el espacio relativista, el tiempo influye en las coordenadas espaciales según la transformación de Lorentz y tiene como consecuencia deseada que la velocidad de la luz es invariante con el sistema de referencia. En este caso, <strong>la expresión invariante en la transformación de Lorentz es el intervalo relativista</strong>. Es esta condición la que nos da las propiedades geométricas del espacio-tiempo relativista. Si igualamos el intervalo a la expresión invariante.</p>
 <div class="math notranslate nohighlight">
 \[
-x' = 0 \Rightarrow ct = \frac{x}{\beta} 
+(ct)^2 - x^2 - y^2 - z^2 = x^ig_{ij}x^j
 \]</div>
-<p>Igualmente, obtenemos la expresión del eje <span class="math notranslate nohighlight">\(x'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span> imponiendo que <span class="math notranslate nohighlight">\(ct'=0\)</span>.</p>
+<p>De forma que identificamos:</p>
 <div class="math notranslate nohighlight">
 \[
-ct' = 0 \Rightarrow ct = \beta x
+(ct)^2 - x^2 - y^2 - z^2 = g_{00}(x^0)^2 - g_{11}(x^1)^2 - g_{22}(x^2)^2 - g_{33}(x^3)^2
 \]</div>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/minkowski_2.png"><img alt="minkowski_2.png" src="../_images/minkowski_2.png" style="width: 325px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Diagrama de Minkowski y ejes de SRI’.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Ahora es fácil comprobar que <strong>dos eventos que ocurren simultáneamente desde SRI, no ocurren simultáneamente desde SRI’</strong>. Al revés también ocurre, que dos eventos que ocurren simultáneamente desde SRI’, no ocurren simultáneamente desde SRI.</p>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/minkowski_3.png"><img alt="minkowski_3.png" src="../_images/minkowski_3.png" style="width: 625px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Diagrama de Minkowski y simultaneidad.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Con la rotura de la simultaneidad, podemos explicar muchas aparentes paradojas de la relatividad:</p>
+<p>Elejimos que <span class="math notranslate nohighlight">\(x^0 = ct\)</span>, <span class="math notranslate nohighlight">\(x^1 = x\)</span>, <span class="math notranslate nohighlight">\(x^2 = y\)</span>, <span class="math notranslate nohighlight">\(x^3 = z\)</span>. Por tanto, el tensor métrico relativista es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g_{ij} = \left( \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -1 \end{array} \right)
+\end{split}\]</div>
+<p>Vemos que el tensor métrico no cambia con la transformación de Lorentz. Tenemos un tensor métrico compatible con la transformación de Lorentz y con la notación independiente del Sistema de Referencia.</p>
+<section id="formulacion-covariante-del-electromagnetismo">
+<h2>Formulación covariante del electromagnetismo<a class="headerlink" href="#formulacion-covariante-del-electromagnetismo" title="Link to this heading">#</a></h2>
+<p>Desde antes del trabajo de Einstein, ya se sabía que la transformación de Lorentz mantenía las ecuaciones del electromagnetismo invariantes. Por lo tanto, podemos suponer que las ecuaciones del electromagnetismo deben poder escribirse de forma covariante. Para ello vamos a realizar las siguientes definiciones:</p>
 <ul class="simple">
-<li><p>Cuando un objeto <span class="math notranslate nohighlight">\(A\)</span> se mueve con velocidad relativista <span class="math notranslate nohighlight">\(v\)</span> con respecto a otro <span class="math notranslate nohighlight">\(B\)</span>, el segundo, <span class="math notranslate nohighlight">\(B\)</span>, se mueve con velocidad relativista <span class="math notranslate nohighlight">\(-v\)</span> con respecto al primero <span class="math notranslate nohighlight">\(A\)</span>. ¿Cómo es posible que <span class="math notranslate nohighlight">\(A\)</span> vea más corto a <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(B\)</span> vea más corto a <span class="math notranslate nohighlight">\(A\)</span>? <strong>Por que los instantes temporales en los que <span class="math notranslate nohighlight">\(A\)</span> mira la parte de delante y de atrás de <span class="math notranslate nohighlight">\(B\)</span> no coinciden con los instantes temporales en los que <span class="math notranslate nohighlight">\(B\)</span> mira sus propios extremos, y viceversa</strong>. Si pusiéramos relojes en los extremos de los objetos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>, La sincronía entre los relojes depende de quién los mira. Claro, entonces <span class="math notranslate nohighlight">\(B\)</span> podría pensar <em>“<span class="math notranslate nohighlight">\(A\)</span> piensa que soy más corto de lo que realmente soy porque mide mal la distancia entre mis extremos”</em>. Pero por el primer postulado de Einstein: <strong>Los dos puntos de vista son válidos y cumplen con todas las leyes de la física</strong>.</p></li>
+<li><p>El cuadrivector de densidad de carga-corriente:</p></li>
 </ul>
-</div>
-<p>La transformación de Lorentz tiene un último resultado importante: En una transformación de Lorentz, se conserva la siguiente expresión, llamada intervalo:</p>
-<div class="math notranslate nohighlight">
-\[
-c^2t^2 - x^2 = c^2t'^2 - x'^2
-\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>El punto de vista de una partícula</strong></p>
-<p>El intervalo y la conservación del intervalo en una transformación relativista es muy importante porque el momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> es un vector relativista de componentes <span class="math notranslate nohighlight">\(E/c = \gamma m c\)</span> en la dirección del eje <span class="math notranslate nohighlight">\(ct\)</span>, y <span class="math notranslate nohighlight">\(p = \gamma m v\)</span> en la dirección <span class="math notranslate nohighlight">\(x\)</span> (<em>ver siguiente nota</em>).</p>
-<p>Por lo tanto, en una transformación de Lorentz, lo que se conserva es el intervalo del momento relativista:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{E^2}{c^2} - p^2 = \frac{E'^2}{c^2} - p'^2
-\]</div>
-<p>En particular, desde el SRI’ pegado a la partícula, está en reposo (<em><span class="math notranslate nohighlight">\(p'=0\)</span>, y su energía es la energía de reposo <span class="math notranslate nohighlight">\(E' = E_0 = mc^2\)</span></em>), por lo que:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{E_0^2}{c^2} = m c
-\]</div>
-<p>Si realizamos la transformación relativista para ver la partícula desde nuestro SRI en el laboratorio, obtenemos la siguiente expresión:</p>
-<div class="math notranslate nohighlight">
-\[
-E^2 - p^2 c^2 = m^2 c^4
-\]</div>
-<p><strong>Esta es una de las expresiones más utilizadas en física de partículas relativistas, por que relaciona correctamente magnitudes que podemos medir desde nuestro SRI del laboratorio</strong>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> asociado a una partícula se deduce de la definición de momento en función de la velocidad, y la definición de la velocidad en función del tiempo propio de la partícula, que es el tiempo desde su propio sistema de referencia:</p>
-<div class="math notranslate nohighlight">
-\[
-d\tau = dt' = \frac{dt}{\gamma}
-\]</div>
-<p>La velocidad relativista <span class="math notranslate nohighlight">\(\vec{U}\)</span> es, por tanto:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{U} = \frac{(cdt, dx)}{d\tau} = \left( c\frac{dt}{d\tau}, \frac{dx}{d\tau} \right) = \left( c\frac{dt}{d\tau}, \frac{dx}{dt}\frac{dt}{d\tau} \right) = ( \gamma c, \gamma v)
-\]</div>
-<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> se obtiene multiplicando por la masa de la partícula <span class="math notranslate nohighlight">\(\vec{P} = ( \gamma m c, \gamma m v)\)</span>. El uso de la energía <span class="math notranslate nohighlight">\(E/c\)</span> en la coordenada temporal <span class="math notranslate nohighlight">\(\gamma m c\)</span> es una idea que no se puede justificar a priori, pero que da uno de los resultados más conocidos de Einstein (<em>y que de hecho demostraremos después cuando veamos la formulación covariante del electromagnetismo</em>):</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma m c = \frac{E}{c} \Rightarrow E_0 = E_{(v=0)} = mc^2
-\]</div>
-<p>Sin embargo, se justifica bien a posteriori, dado que si llamamos energía cinética a la energía adicional que posee la partícula debido a su movimiento, entonces obtenemos una expresión que se puede aproximar a la energía cinética clásica cuando las velocidades son pequeñas. De esta manera, la definición de la coordenada temporal <span class="math notranslate nohighlight">\(E/c\)</span> del momento relativista está justificada.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-E_k &amp;= E - E_0 = \gamma mc^2 - mc^2 \\
-E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
+J^\alpha = \left( \begin{array}{c} c\rho \\ J_x \\ J_y \\ J_z \end{array} \right)
 \end{split}\]</div>
+<ul class="simple">
+<li><p>El cuadrivector de potencial electromagnético:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^\alpha = \left( \begin{array}{c} \frac{\phi}{c} \\ A_x \\ A_y \\ A_z \end{array} \right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>El tensor de campo electromagnético:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F^{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; -\frac{E_x}{c} &amp; -\frac{E_y}{c} &amp; -\frac{E_z}{c} \\ \frac{E_x}{c} &amp; 0 &amp; -B_z &amp; B_y \\ \frac{E_y}{c} &amp; B_z &amp; 0 &amp; -B_x \\ \frac{E_z}{c} &amp; -B_y &amp; B_x &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>Utilizando el tensor métrico, encontramos las expresiones covariantes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J_\alpha = \left( \begin{array}{c} c\rho \\ -J_x \\ -J_y \\ -J_z \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_\alpha = \left( \begin{array}{c} \frac{\phi}{c} \\ -A_x \\ -A_y \\ -A_z \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F_{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; +\frac{E_x}{c} &amp; +\frac{E_y}{c} &amp; +\frac{E_z}{c} \\ -\frac{E_x}{c} &amp; 0 &amp; -B_z &amp; B_y \\ -\frac{E_y}{c} &amp; B_z &amp; 0 &amp; -B_x \\ -\frac{E_z}{c} &amp; -B_y &amp; B_x &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>Definimos además el siguiente tensor de campo electromagnético alternativo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+G^{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; -B_x &amp; -B_y &amp; -B_z \\ B_x &amp; 0 &amp; -\frac{E_z}{c} &amp; \frac{E_y}{c} \\ B_y &amp; \frac{E_z}{c} &amp; 0 &amp; -\frac{E_x}{c} \\ B_z &amp; -\frac{E_y}{c} &amp; \frac{E_x}{c} &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>(<em>Observemos que <span class="math notranslate nohighlight">\(F^{\alpha\beta}\)</span> y <span class="math notranslate nohighlight">\(G^{\alpha\beta}\)</span> se relacionan mediante <span class="math notranslate nohighlight">\(G^{\alpha\beta} = \frac{1}{2} \epsilon^{\alpha\beta\mu\nu} G_{\mu\nu}\)</span></em>)</p>
+<p>Definimos el operador <span class="math notranslate nohighlight">\(\delta_\alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\partial_\alpha = \left( \begin{array}{c} \frac{\partial}{\partial ct} \\ \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\partial^\alpha = \left( \begin{array}{c} \frac{\partial}{\partial ct} \\ -\frac{\partial}{\partial x} \\ -\frac{\partial}{\partial y} \\ -\frac{\partial}{\partial z} \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\square = \partial_\alpha \partial^\alpha = \frac{\partial^2}{\partial (ct)^2} -\frac{\partial^2}{\partial x^2} -\frac{\partial^2}{\partial y^2} -\frac{\partial^2}{\partial z^2}
+\]</div>
+<p>Con estas definiciones tenemos las siguientes expresiones covariantes para el electromagnetismo:</p>
+<ul class="simple">
+<li><p>La conservación de la carga:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha J^\alpha = 0
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de los potenciales en función de las cargas, en el gauge de Lorentz (<em><span class="math notranslate nohighlight">\(\alpha\)</span> no se suma, por lo que son 4 ecuaciones</em>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\square{A^\alpha} = \mu_0 J^\alpha
+\]</div>
+<ul class="simple">
+<li><p>Condición del gauge de Lorentz:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha A^\alpha = 0
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de los campos en función de los potenciales:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+F^{\alpha\beta} = \partial^\alpha A^\beta - \partial^\beta A^\alpha
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de Gauss y ecuación de Ampere generalizada:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha F^{\alpha\beta} = \mu_0 J^\beta
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de Faraday y de <span class="math notranslate nohighlight">\(\vec{B}\)</span> solenoidal:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha G^{\alpha\beta} = 0
+\]</div>
+<ul class="simple">
+<li><p>Fuerza de Lorentz</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial P^\alpha}{\partial \tau} = q U_\beta F^{\alpha\beta}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La expresión de la fuerza de Lorentz que actúa sobre una partícula de carga <span class="math notranslate nohighlight">\(q\)</span> merece una mención especial porque da una justificación definitiva a la famosa expresión <span class="math notranslate nohighlight">\(E = mc^2\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Definimos el cuadrivector posición:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X^\alpha = \left( \begin{array}{c} ct \\ x \\ y \\ z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtenemos el cuadrivector velocidad, derivando en función del tiempo propio <span class="math notranslate nohighlight">\(\tau\)</span> (<em>recordamos que el tiempo propio es el tiempo en el SRI de la partícula, por lo que <span class="math notranslate nohighlight">\(d\tau = \frac{dt}{\gamma}\)</span>, donde <span class="math notranslate nohighlight">\(t\)</span> es el tiempo en el SRI del laboratorio</em>)</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U^\alpha = \left( \begin{array}{c} \gamma c \\ \gamma v_x \\ \gamma v_y \\ \gamma v_z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>El cuadrivector momento lo obtenemos multiplicando por la masa:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P^\alpha = \left( \begin{array}{c} \gamma mc \\ \gamma p_x \\ \gamma p_y \\ \gamma p_z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>El cuadrivector fuerza es la derivada del momento con respecto al tiempo propio de la partícula:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+K^\alpha = \frac{d P^\alpha}{d\tau}
+\]</div>
+<ol class="arabic simple" start="5">
+<li><p>La fuerza de Lorentz es, finalmente <span class="math notranslate nohighlight">\(K^\alpha = \frac{d P^\alpha}{d\tau} = q U_\beta F^{\alpha\beta}\)</span>. Las componentes espaciales son la parte magnética de la fuerza de Lorentz, <span class="math notranslate nohighlight">\(\vec{F_m} = q \vec{v} \times \vec{B}\)</span>. La parte temporal:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+K^0 = \frac{d(\gamma mc)}{d\tau} = q U_\beta F^{0\beta} = -q \gamma \vec{v} \cdot \frac{\vec{E}}{c}
+\]</div>
+<p>Debido a que la fuerza magnética no genera trabajo sobre la partícula, todo el incremento de energía <span class="math notranslate nohighlight">\(\varepsilon\)</span> de la partícula proviene de la fuerza eléctrica <span class="math notranslate nohighlight">\(q\vec{E}\)</span>. El trabajo realizado, o lo que es lo mismo, la energía que recibe la partícula de carga <span class="math notranslate nohighlight">\(q\)</span> es:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \int \vec{v} \cdot (q \vec{E}) dt
+\]</div>
+<p>Es decir, que:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon}{dt} = q \vec{v}\cdot\vec{E}
+\]</div>
+<p>O, usando el tiempo propio:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\gamma}\frac{d \varepsilon}{d\tau} = q \vec{v}\cdot\vec{E}
+\]</div>
+<p>Por lo que hallamos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d(\gamma mc)}{d\tau}  = \frac{1}{c} \frac{d \varepsilon}{d\tau}
+\]</div>
+<p>Por lo que finalmente identificamos:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \gamma m c^2
+\]</div>
+<p>Y por lo tanto, la energía en reposo para <span class="math notranslate nohighlight">\(\gamma=1\)</span> nos ofrece la famosa ecuación de Einstein, <span class="math notranslate nohighlight">\(E = mc^2\)</span>.</p>
 </div>
-<div class="toctree-wrapper compound">
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -508,22 +594,13 @@ E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="onda.html"
+       href="ej_tensores.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Ejemplo de onda electromagnética atenuada</p>
+        <p class="prev-next-title">Ejemplos de aplicación</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="ej_relatividad.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejemplos de relatividad especial</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -531,6 +608,22 @@ E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

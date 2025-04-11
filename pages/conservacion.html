@@ -194,7 +194,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="tensores.html">Tensores</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 
     </div>
@@ -340,7 +344,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacon-de-la-energia">Conservacón de la energía</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-energia">Conservación de la energía</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-lineal">Conservación del momento lineal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-angular">Conservación del momento angular</a></li>
 </ul>
@@ -356,7 +360,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="teoremas-de-conservacion">
 <h1>Teoremas de conservación<a class="headerlink" href="#teoremas-de-conservacion" title="Link to this heading">#</a></h1>
-<p>A partir de las ecuaciones de Maxwell podemos estudiar <strong>el efecto que tienen los campos sobre las partículas de un volumen</strong>. Como resultado, nos aparecerán naturalmente <em>dos términos electromagnéticos</em> puros: uno <em>en la superficie</em> del volumen y otro <em>en el interior</em> del volumen. <strong>El efecto se produce a través de la Fuerza de Lorentz</strong>. Dependiendo de si lo que nos interesa es la energía, el momento lineal o el momento angular (las tres magnitudes que se conservan en la mecánia clásica) empezamos el cálculo en un punto diferente:</p>
+<p>A partir de las ecuaciones de Maxwell podemos estudiar <strong>el efecto que tienen los campos sobre las partículas de un volumen</strong>. Como resultado, nos aparecerán naturalmente <em>dos términos electromagnéticos</em> puros: uno <em>en la superficie</em> del volumen y otro <em>en el interior</em> del volumen. <strong>El efecto se produce a través de la Fuerza de Lorentz</strong>. Dependiendo de si lo que nos interesa es la energía, el momento lineal o el momento angular (las tres magnitudes que se conservan en la mecánica clásica) empezamos el cálculo en un punto diferente:</p>
 <p>Para la energía cinética:</p>
 <ul class="simple">
 <li><p>La energía cinética de una partícula:</p></li>
@@ -409,14 +413,14 @@
 <li><p>Un término que se integra en la superficie y por lo tanto representa <strong>una interacción entre el volumen y el exterior</strong>.</p></li>
 </ul>
 <p>Veamos el caso de la energía, que es menos elaborado algebraicamente:</p>
-<section id="conservacon-de-la-energia">
-<h2>Conservacón de la energía<a class="headerlink" href="#conservacon-de-la-energia" title="Link to this heading">#</a></h2>
+<section id="conservacion-de-la-energia">
+<h2>Conservación de la energía<a class="headerlink" href="#conservacion-de-la-energia" title="Link to this heading">#</a></h2>
 <p>Para la energía cinética total de todas las partículas de un volumen obtuvimos:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{d \varepsilon_c}{dt} = \int_V (\vec{J} \cdot \vec{E}) dV
 \]</div>
-<p>La expresión del interior de la integral se puede desarrorar para obtener una expresión que sólo dependa de los campos, sustituyendo <span class="math notranslate nohighlight">\(\vec{J}\)</span> por los campos en la ley de Ampere generalizada.</p>
+<p>La expresión del interior de la integral se puede desarrollar para obtener una expresión que sólo dependa de los campos, sustituyendo <span class="math notranslate nohighlight">\(\vec{J}\)</span> por los campos en la ley de Ampere generalizada.</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{J} \cdot \vec{E} = \vec{E} \cdot \left( \nabla \times \vec{H} - \frac{\partial \vec{D}}{\partial t} \right)
@@ -431,7 +435,7 @@
 \[
 \frac{d \varepsilon_c}{dt} = \int_V (\vec{J} \cdot \vec{E}) dV = - \int_V \left( \vec{H} \cdot \frac{\partial \vec{B}}{\partial t} + \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} \right) - \oint_S \left(\vec{E} \times \vec{H} \right) \cdot \vec{dS}
 \]</div>
-<p>Con lo que indentificamos los términos mencionados anteriormente:</p>
+<p>Con lo que identificamos los términos mencionados anteriormente:</p>
 <ul class="simple">
 <li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \varepsilon_c}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V (\vec{J} \cdot \vec{E}) dV\)</span>, <strong>es la variación de energía cinética de todas las partículas del interior</strong> del volumen V.</p></li>
 <li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de energía almacenada por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>.</p></li>
@@ -493,7 +497,7 @@
 &amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \nabla \cdot \overset\leftrightarrow{T} dV \\
 &amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \oint_S \overset\leftrightarrow{T} \cdot \vec{dS}
 \end{split}\]</div>
-<p>Indentificamos los términos mencionados anteriormente:</p>
+<p>Identificamos los términos mencionados anteriormente:</p>
 <ul class="simple">
 <li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \vec{p}}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V (\rho \vec{E} + \vec{J} \times \vec{B}) dV\)</span>, <strong>es la variación de momento lineal de todas las partículas del interior</strong> del volumen.</p></li>
 <li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de momento lineal almacenado por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>. De hecho, el vector <span class="math notranslate nohighlight">\(\vec{g} = \varepsilon \mu \vec{E} \times \vec{H}\)</span> es la densidad de momento lineal electromagnético y tiene unidades de momento lineal por unidad de volumen.</p></li>
@@ -517,12 +521,12 @@ T_{ij} &amp;= E_iD_j + H_iB_j - \frac{1}{2}\left( E_kD_k + H_kB_k \right) \delta
 \[
 \frac{d \vec{L}}{dt} = \int_V \vec{r} \times (\rho \vec{E} + \vec{J} \times \vec{B}) dV
 \]</div>
-<p>Similarmente, llegariamos a la expresión integral de la conservación del momento angular.</p>
+<p>Similarmente, llegaríamos a la expresión integral de la conservación del momento angular.</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{d \vec{L}}{dt} = - \frac{d}{dt} \int_V \left( \vec{r} \times \left( \varepsilon \mu ( \vec{E} \times \vec{H} ) \right) \right) dV + \oint_S \left( \vec{r} \times \overset\leftrightarrow{T} \right) \cdot \vec{dS}
 \]</div>
-<p>Igualemente, indentificamos los términos mencionados anteriormente:</p>
+<p>Igualmente, identificamos los términos mencionados anteriormente:</p>
 <ul class="simple">
 <li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \vec{L}}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V \vec{r} \times (\rho \vec{E} + \vec{J} \times \vec{B}) dV\)</span>, <strong>es la variación de momento angular de todas las partículas del interior</strong> del volumen.</p></li>
 <li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de momento angular almacenado por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>. De hecho, el vector <span class="math notranslate nohighlight">\(\vec{r} \times \vec{g} = \vec{r} \times \left( \varepsilon \mu \vec{E} \times \vec{H} \right)\)</span> es la densidad de momento angular electromagnético y tiene unidades de momento angular por unidad de volumen.</p></li>
@@ -602,7 +606,7 @@ T_{ij} &amp;= E_iD_j + H_iB_j - \frac{1}{2}\left( E_kD_k + H_kB_k \right) \delta
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacon-de-la-energia">Conservacón de la energía</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-energia">Conservación de la energía</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-lineal">Conservación del momento lineal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-angular">Conservación del momento angular</a></li>
 </ul>
