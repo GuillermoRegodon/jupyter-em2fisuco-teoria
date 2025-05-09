@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Materiales dieléctricos en régimen estático &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3-1-dielectricos_estatico';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Relatividad en notación tensorial" href="2-3-relat_tensorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-1-repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-2-potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-3-conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-3-1-poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1-4-ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-5-mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-5-1-onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-2-1-ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materiales dieléctricos en régimen estático</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/3-1-dielectricos_estatico.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Materiales dieléctricos en régimen estático</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizacion">Polarización</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad">Polarizabilidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-distorsion-electronica">Polarizabilidad por distorsión eléctronica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-distorsion-ionica">Polarizabilidad por distorsión iónica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-orientacion">Polarizabilidad por orientación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-total">Polarizabilidad total</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-ferroelectricos">Materiales ferroeléctricos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="materiales-dielectricos-en-regimen-estatico">
+<h1>Materiales dieléctricos en régimen estático<a class="headerlink" href="#materiales-dielectricos-en-regimen-estatico" title="Link to this heading">#</a></h1>
+<p>Hasta ahora, desde el punto de vista electrostático, tenemos varias posibilidades para modelar una región del espacio en el que podemos definir una campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Vacío</strong>: Caracterizado por las ecuaciones de la electrostática y por la permitividad dieléctrica del vacío <span class="math notranslate nohighlight">\(\varepsilon_0\)</span>.</p></li>
+<li><p><strong>Materiales conductores eléctricos perfectos CEP)</strong>: Caracterizados por la presencia de cargas con movilidad infinita (<em>con respecto a la escala de tiempos de los problemas que podemos estudiar</em>). Nos permiten imponer unas condiciones de contorno sobre las ecuaciones de la electrostática para resolver algunos problemas de forma más sencilla.</p></li>
+<li><p><strong>Materiales conductores</strong>: Caracterizados por la presencia de unas cargas móviles pero que no se pueden mover tan rápido. Nos permiten utilizar la relación entre el campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> y la densidad de corriente <span class="math notranslate nohighlight">\(\vec{J}\)</span>. Tienen implicaciones en la disipación de potencia y en la atenuación de las ondas electromagnéticas.</p></li>
+<li><p><strong>Materiales dieléctricos</strong>: Caracterizados por cargas que se pueden desplazar un poco con respecto a una posición de equilibrio a la que están ligadas. <em>Se modelan utilizando la permitividad eléctrica del material o su permitividad relativa y utilizando la definición de vector desplazamiento <span class="math notranslate nohighlight">\(\vec{D}\)</span></em>. Estas definiciones nos permiten modificar las leyes de la electrostática para no tener que escribir explícitamente las cargas ligadas, que quedan modeladas mediante la permitividad relativa del material. <strong>Observemos que aún no hemos relacionado la dinámica microscópica de las cargas ligadas con el efecto macroscópico</strong>: Este es el objetivo de este tema.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El objetivo de este tema es relacionar la respuesta macroscópica de un material dieléctrico con la respuesta microscópica de las cargas ligadas.</p>
+</div>
+<p>También vamos a realizar varios <strong>modelos teóricos</strong> para ciertos conceptos, <strong>y vamos a extraer algunas conclusiones a partir de ellos</strong>.</p>
+<section id="polarizacion">
+<h2>Polarización<a class="headerlink" href="#polarizacion" title="Link to this heading">#</a></h2>
+<p>Vamos a definir la polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span> de la siguiente manera: <em>un dipolo es una configuración microscópica en la que tenemos una carga positiva <span class="math notranslate nohighlight">\(+q\)</span> y una negativa <span class="math notranslate nohighlight">\(-q\)</span> separadas una distancia <span class="math notranslate nohighlight">\(d\)</span>, de tal forma que el dipolo tiene un momento dipolar <span class="math notranslate nohighlight">\(\vec{p}\)</span></em>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{p} &amp;= q(\vec{r_{+q}} - \vec{r_{-q}})\\
+p &amp;= qd
+\end{split}\]</div>
+<p><strong>La polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span> se obtiene sumando todos los dipolos en una región de volumen <span class="math notranslate nohighlight">\(\Delta V\)</span></strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = \lim_{\Delta V \rightarrow 0} \frac{\sum \vec{p_i}}{\Delta V} = n &lt;\vec{p}&gt;
+\]</div>
+<p>Observemos que las unidades de la polarización son <span class="math notranslate nohighlight">\(\frac{C}{m^2}\)</span>. Esta definición es la más conveniente, porque como también vimos, las polarización de un material se puede sustituir por unas densidades de carga de polarización <span class="math notranslate nohighlight">\(\rho_p\)</span> y <span class="math notranslate nohighlight">\(\sigma_p\)</span>, y resolver los problemas electrostáticas utilizando dichas densidades de carga. Siendo <span class="math notranslate nohighlight">\(\vec{n}\)</span> el vector saliente de la superficie que envuelve un volumen con polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\rho_p &amp;= -\nabla \cdot \vec{P} \\
+\sigma_p &amp;= \vec{P} \cdot \vec{n}
+\end{split}\]</div>
+<p><strong>En la mayoría de los materiales, la polarización es proporcional al campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span></strong>, de tal forma que tenemos la siguiente expresión:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = \chi_e \vec{E}
+\]</div>
+<p>Finalmente, escribimos la definición de vector desplazamiento <span class="math notranslate nohighlight">\(\vec{D}\)</span> y el resto de expresiones para la permitividad eléctrica del material <span class="math notranslate nohighlight">\(\varepsilon\)</span> y la permitividad relativa del material <span class="math notranslate nohighlight">\(\varepsilon_r\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{D} = \vec{P} + \varepsilon_o \vec{E} = \varepsilon_0 (1 + \chi_e) \vec{E} = \varepsilon_o \varepsilon_r \vec{E} = \varepsilon \vec{E}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>En todo este recordatorio, la única relación entre lo microscópico y lo macroscópica es la que da la expresión:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} =  n &lt;\vec{p}&gt;
+\]</div>
+</div>
+</section>
+<section id="polarizabilidad">
+<h2>Polarizabilidad<a class="headerlink" href="#polarizabilidad" title="Link to this heading">#</a></h2>
+<p>Supongamos que tenemos un átomo neutro en una región de volumen. Tendrá cargas positivas y negativas <span class="math notranslate nohighlight">\(+q\)</span> y <span class="math notranslate nohighlight">\(-q\)</span> que se podrán desplazar una cierta distancia <span class="math notranslate nohighlight">\(d\)</span> cuando apliquemos un campo eléctrico <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>, generando un momento dipolar. Si, <strong>como se comprueba experimentalmente para la mayoría de materiales, la relación entre <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{P}\)</span> es proporcional</strong>, podemos entender que la relación entre <span class="math notranslate nohighlight">\(\vec{p}\)</span> y <span class="math notranslate nohighlight">\(\vec{E_L}\)</span> también lo será: definimos así la polarizabilidad <span class="math notranslate nohighlight">\(\alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{p} = \alpha \vec{E_L}
+\]</div>
+<p>En lugar de <span class="math notranslate nohighlight">\(\vec{E}\)</span>, hemos utilizado <span class="math notranslate nohighlight">\(\vec{E_L}\)</span> al que llamamos <strong>campo eléctrico local</strong>, mientras que conservamos <span class="math notranslate nohighlight">\(\vec{E}\)</span> para el campo eléctrico impuesto desde el exterior. <strong>No tienen por que ser iguales, <span class="math notranslate nohighlight">\(\vec{E} \neq \vec{E_L}\)</span> , ya que el efecto de las cargas ligadas en general modifica el campo eléctrico total que actúa en la región del átomo</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de gas diluido</strong></p>
+<p><strong>Si podemos afirmar que los dipolos no se afectan mútuamente</strong>, podemos decir que en este caso, el campo eléctrico local es igual al campo eléctrico externo:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \vec{E_L}
+\]</div>
+<p>Con esta premisa, podemos calcular la relación entre la polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span> y el campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> para un gas a presión suficientemente baja.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{p} = \alpha \vec{E_L} \approx \alpha \vec{E} \quad \Rightarrow \quad \vec{P} = n \vec{p} = n \alpha \vec{E}
+\]</div>
+<p>Con lo que podemos deducir la relación entre el vector desplazamiento <span class="math notranslate nohighlight">\(\vec{D}\)</span> y el campo eléctrico <span class="math notranslate nohighlight">\(\vec{E}\)</span> y por tanto <strong>la permitividad eléctrica de una gas a baja presión</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{D} = \vec{P} + \varepsilon_0 \vec{E} = \varepsilon_0 (1 + n \alpha) \vec{E} = \varepsilon \vec{E}
+\]</div>
+<p>O lo que es lo mismo, que la permitividad eléctrica relativa <span class="math notranslate nohighlight">\(\varepsilon_r = 1 + \frac{n \alpha}{\varepsilon_0}\)</span> y que <span class="math notranslate nohighlight">\(\chi_e = \frac{n \alpha}{\varepsilon_0}\)</span>.</p>
+</div>
+<p>Existen tres posibles motivos para que los átomos y moléculas se puedan polarizar, y por lo tanto tres contribuciones posibles a la hora de calcular la polarizabilidad <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<section id="polarizabilidad-por-distorsion-electronica">
+<h3>Polarizabilidad por distorsión eléctronica<a class="headerlink" href="#polarizabilidad-por-distorsion-electronica" title="Link to this heading">#</a></h3>
+<p>En este mecanismo de polarización, la nube electrónica se desplaza un poco con respecto al núcleo positivo, de forma que se crea un dipolo. La distancia que se desplaza está relacionada con el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>. Para calcular la polarizabilidad por distorsión electrónica <span class="math notranslate nohighlight">\(\alpha_e\)</span> vamos a realizar un pequeño modelo en el que consideramos la nube electrónica con una densidad de carga constante y buscamos el punto de equilibrio tras aplicar el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de nube electronica con densidad de carga constante</strong></p>
+<p>Supongamos que tenemos un átomo con <span class="math notranslate nohighlight">\(Z\)</span> protones y <span class="math notranslate nohighlight">\(Z\)</span> electrones, y supongamos que la nube electrónica tiene una densidad de carga constante de valor <span class="math notranslate nohighlight">\(rho\)</span>, con <span class="math notranslate nohighlight">\(R\)</span> el radio del átomo:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{Q}{V} = \frac{-Ze}{\frac{4}{3} \pi R^3}
+\]</div>
+<p>El campo eléctrico generado por una densidad de carga constante es un problema que podemos resolver mediante Gauss, como se hizo en EMI. El módulo del campo eléctrico aumenta cuando nos alejamos del centro. Por esto, la posición de reposo es con el núcleo de carga <span class="math notranslate nohighlight">\(Ze\)</span> en el centro.</p>
+<div class="math notranslate nohighlight">
+\[
+E_r = \frac{-Ze r}{4 \pi \varepsilon_0 R^3}
+\]</div>
+<p>Ahora supongamos que imponemos una campo eléctrico adicional <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>. El núcleo se desplazara a la posición <span class="math notranslate nohighlight">\(r=d\)</span> que cumple la condición de que la fuerza neta es nula, o lo que es lo mismo, el campo eléctrico generado por la nube electrónica <span class="math notranslate nohighlight">\(E_r\)</span> se compensa con el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/mat_1.png"><img alt="mat_1.png" src="../_images/mat_1.png" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Modelo de nube electrónica con densidad de carga constante.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[
+E_L = \frac{-Ze d}{4 \pi \varepsilon_0 R^3}
+\]</div>
+<p>El momento dipolar del dipolo que se forma es por tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+p = qd = Zed = 4 \pi \varepsilon_0 R^3 E_L
+\]</div>
+<p>De donde deducimos que <span class="math notranslate nohighlight">\(\alpha_e = 4 \pi \varepsilon_0 R^3\)</span></p>
+</div>
+<p>Por supuesto, este modelo se puede mejorar si calculamos la densidad electrónica real mediante los métodos de la física cuántica y la utilizamos en el modelo, pero la metodología es la misma.</p>
+</section>
+<section id="polarizabilidad-por-distorsion-ionica">
+<h3>Polarizabilidad por distorsión iónica<a class="headerlink" href="#polarizabilidad-por-distorsion-ionica" title="Link to this heading">#</a></h3>
+<p>Las moléculas están constituidas por átomos colocados en una posición de equilibrio, y, en la mayoría de los casos, los distintos átomos van a tener distinta carga. De esta forma, las moléculas pueden deformarse ligeramente con respecto a la posición de equilibrio. Este es el mecanismo de polarización por distorsión iónica <span class="math notranslate nohighlight">\(\alpha_i\)</span>. Para poder calcularla, necesitamos estimar la fuerza con la que la posición de reposo se mantiene y calcular cuál es la nueva posición de equilibrio al aplicar el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/mat_2.png"><img alt="mat_2.png" src="../_images/mat_2.png" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Polarizabilidad por distorsión iónica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Por lo tanto, para moléculas con iones de carga <span class="math notranslate nohighlight">\(+q\)</span> y <span class="math notranslate nohighlight">\(-q\)</span> aparece un dipolo adicional de valor <span class="math notranslate nohighlight">\(p = qd\)</span>. Obsérvese que el dipolo formado es el mismo independientemente de la orientación de la molécula, por lo que una sustancia puede tener una polarización propia neta nula, y polarizarse por distorsión iónica, siempre que esté constituido por moléculas con iones de cargas no nulas.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/mat_3.png"><img alt="mat_3.png" src="../_images/mat_3.png" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Polarizabilidad por distorsión iónica.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Experimentalmente, este mecanismo es difícil de distinguir del mecanismo de polarización por distorsión electrónica, y de hecho, ambos suelen agruparse en un único mecanismo de polarización por distorsión <span class="math notranslate nohighlight">\(\alpha_d = \alpha_e + \alpha_i\)</span>.</p>
+</section>
+<section id="polarizabilidad-por-orientacion">
+<h3>Polarizabilidad por orientación<a class="headerlink" href="#polarizabilidad-por-orientacion" title="Link to this heading">#</a></h3>
+<p>Cuando las moléculas que forman una sustancia tienen un momento dipolar <span class="math notranslate nohighlight">\(\vec{p_0}\)</span> no nulo y la posibilidad de girar, van a tener tendencia a orientarse en la dirección del campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>. En este caso, <strong>la polarización máxima que pueden tener es precisamente la de todos los dipolos orientados</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P_{max}} = n \vec{p_0}
+\]</div>
+<p>En este caso, la energía de todos los dipolos es mínima. Sin embargo, si la sustancia tiene una cierta temperatura, los dipolos intentarán orientarse debido al efecto del campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>, pero las colisiones y vibraciones aleatorias producirán una orientación aleatoria. <strong>Los principios de la termodinámica nos dicen que el estado de equilibrio viene dado por la distribución de Maxwell-Boltzmann</strong>. Para ello, necesitamos la energía de cada dipolo con orientación arbitraria, <span class="math notranslate nohighlight">\(\vec{p}\)</span> con <span class="math notranslate nohighlight">\(p = p_0\)</span>  :</p>
+<div class="math notranslate nohighlight">
+\[
+U_p = -\vec{p} \cdot \vec{E_L}
+\]</div>
+<p>De esta forma, el número de partículas con una orientación determinada es proporcional a:</p>
+<div class="math notranslate nohighlight">
+\[
+N(\vec{p}) \propto \exp \left(-\frac{U_p}{k_BT} \right)
+\]</div>
+<p>Este problema tiene como solución la conocida como función de Langevin <span class="math notranslate nohighlight">\(\mathcal{L}(y) = \coth{y} - \frac{1}{y}\)</span> , con <span class="math notranslate nohighlight">\(\vec{p_0}\)</span> el momento dipolar de cada molécula, orientado en la dirección del campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;\vec{p}&gt; = \vec{p_0} \mathcal{L}\left( \frac{p_0 E_L}{k_BT} \right)
+\]</div>
+<p>En el límite para bajas temperaturas, la función de Langevin tiende a 1, por lo que efectivamente, predice que todos los dipolos se orientan en la dirección del campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span>. <strong>Para temperaturas suficientemente altas</strong>, la podemos aproximar por <span class="math notranslate nohighlight">\(\mathcal{L}(y) = \coth{y} - \frac{1}{y} \approx \frac{y}{3}\)</span>. De hecho, <strong>en la mayoría de las situaciones, podremos utilizar esta aproximación</strong>.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/mat_4.png"><img alt="mat_4.png" src="../_images/mat_4.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Función de Langevin.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+&lt;p&gt; &amp;\approx p_0 \left( \frac{p_0 E_L}{3 k_BT} \right) =  \frac{p_0^2 E_L}{3 k_BT} \\
+\alpha_o &amp;= \frac{p_0^2}{3 k_BT}
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Obsérvese que para poder realizar este cálculo, tan solo hemos necesitado la energía de cada orientación y la distribución de Maxwell-Boltzmann.</p>
+</div>
+</section>
+<section id="polarizabilidad-total">
+<h3>Polarizabilidad total<a class="headerlink" href="#polarizabilidad-total" title="Link to this heading">#</a></h3>
+<p>La polarizabilidad total es la suma de las tres componentes:</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha_T = \alpha_e + \alpha_i + \alpha_o = \alpha_d + \alpha_o
+\]</div>
+<p>Hemos visto que la polarizabilidad por distorsión, no depende de la temperatura, mientras que la polarizabilidad por orientación solo aparece si <span class="math notranslate nohighlight">\(p_0\)</span> es distinto de cero y si depende de la temperatura.</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha_T = \alpha_d + \frac{p_0^2}{3 k_BT}
+\]</div>
+<p>Podemos sacar varias conclusiones:</p>
+<ul class="simple">
+<li><p>La polarización por orientación, solo se puede dar en sustancias polares (<span class="math notranslate nohighlight">\(p_0 \neq 0\)</span>)</p></li>
+<li><p>La polarización por orientación aumenta con el inverso de la temperatura, por lo que para una temperatura suficientemente baja, siempre va a ser mayor que la polarización por distorsión (<em>En realidad, la función de Langevin dejaría de poder aproximarse por <span class="math notranslate nohighlight">\(\mathcal{L}(y) \approx \frac{y}{3}\)</span>, pero en todas las sustancias polares, dicha aproximación sigue siendo válida cuando <span class="math notranslate nohighlight">\(\alpha_o\)</span> supera a <span class="math notranslate nohighlight">\(\alpha_d\)</span></em>)</p></li>
+<li><p>Por regresión lineal, experimentalmente podemos distinguir <span class="math notranslate nohighlight">\(\alpha_o\)</span> de <span class="math notranslate nohighlight">\(\alpha_d\)</span>, pero no podemos distinguir <span class="math notranslate nohighlight">\(\alpha_e\)</span> de <span class="math notranslate nohighlight">\(\alpha_i\)</span></p></li>
+</ul>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/mat_5.png"><img alt="mat_5.png" src="../_images/mat_5.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Ejemplo de medidas experimentales de polarizabilidad.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="materiales-ferroelectricos">
+<h2>Materiales ferroeléctricos<a class="headerlink" href="#materiales-ferroelectricos" title="Link to this heading">#</a></h2>
+<p>Hasta ahora no hemos hecho el esfuerzo de calcular el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L\)</span> en función del tipo de material, sino que tan solo lo hemos aproximado por el campo eléctrico externo <span class="math notranslate nohighlight">\(\vec{E}\)</span> en el caso de gas diluido. Esta aproximación es válida en ocasiones, <strong>pero no explica fenómenos experimentales como son los materiales ferroeléctricos</strong> que conservan polarización distinta de 0 aunque el campo eléctrico aplicado sea nulo.</p>
+<p><strong>Para poder explicar la existencia de los materiales ferroeléctricos necesitamos un modelo que tenga en cuenda el efecto de los demás dipolos del material</strong>, de forma que unos dipolos realimentan la polarización de sus dipolos vecinos y pueda haber polarización no nula.</p>
+<p>El modelo más sencillo que tiene en cuenta el efecto de los dipolos cercanos es el modelo de Lorentz:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de Lorentz</strong></p>
+<p>En este modelo, el material se modela como un conjunto de dipolos orientados en la misma dirección. Para los dipolos cercanos se calcula el campo eléctrico real que generan, mientras que para los dipolos lejanos, se utilizan las densidades de carga de polarización. Se define una frontera esférica de radio arbitrario que incluya suficientes dipolos cercanos, llamada la esfera de Lorentz.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/mat_6.png"><img alt="mat_6.png" src="../_images/mat_6.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Modelo de Lorentz.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>De esta forma el campo eléctrico local <span class="math notranslate nohighlight">\(\vec{E_L}\)</span> será <strong>la suma de tres componentes</strong>: El campo eléctrico externo <span class="math notranslate nohighlight">\(\vec{E}\)</span>, el campo eléctrico generado por los dipolos cercanos <span class="math notranslate nohighlight">\(\vec{E'}\)</span> y el campo eléctrico generado por las densidades de carga de polarización <span class="math notranslate nohighlight">\(\vec{E_S}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E_L} = \vec{E} + \vec{E'} + \vec{E_S}
+\]</div>
+<p><strong>Respecto a <span class="math notranslate nohighlight">\(\vec{E_S}\)</span></strong>, generado por las densidades de carga de polarización, éstas se pueden obtener utilizando las expresiones apropiadas, utilizando una polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span> constante y en la misma dirección que el campo eléctrico externo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\rho_p &amp;= -\nabla \cdot \vec{P} = 0 \\
+\sigma_p &amp;= \vec{P} \cdot \vec{n} = P \vec{u_z} \cdot (-\vec{u_r}) = -P \cos \theta
+\end{split}\]</div>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/mat_7.png"><img alt="mat_7.png" src="../_images/mat_7.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Modelo de Lorentz.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>El campo generado por esta distribución de carga superficial en el centro es un problema que se resuelve utilizando las técnicas de EMI, y da como resultado:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E_S} = \frac{\vec{P}}{3\varepsilon_0}
+\]</div>
+<p><strong>Respecto a <span class="math notranslate nohighlight">\(\vec{E'}\)</span>, el campo eléctrico de los dipolos cercanos, es nulo</strong>. Podemos ver que por la ley de Gauss, la integral de superficie esférica del campo eléctrico generado por un dipolo debe ser 0.</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_0 \int_S \vec{E_p} \cdot \vec{dS} = Q_{enc} = 0
+\]</div>
+<p>Ahora podemos ver que la integral del campo eléctrico generado por una esfera de dipolos en el centro de dicha esfera, es exactamente la misma integral, intercambiando la posición del dipolo y del punto donde se realiza la suma. Para cada esfera de dipolos da 0, por lo que para toda la esfera sólida de dipolos también da cero.</p>
+<p>Por lo tanto, uniendo los resultados:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E_L} = \vec{E} + \frac{\vec{P}}{3\varepsilon_0}
+\]</div>
+<p>Por lo que la relación entre <span class="math notranslate nohighlight">\(\vec{P}\)</span> y <span class="math notranslate nohighlight">\(\vec{E}\)</span>, usando la definición de <span class="math notranslate nohighlight">\(\chi_e\)</span> (es decir, <span class="math notranslate nohighlight">\(\vec{P} = \varepsilon_0 \chi_e \vec{E}\)</span>) y de la polarizabilidad <span class="math notranslate nohighlight">\(\alpha\)</span> (es decir, <span class="math notranslate nohighlight">\(\vec{P} = n \alpha \vec{E_L}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{E} = \frac{\vec{P}}{3\varepsilon_0} - \vec{E_L} = \vec{P} \left( \frac{1}{3\varepsilon_0} - \frac{1}{n\alpha} \right) = \varepsilon_0 \chi_e \vec{E} \left( \frac{1}{3\varepsilon_0} - \frac{1}{n\alpha} \right)
+\]</div>
+<p>Por lo que finalmente:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_e = \frac{\frac{n\alpha}{\varepsilon_0}}{1- \frac{n\alpha}{3\varepsilon_0}}
+\]</div>
+</div>
+<p>Vemos que en el denominador hay una resta, lo que permite que la expresión de <span class="math notranslate nohighlight">\(\chi_e\)</span> diverja. Es decir, el posible que exista una polarización no nula, para campo eléctrico externo nulo.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = \varepsilon_0 \chi_e \vec{E} = \infty \cdot 0
+\]</div>
+<p>Utilizamos la polarizabilidad por orientación, <span class="math notranslate nohighlight">\(\alpha = \alpha_o = \frac{p_0^2}{3 k_BT}\)</span> que depende de la temperatura, y de esta forma deducimos la conocida como Ley de Curie-Weiss, con <span class="math notranslate nohighlight">\(T_c = \frac{np_0^2}{9\varepsilon_0k_B}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_e = \frac{3 Tc}{T- Tc}
+\]</div>
+<p>De esta forma, utilizando el modelo de Lorentz y la polarizabilidad por orientación, se predice que para temperaturas inferiores a una temperatura crítica <span class="math notranslate nohighlight">\(T_c\)</span>, el material puede mantener la polarización <span class="math notranslate nohighlight">\(\vec{P}\)</span> aunque el campo externo <span class="math notranslate nohighlight">\(\vec{E}\)</span> sea nulo.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2-3-relat_tensorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Relatividad en notación tensorial</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizacion">Polarización</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad">Polarizabilidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-distorsion-electronica">Polarizabilidad por distorsión eléctronica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-distorsion-ionica">Polarizabilidad por distorsión iónica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-por-orientacion">Polarizabilidad por orientación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizabilidad-total">Polarizabilidad total</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-ferroelectricos">Materiales ferroeléctricos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

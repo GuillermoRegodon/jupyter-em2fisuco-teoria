@@ -6,31 +6,31 @@ root: intro
 parts:
 - caption: Repaso
   chapters:
-  - file: pages/repaso_gauss_ampere
+  - file: pages/0-repaso_gauss_ampere
 
 - caption: Bloque I - El campo electromagnético
   chapters:
-  - file: pages/repaso_frontera.ipynb
-  - file: pages/potenciales.ipynb
-  - file: pages/conservacion.ipynb
+  - file: pages/1-1-repaso_frontera.ipynb
+  - file: pages/1-2-potenciales.ipynb
+  - file: pages/1-3-conservacion.ipynb
     sections:
-    - file: pages/poynting_ejemplo.ipynb
-  - file: pages/ec_ondas.ipynb
-  - file: pages/mat_conductividad.ipynb
+    - file: pages/1-3-1-poynting_ejemplo.ipynb
+  - file: pages/1-4-ec_ondas.ipynb
+  - file: pages/1-5-mat_conductividad.ipynb
     sections:
-    - file: pages/onda.ipynb
+    - file: pages/1-5-1-onda.ipynb
 
 - caption: Bloque II - Formulación relativista del electromagnetismo
   chapters:
-  - file: pages/ppios_relatividad.ipynb
+  - file: pages/2-1-ppios_relatividad.ipynb
     sections:
-    - file: pages/ej_relatividad.ipynb
-  - file: pages/tensores.ipynb
+    - file: pages/2-1-1-ej_relatividad.ipynb
+  - file: pages/2-2-tensores.ipynb
     sections:
-    - file: pages/ej_tensores.ipynb
-  - file: pages/relat_tensorial.ipynb
+    - file: pages/2-2-1-ej_tensores.ipynb
+  - file: pages/2-3-relat_tensorial.ipynb
   
 
-# - caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
-#   chapters:
-#   - file: pages/page.ipynb
+- caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
+  chapters:
+  - file: pages/3-1-dielectricos_estatico.ipynb

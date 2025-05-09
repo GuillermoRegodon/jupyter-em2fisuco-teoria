@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Relatividad en notación tensorial &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2-3-relat_tensorial';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Materiales dieléctricos en régimen estático" href="3-1-dielectricos_estatico.html" />
+    <link rel="prev" title="Ejemplos de aplicación" href="2-2-1-ej_tensores.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-1-repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-2-potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-3-conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-3-1-poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1-4-ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-5-mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-5-1-onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-2-1-ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Relatividad en notación tensorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/2-3-relat_tensorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Relatividad en notación tensorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacion-de-los-campos">Transformación de los campos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="relatividad-en-notacion-tensorial">
+<h1>Relatividad en notación tensorial<a class="headerlink" href="#relatividad-en-notacion-tensorial" title="Link to this heading">#</a></h1>
+<p>Todo lo visto sobre tensores sigue siendo válido para el espacio, pero hasta ahora no hemos considerado el tiempo como otra coordenada. De hecho, <strong>en la relatividad de Galileo el tiempo y el espacio están completamente desacoplados y no tiene sentido pensar en un espacio-tiempo de Galileo</strong>. Se pueden dibujar diagramas de espacio frente a tiempo, pero las coordenadas espaciales y el tiempo son totalmente independientes. Sin embargo, en la transformación de Lorentz se considera que el tiempo influye en la transformación de las coordenadas espaciales.</p>
+<p>Para poder utilizar la notación tensorial para la relatividad, <strong>debemos definir el tensor métrico a partir de la expresión que sabemos que es invariante</strong>. Esto hace que sean las propiedades geométricas del espacio-tiempo las que dictaminen cuál es el tensor métrico.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Veamos que las condiciones geométricas del espacio son las que definen el tensor métrico. Por ejemplo, en el espacio tridimensional, los vectores tienen que cumplir que su módulo y su dirección no cambian con el sistema de referencia. La dirección la entendemos en el sentido de el ángulo que forma un vector con otro. Esto es lo mismo que decir que <strong>en el espacio tridimensional, el resultado de obtener el producto escalar de dos vectores se conserva cuando se cambian las coordenadas</strong>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v} \cdot \vec{v} &amp;= v^2\\
+\vec{a} \cdot \vec{b} &amp;= ab \cos{\alpha}
+\end{split}\]</div>
+<p><strong>Efectivamente, el producto escalar se puede escribir en forma tensorial de forma que es invariante con el cambio de sistema de coordenadas</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} \cdot \vec{b} = a^ig_{ij}b^j
+\]</div>
+</div>
+<p>En el espacio relativista, el tiempo influye en las coordenadas espaciales según la transformación de Lorentz y tiene como consecuencia deseada que la velocidad de la luz es invariante con el sistema de referencia. En este caso, <strong>la expresión invariante en la transformación de Lorentz es el intervalo relativista</strong>. Es esta condición la que nos da las propiedades geométricas del espacio-tiempo relativista. Si igualamos el intervalo a la expresión invariante.</p>
+<div class="math notranslate nohighlight">
+\[
+(ct)^2 - x^2 - y^2 - z^2 = x^ig_{ij}x^j
+\]</div>
+<p>De forma que identificamos:</p>
+<div class="math notranslate nohighlight">
+\[
+(ct)^2 - x^2 - y^2 - z^2 = g_{00}(x^0)^2 - g_{11}(x^1)^2 - g_{22}(x^2)^2 - g_{33}(x^3)^2
+\]</div>
+<p>Elejimos que <span class="math notranslate nohighlight">\(x^0 = ct\)</span>, <span class="math notranslate nohighlight">\(x^1 = x\)</span>, <span class="math notranslate nohighlight">\(x^2 = y\)</span>, <span class="math notranslate nohighlight">\(x^3 = z\)</span>. Por tanto, el tensor métrico relativista es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g_{ij} = \left( \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -1 \end{array} \right)
+\end{split}\]</div>
+<p>Vemos que el tensor métrico no cambia con la transformación de Lorentz. Tenemos un tensor métrico compatible con la transformación de Lorentz y con la notación independiente del Sistema de Referencia.</p>
+<section id="formulacion-covariante-del-electromagnetismo">
+<h2>Formulación covariante del electromagnetismo<a class="headerlink" href="#formulacion-covariante-del-electromagnetismo" title="Link to this heading">#</a></h2>
+<p>Desde antes del trabajo de Einstein, ya se sabía que la transformación de Lorentz mantenía las ecuaciones del electromagnetismo invariantes. Por lo tanto, podemos suponer que las ecuaciones del electromagnetismo deben poder escribirse de forma covariante. Para ello vamos a realizar las siguientes definiciones:</p>
+<ul class="simple">
+<li><p>El cuadrivector de densidad de carga-corriente:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J^\alpha = \left( \begin{array}{c} c\rho \\ J_x \\ J_y \\ J_z \end{array} \right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>El cuadrivector de potencial electromagnético:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^\alpha = \left( \begin{array}{c} \frac{\phi}{c} \\ A_x \\ A_y \\ A_z \end{array} \right)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>El tensor de campo electromagnético:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F^{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; -\frac{E_x}{c} &amp; -\frac{E_y}{c} &amp; -\frac{E_z}{c} \\ \frac{E_x}{c} &amp; 0 &amp; -B_z &amp; B_y \\ \frac{E_y}{c} &amp; B_z &amp; 0 &amp; -B_x \\ \frac{E_z}{c} &amp; -B_y &amp; B_x &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>Utilizando el tensor métrico, encontramos las expresiones covariantes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J_\alpha = \left( \begin{array}{c} c\rho \\ -J_x \\ -J_y \\ -J_z \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_\alpha = \left( \begin{array}{c} \frac{\phi}{c} \\ -A_x \\ -A_y \\ -A_z \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F_{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; +\frac{E_x}{c} &amp; +\frac{E_y}{c} &amp; +\frac{E_z}{c} \\ -\frac{E_x}{c} &amp; 0 &amp; -B_z &amp; B_y \\ -\frac{E_y}{c} &amp; B_z &amp; 0 &amp; -B_x \\ -\frac{E_z}{c} &amp; -B_y &amp; B_x &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>Definimos además el siguiente tensor de campo electromagnético alternativo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+G^{\alpha\beta} = \left( \begin{array}{cccc} 0 &amp; -B_x &amp; -B_y &amp; -B_z \\ B_x &amp; 0 &amp; -\frac{E_z}{c} &amp; \frac{E_y}{c} \\ B_y &amp; \frac{E_z}{c} &amp; 0 &amp; -\frac{E_x}{c} \\ B_z &amp; -\frac{E_y}{c} &amp; \frac{E_x}{c} &amp; 0 \end{array} \right)
+\end{split}\]</div>
+<p>(<em>Observemos que <span class="math notranslate nohighlight">\(F^{\alpha\beta}\)</span> y <span class="math notranslate nohighlight">\(G^{\alpha\beta}\)</span> se relacionan mediante <span class="math notranslate nohighlight">\(G^{\alpha\beta} = \frac{1}{2} \epsilon^{\alpha\beta\mu\nu} G_{\mu\nu}\)</span></em>)</p>
+<p>Definimos el operador <span class="math notranslate nohighlight">\(\delta_\alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\partial_\alpha = \left( \begin{array}{c} \frac{\partial}{\partial ct} \\ \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\partial^\alpha = \left( \begin{array}{c} \frac{\partial}{\partial ct} \\ -\frac{\partial}{\partial x} \\ -\frac{\partial}{\partial y} \\ -\frac{\partial}{\partial z} \end{array} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\square = \partial_\alpha \partial^\alpha = \frac{\partial^2}{\partial (ct)^2} -\frac{\partial^2}{\partial x^2} -\frac{\partial^2}{\partial y^2} -\frac{\partial^2}{\partial z^2}
+\]</div>
+<p>Con estas definiciones tenemos las siguientes expresiones covariantes para el electromagnetismo:</p>
+<ul class="simple">
+<li><p>La conservación de la carga:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha J^\alpha = 0
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de los potenciales en función de las cargas, en el gauge de Lorentz (<em><span class="math notranslate nohighlight">\(\alpha\)</span> no se suma, por lo que son 4 ecuaciones</em>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\square{A^\alpha} = \mu_0 J^\alpha
+\]</div>
+<ul class="simple">
+<li><p>Condición del gauge de Lorentz:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha A^\alpha = 0
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de los campos en función de los potenciales:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+F^{\alpha\beta} = \partial^\alpha A^\beta - \partial^\beta A^\alpha
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de Gauss y ecuación de Ampere generalizada:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha F^{\alpha\beta} = \mu_0 J^\beta
+\]</div>
+<ul class="simple">
+<li><p>Ecuación de Faraday y de <span class="math notranslate nohighlight">\(\vec{B}\)</span> solenoidal:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\partial_\alpha G^{\alpha\beta} = 0
+\]</div>
+<ul class="simple">
+<li><p>Fuerza de Lorentz</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial P^\alpha}{\partial \tau} = q U_\beta F^{\alpha\beta}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La expresión de la fuerza de Lorentz que actúa sobre una partícula de carga <span class="math notranslate nohighlight">\(q\)</span> merece una mención especial porque da una justificación definitiva a la famosa expresión <span class="math notranslate nohighlight">\(E = mc^2\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Definimos el cuadrivector posición:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X^\alpha = \left( \begin{array}{c} ct \\ x \\ y \\ z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtenemos el cuadrivector velocidad, derivando en función del tiempo propio <span class="math notranslate nohighlight">\(\tau\)</span> (<em>recordamos que el tiempo propio es el tiempo en el SRI de la partícula, por lo que <span class="math notranslate nohighlight">\(d\tau = \frac{dt}{\gamma}\)</span>, donde <span class="math notranslate nohighlight">\(t\)</span> es el tiempo en el SRI del laboratorio</em>)</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U^\alpha = \left( \begin{array}{c} \gamma c \\ \gamma v_x \\ \gamma v_y \\ \gamma v_z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>El cuadrivector momento lo obtenemos multiplicando por la masa:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P^\alpha = \left( \begin{array}{c} \gamma mc \\ \gamma p_x \\ \gamma p_y \\ \gamma p_z \end{array} \right)
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>El cuadrivector fuerza es la derivada del momento con respecto al tiempo propio de la partícula:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+K^\alpha = \frac{d P^\alpha}{d\tau}
+\]</div>
+<ol class="arabic simple" start="5">
+<li><p>La fuerza de Lorentz es, finalmente <span class="math notranslate nohighlight">\(K^\alpha = \frac{d P^\alpha}{d\tau} = q U_\beta F^{\alpha\beta}\)</span>. Las componentes espaciales son la fuerza de Lorentz, <span class="math notranslate nohighlight">\(\vec{F} = q (\vec{E} + \vec{v} \times \vec{B})\)</span>. La parte temporal:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+K^0 = \frac{d(\gamma mc)}{d\tau} = q U_\beta F^{0\beta} = -q \gamma \vec{v} \cdot \frac{\vec{E}}{c}
+\]</div>
+<p>Debido a que la fuerza magnética no genera trabajo sobre la partícula, todo el incremento de energía <span class="math notranslate nohighlight">\(\varepsilon\)</span> de la partícula proviene de la fuerza eléctrica <span class="math notranslate nohighlight">\(q\vec{E}\)</span>. El trabajo realizado, o lo que es lo mismo, la energía que recibe la partícula de carga <span class="math notranslate nohighlight">\(q\)</span> es:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \int \vec{v} \cdot (q \vec{E}) dt
+\]</div>
+<p>Es decir, que:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon}{dt} = q \vec{v}\cdot\vec{E}
+\]</div>
+<p>O, usando el tiempo propio:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\gamma}\frac{d \varepsilon}{d\tau} = q \vec{v}\cdot\vec{E}
+\]</div>
+<p>Por lo que hallamos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d(\gamma mc)}{d\tau}  = \frac{1}{c} \frac{d \varepsilon}{d\tau}
+\]</div>
+<p>Por lo que finalmente identificamos:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \gamma m c^2
+\]</div>
+<p>Y por lo tanto, la energía en reposo para <span class="math notranslate nohighlight">\(\gamma=1\)</span> nos ofrece la famosa ecuación de Einstein, <span class="math notranslate nohighlight">\(E = mc^2\)</span>.</p>
+</div>
+</section>
+<section id="transformacion-de-los-campos">
+<h2>Transformación de los campos<a class="headerlink" href="#transformacion-de-los-campos" title="Link to this heading">#</a></h2>
+<p>Hemos visto que todo el electromagnetismo se puede escribir en forma tensorial independiente del SR bajo la transformación de Lorentz. Por lo tanto, si cambiamos el SR los campos transformados nuevos van a cumplir las leyes del electromagnetismo en el nuevo SR. La transformación la da la regla de la transformación de Lorentz sobre el tensor de campo electromagnético <span class="math notranslate nohighlight">\(F^{\alpha\beta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+F'^{\alpha\beta} = \frac{\partial x'^\alpha}{\partial x^\mu}\frac{\partial x'^\beta}{\partial x^\nu}F^{\mu\nu}
+\]</div>
+<p>Realizando el cálculo con cuidado, podemos identificar las componentes de <span class="math notranslate nohighlight">\(F'^{\alpha\beta}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{E'} &amp;= \gamma(\vec{E} + \vec{v}\times\vec{B}) - \frac{\gamma^2}{\gamma+1} \frac{\vec{v}}{c^2}(\vec{v}\cdot\vec{E}) \\
+\vec{B'} &amp;= \gamma(\vec{B} + \frac{\vec{v}}{c^2}\times\vec{E}) - \frac{\gamma^2}{\gamma+1} \frac{\vec{v}}{c^2}(\vec{v}\cdot\vec{B})
+\end{split}\]</div>
+<p>Ademas, cualquier contracción sobre cualquier expresión tensorial se conserva en la transformación (<em>Igual que pasa con <span class="math notranslate nohighlight">\(v^iv_i\)</span>, el módulo de un vector en el espacio, o el intervalo en el espacio-tiempo relativista</em>). Con el tensor de campo electromagnético tenemos dos contracciones posibles independientes.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F^{\alpha\beta}F_{\alpha\beta} \quad \Rightarrow \quad 2 \left( B^2 - \frac{E^2}{c^2} \right) \\
+F^{\alpha\beta}G_{\alpha\beta} \quad \Rightarrow \quad -4\frac{\vec{E}\cdot\vec{B}}{c}
+\end{split}\]</div>
+<p>Esto también se puede aprovechar al realizar los cambios de SR. Por ejemplo, una onda plana (<span class="math notranslate nohighlight">\(\vec{E}\cdot\vec{B} = 0\)</span>) es una onda plana en todos los SR.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2-2-1-ej_tensores.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ejemplos de aplicación</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-1-dielectricos_estatico.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Materiales dieléctricos en régimen estático</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-covariante-del-electromagnetismo">Formulación covariante del electromagnetismo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacion-de-los-campos">Transformación de los campos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

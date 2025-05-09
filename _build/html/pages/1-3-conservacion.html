@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Teoremas de conservación &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/1-3-conservacion';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ejemplos de conservación" href="1-3-1-poynting_ejemplo.html" />
+    <link rel="prev" title="Potenciales electromagnéticos" href="1-2-potenciales.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-1-repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-2-potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Teoremas de conservación</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-3-1-poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1-4-ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-5-mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-5-1-onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-2-1-ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/1-3-conservacion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Teoremas de conservación</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-energia">Conservación de la energía</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-lineal">Conservación del momento lineal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-angular">Conservación del momento angular</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="teoremas-de-conservacion">
+<h1>Teoremas de conservación<a class="headerlink" href="#teoremas-de-conservacion" title="Link to this heading">#</a></h1>
+<p>A partir de las ecuaciones de Maxwell podemos estudiar <strong>el efecto que tienen los campos sobre las partículas de un volumen</strong>. Como resultado, nos aparecerán naturalmente <em>dos términos electromagnéticos</em> puros: uno <em>en la superficie</em> del volumen y otro <em>en el interior</em> del volumen. <strong>El efecto se produce a través de la Fuerza de Lorentz</strong>. Dependiendo de si lo que nos interesa es la energía, el momento lineal o el momento angular (las tres magnitudes que se conservan en la mecánica clásica) empezamos el cálculo en un punto diferente:</p>
+<p>Para la energía cinética:</p>
+<ul class="simple">
+<li><p>La energía cinética de una partícula:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon_{c,1}}{dt} = \frac{d}{dt} \left( \frac{1}{2}m v^2 \right) = m \vec{v} \cdot \frac{d \vec{v}}{d t} = m \vec{v} \cdot \vec{a} = \vec{v} \cdot \vec{F} = \vec{v} \cdot \left(q (\vec{E} + \vec{v} \times \vec{B}) \right) = q \vec{v} \cdot \vec{E}
+\]</div>
+<ul class="simple">
+<li><p>La energía cinética de todas las partículas de un volumen, sustituyendo <span class="math notranslate nohighlight">\(q \rightarrow \rho dV\)</span> e integrando en el volumen <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon_c}{dt} = \int_V (\rho dV) \vec{v} \cdot \vec{E} = \int_V (\vec{J} \cdot \vec{E}) dV
+\]</div>
+<p>Para el momento lineal:</p>
+<ul class="simple">
+<li><p>El momento lineal de una partícula:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{p_1}}{dt} = \vec{F} = q (\vec{E} + \vec{v} \times \vec{B})
+\]</div>
+<ul class="simple">
+<li><p>El momento lineal total de todas las partículas de un volumen, sustituyendo <span class="math notranslate nohighlight">\(q \rightarrow \rho dV\)</span> e integrando en el volumen <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{p}}{dt} = \int_V (\rho dV) \vec{E} + \vec{v} \times \vec{B} = \int_V (\rho \vec{E} + \vec{J} \times \vec{B}) dV
+\]</div>
+<p>Respecto al momento angular:</p>
+<ul class="simple">
+<li><p>El momento angular de una partícula, con respecto al origen:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{L_1}}{dt} = \vec{r} \times \vec{F} = q \vec{r} \times (\vec{E} + \vec{v} \times \vec{B})
+\]</div>
+<ul class="simple">
+<li><p>El momento angular total de todas las partículas de un volumen, sustituyendo <span class="math notranslate nohighlight">\(q \rightarrow \rho dV\)</span> e integrando en el volumen <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{L}}{dt} = \int_V (\rho dV) \vec{r} \times (\vec{E} + \vec{v} \times \vec{B}) = \int_V \vec{r} \times (\rho \vec{E} + \vec{J} \times \vec{B}) dV
+\]</div>
+<p>El siguiente paso es sustituir la densidad de carga <span class="math notranslate nohighlight">\(\rho\)</span> y la densidad de corriente <span class="math notranslate nohighlight">\(\vec{J}\)</span> utilizando las ecuaciones de Maxwell para obtener una expresión en función de los campos. <strong>Este paso es algebraico, se trata tan solo de sustituciones que siempre son válidas, pero en este caso, nos van a permitir identificar términos que tienen sentido físico</strong>. En los tres teoremas de conservación casos vamos a tener tres términos:</p>
+<ul class="simple">
+<li><p>Un término relacionado con <strong>las partículas del volumen</strong>.</p></li>
+<li><p>Un término relacionado con <strong>los campos en el interior</strong>.</p></li>
+<li><p>Un término que se integra en la superficie y por lo tanto representa <strong>una interacción entre el volumen y el exterior</strong>.</p></li>
+</ul>
+<p>Veamos el caso de la energía, que es menos elaborado algebraicamente:</p>
+<section id="conservacion-de-la-energia">
+<h2>Conservación de la energía<a class="headerlink" href="#conservacion-de-la-energia" title="Link to this heading">#</a></h2>
+<p>Para la energía cinética total de todas las partículas de un volumen obtuvimos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon_c}{dt} = \int_V (\vec{J} \cdot \vec{E}) dV
+\]</div>
+<p>La expresión del interior de la integral se puede desarrollar para obtener una expresión que sólo dependa de los campos, sustituyendo <span class="math notranslate nohighlight">\(\vec{J}\)</span> por los campos en la ley de Ampere generalizada.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{J} \cdot \vec{E} = \vec{E} \cdot \left( \nabla \times \vec{H} - \frac{\partial \vec{D}}{\partial t} \right)
+\]</div>
+<p>Podemos simetrizar la expresión observando que <span class="math notranslate nohighlight">\(\vec{E} \cdot \nabla \times \vec{H}\)</span> aparece en el desarrollo de <span class="math notranslate nohighlight">\(\nabla \cdot \left(\vec{E} \times \vec{H} \right)\)</span> y usando finalmente la ley de Gauss.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{J} \cdot \vec{E} = - \nabla \cdot \left(\vec{E} \times \vec{H} \right) + \vec{H} \cdot \nabla \times \vec{E} - \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} = - \nabla \cdot \left(\vec{E} \times \vec{H} \right) - \vec{H} \cdot \frac{\partial \vec{B}}{\partial t} - \vec{E} \cdot \frac{\partial \vec{D}}{\partial t}
+\]</div>
+<p>Esta expresión es la expresión diferencial del teorema de Poynting. El primer término es una divergencia por lo que se puede sustituir la integral de volumen de la divergencia por la integral de superficie (cerrada) del vector. Con esto, obtenemos la expresión integral del teorema de Poynting.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \varepsilon_c}{dt} = \int_V (\vec{J} \cdot \vec{E}) dV = - \int_V \left( \vec{H} \cdot \frac{\partial \vec{B}}{\partial t} + \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} \right) - \oint_S \left(\vec{E} \times \vec{H} \right) \cdot \vec{dS}
+\]</div>
+<p>Con lo que identificamos los términos mencionados anteriormente:</p>
+<ul class="simple">
+<li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \varepsilon_c}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V (\vec{J} \cdot \vec{E}) dV\)</span>, <strong>es la variación de energía cinética de todas las partículas del interior</strong> del volumen V.</p></li>
+<li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de energía almacenada por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>.</p></li>
+<li><p>El segundo término del miembro derecho se integra en la superficie y también depende exclusivamente de los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que lo identificamos como <strong>el flujo de la energía entre el interior y el exterior del volumen debido a los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> electromagnéticos</strong>. De hecho, el vector <span class="math notranslate nohighlight">\(\vec{G} = \vec{E} \times \vec{H}\)</span> se conoce como <strong>vector de Poynting</strong> y tiene unidades de energía por unidad de tiempo y por unidad de superficie.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>¡El signo del término de flujo de energía electromagnética es negativo! Esto quiere decir que el flujo se define positivo hacia fuera.</p>
+</div>
+</section>
+<section id="conservacion-del-momento-lineal">
+<h2>Conservación del momento lineal<a class="headerlink" href="#conservacion-del-momento-lineal" title="Link to this heading">#</a></h2>
+<p>El teorema de conservación de la energía tiene la ventaja de ser escalar, por lo que algebraicamente es más sencillo. En particular, el uso del teorema de la divergencia es el uso común que solemos usar en la ley de Gauss. En la conservación del momento lineal, sin embargo, tenemos que hay tres componentes que se van a conservar y que queremos relacionar con los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que el uso de la divergencia es menos común, aunque igualmente válido.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El teorema de la divergencia escalar dice:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_V \left( \nabla \cdot \vec{A} \right) dV = \oint_S \vec{A} \cdot \vec{dS}
+\]</div>
+<p>Podemos utilizar la siguiente justificación para recordarla utilizando las cordenadas cartesianas.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\int_V \left( \nabla \cdot \vec{A} \right) dV &amp;= \int_V \left( \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\right) dx \space dy \space dz = \\
+&amp;= \int_V \left( \frac{\partial A_x}{\partial x} dx \space dy \space dz + \frac{\partial A_y}{\partial y} dx \space dy \space dz + \frac{\partial A_z}{\partial z} dx \space dy \space dz \right) = \\
+&amp;= \int_V \left( dA_x \space dy \space dz + dA_y \space dx \space dz + dA_z \space dx \space dy \right)
+\end{split}\]</div>
+<p>Cada uno de los tres términos de la integral es un diferencial exacto en <span class="math notranslate nohighlight">\(dA_x\)</span>, <span class="math notranslate nohighlight">\(dA_y\)</span> o <span class="math notranslate nohighlight">\(dA_z\)</span>. Ésta es la expresión que luego integramos entre un extremo y otro del volumen en cada una de las direcciones para obtener la integral de superficie. No necesitamos terminar la demostración que, de todas formas, es conocida de los cursos de Matemáticas. Por supuesto, el producto <span class="math notranslate nohighlight">\(\vec{A} \cdot \vec{dS}\)</span> también es un escalar.</p>
+<p>En el teorema de conservación del momento lineal (y en el de conservacion del momento angular) vamos a obtener que los diferenciales exactos son más largos y dependeran de términos de los campos en las tres componentes, y de hecho, utilizando notación tensorial, la expresión queda simetrizada y muy parecida. Sea un tensor <span class="math notranslate nohighlight">\(\overset\leftrightarrow{F}\)</span> que podemos usar como una matriz de 9 elementos <span class="math notranslate nohighlight">\(F_{ij}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\int_V \left( \nabla \cdot \overset\leftrightarrow{F} \right) dV = \oint_S \overset\leftrightarrow{F} \cdot \vec{dS}
+\]</div>
+<p>Para entender esta expresión, veamos que <span class="math notranslate nohighlight">\(\nabla \cdot \vec{A}\)</span> es un escalar, mientras que <span class="math notranslate nohighlight">\(\nabla \cdot \overset\leftrightarrow{F}\)</span> es un vector, o más bien la suma de tres vectores:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \cdot \overset\leftrightarrow{F} = \frac{\partial (F_{xx}, F_{xy}, F_{xz})}{\partial x} + \frac{\partial (F_{yx}, F_{yy}, F_{yz})}{\partial y} + \frac{\partial (F_{zx}, F_{zy}, F_{zz})}{\partial z}
+\]</div>
+<p>Por lo demás, el teorema de la divergencia funciona igual: al final obtenemos diferenciales exactos (de vectores) que podremos integrar entre los extremos para convertir en una integral de superficie cerrada. Veamos por último que <span class="math notranslate nohighlight">\(\overset\leftrightarrow{F} \cdot \vec{dS}\)</span> también es un vector. Usando el producto matricial:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overset\leftrightarrow{F} \cdot \vec{dS} = \left( \begin{array}{ccc} F_{xx} &amp; F_{xy} &amp; F_{xz} \\ F_{yx} &amp; F_{yy} &amp; F_{yz} \\ F_{zx} &amp; F_{zy} &amp; F_{zz} \end{array} \right) \left( \begin{array}{c} dS_x \\ dS_y \\ dS_z \end{array} \right) = \left( \begin{array}{c} F_{xx}dS_x + F_{xy}dS_y + F_{xz}dS_z \\ F_{yx}dS_x + F_{yy}dS_y + F_{yz}dS_z \\ F_{zx}dS_x + F_{zy}dS_y + F_{zz}dS_z \end{array} \right) 
+\end{split}\]</div>
+<p>Con lo que la integral de superficie <span class="math notranslate nohighlight">\(\oint_S \overset\leftrightarrow{F} \cdot \vec{dS}\)</span> es un vector con tres integrales de superficie.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Estas expresiones quedarán más sencillas usando la notación tensorial pura, de forma que aplicar el teorema de la divergencia a un tensor de orden 2 no genera ninguna dificultad.</p>
+</div>
+</div>
+<p>Para el momento lineal total de todas las partículas de un volumen obtuvimos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{p}}{dt} = \int_V (\rho \vec{E} + \vec{J} \times \vec{B}) dV
+\]</div>
+<p>Un desarrollo algo elaborado nos permite obtener finalmente la expresión integral del teorema de conservación del momento lineal.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{d \vec{p}}{dt} &amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \left( \left( \vec{E} (\nabla \cdot \vec{D}) - \vec{D} \times (\nabla \times \vec{E}) \right) + \left( \vec{H} (\nabla \cdot \vec{B}) - \vec{B} \times (\nabla \times \vec{H}) \right) \right) dV \\
+&amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \int_V \nabla \cdot \overset\leftrightarrow{T} dV \\
+&amp;= - \frac{d}{dt} \int_V \varepsilon \mu \left( \vec{E} \times \vec{H} \right) dV + \oint_S \overset\leftrightarrow{T} \cdot \vec{dS}
+\end{split}\]</div>
+<p>Identificamos los términos mencionados anteriormente:</p>
+<ul class="simple">
+<li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \vec{p}}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V (\rho \vec{E} + \vec{J} \times \vec{B}) dV\)</span>, <strong>es la variación de momento lineal de todas las partículas del interior</strong> del volumen.</p></li>
+<li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de momento lineal almacenado por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>. De hecho, el vector <span class="math notranslate nohighlight">\(\vec{g} = \varepsilon \mu \vec{E} \times \vec{H}\)</span> es la densidad de momento lineal electromagnético y tiene unidades de momento lineal por unidad de volumen.</p></li>
+<li><p>El segundo término del miembro derecho se integra en la superficie y también depende exclusivamente de los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que lo identificamos como <strong>el flujo de momento lineal entre el interior y el exterior del volumen debido a los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> electromagnéticos</strong>. Tiene el signo positivo, a diferencia del término equivalente en el teorema de Poynting. El integrando es el conocido como tensor de esfuerzos de Maxwell y se puede escribir de las siguientes maneras equivalentes:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\nabla \cdot \overset\leftrightarrow{T} &amp;= \left( \vec{E} (\nabla \cdot \vec{D}) - \vec{D} \times (\nabla \times \vec{E} ) \right) + \left( \vec{H} (\nabla \cdot \vec{B}) - \vec{B} \times (\nabla \times \vec{H}) \right) \\
+T_{ij} &amp;= E_iD_j + H_iB_j - \frac{1}{2}\left( E_kD_k + H_kB_k \right) \delta_{ij} \quad (\sum_k \rm {implicita}) \\
+\overset\leftrightarrow{T} &amp;= \vec{E}\vec{D} + \vec{H}\vec{B} - \frac{1}{2} \left( \vec{E} \cdot \vec{D} + \vec{H} \cdot \vec{B} \right) \overset\leftrightarrow{I} \quad (\overset\leftrightarrow{I} \rm{\space tensor \space diagonal})
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>¡El signo del término de flujo de momento lineal es positivo! Esto quiere decir que el flujo se define positivo hacia dentro.</p>
+</div>
+</section>
+<section id="conservacion-del-momento-angular">
+<h2>Conservación del momento angular<a class="headerlink" href="#conservacion-del-momento-angular" title="Link to this heading">#</a></h2>
+<p>Se puede llegar a una expresión similar, empezando desde la expresión que obtuvimos para el momento angular de todas las partículas de un volumen:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{L}}{dt} = \int_V \vec{r} \times (\rho \vec{E} + \vec{J} \times \vec{B}) dV
+\]</div>
+<p>Similarmente, llegaríamos a la expresión integral de la conservación del momento angular.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d \vec{L}}{dt} = - \frac{d}{dt} \int_V \left( \vec{r} \times \left( \varepsilon \mu ( \vec{E} \times \vec{H} ) \right) \right) dV + \oint_S \left( \vec{r} \times \overset\leftrightarrow{T} \right) \cdot \vec{dS}
+\]</div>
+<p>Igualmente, identificamos los términos mencionados anteriormente:</p>
+<ul class="simple">
+<li><p>El miembro de la izquierda, ya sea <span class="math notranslate nohighlight">\(\frac{d \vec{L}}{dt}\)</span> o su expresión integral <span class="math notranslate nohighlight">\(\int_V \vec{r} \times (\rho \vec{E} + \vec{J} \times \vec{B}) dV\)</span>, <strong>es la variación de momento angular de todas las partículas del interior</strong> del volumen.</p></li>
+<li><p>El primer término del miembro derecho se integra en el volumen y solo contiene los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que podemos identificarlo como <strong>la variación de momento angular almacenado por los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> en el interior del volumen</strong>. De hecho, el vector <span class="math notranslate nohighlight">\(\vec{r} \times \vec{g} = \vec{r} \times \left( \varepsilon \mu \vec{E} \times \vec{H} \right)\)</span> es la densidad de momento angular electromagnético y tiene unidades de momento angular por unidad de volumen.</p></li>
+<li><p>El segundo término del miembro derecho se integra en la superficie y también depende exclusivamente de los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span>, por lo que lo identificamos como <strong>el flujo de momento angular entre el interior y el exterior del volumen debido a los campos <span class="math notranslate nohighlight">\(\vec{E}\)</span> y <span class="math notranslate nohighlight">\(\vec{H}\)</span> electromagnéticos</strong>. Tiene el signo positivo.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>¡El signo del término de flujo de momento angular es positivo! Esto quiere decir que el flujo se define positivo hacia dentro.</p>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-2-potenciales.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Potenciales electromagnéticos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1-3-1-poynting_ejemplo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ejemplos de conservación</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-energia">Conservación de la energía</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-lineal">Conservación del momento lineal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-del-momento-angular">Conservación del momento angular</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
