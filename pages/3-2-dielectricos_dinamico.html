@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Principios de relatividad especial &#8212; Apuntes de Electromagnetismo II</title>
+    <title>Materiales dieléctricos en régimen dinámico &#8212; Apuntes de Electromagnetismo II</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2-1-ppios_relatividad';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3-2-dielectricos_dinamico';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ejemplos de relatividad especial" href="2-1-1-ej_relatividad.html" />
-    <link rel="prev" title="Ejemplo de onda electromagnética atenuada" href="1-5-1-onda.html" />
+    <link rel="prev" title="Materiales dieléctricos en régimen estático" href="3-1-dielectricos_estatico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -189,8 +188,8 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Principios de relatividad especial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
@@ -201,9 +200,9 @@
 <li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-2-dielectricos_dinamico.html">Materiales dieléctricos en régimen dinámico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materiales dieléctricos en régimen dinámico</a></li>
 </ul>
 
     </div>
@@ -263,7 +262,7 @@
       
       
       
-      <li><a href="../_sources/pages/2-1-ppios_relatividad.ipynb" target="_blank"
+      <li><a href="../_sources/pages/3-2-dielectricos_dinamico.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +336,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principios de relatividad especial</h1>
+    <h1>Materiales dieléctricos en régimen dinámico</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -351,134 +350,148 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="principios-de-relatividad-especial">
-<h1>Principios de relatividad especial<a class="headerlink" href="#principios-de-relatividad-especial" title="Link to this heading">#</a></h1>
-<p>Los postulados de Einstein, en torno a los que se construye la relatividad especial son los siguientes:</p>
-<ol class="arabic simple">
-<li><p>Las leyes físicas son las mismas en todos los sistemas de referencia inerciales (o SRI).</p></li>
-<li><p>La velocidad de la luz <span class="math notranslate nohighlight">\(c\)</span> es la misma desde todos los sistemas de referencia inerciales (o SRI).</p></li>
-</ol>
-<p>Esto tiene como consecuencia varias cosas importantes:</p>
-<ol class="arabic simple">
-<li><p><strong>La dilatación temporal</strong>: Si la diferencia de tiempo que pasa entre dos eventos es <span class="math notranslate nohighlight">\(\Delta t'\)</span> desde un SRI en el que la posición donde ocurren los eventos es la misma, entonces la diferencia de tiempo <span class="math notranslate nohighlight">\(\Delta t\)</span> que pasa entre los dos eventos visto desde un SRI en el que los eventos pasa en posiciones distintas es mayor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\Delta t = \gamma \Delta t'
-\]</div>
-<ol class="arabic simple" start="2">
-<li><p><strong>La contracción espacial</strong>: Si la longitud de un objeto que se mide desde un SRI en el que el objeto está en reposo es <span class="math notranslate nohighlight">\(\Delta x'\)</span>, la longitud del objeto <span class="math notranslate nohighlight">\(\Delta x\)</span> visto desde un SRI en el que el objeto está en movimiento es menor en un factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\Delta x = \frac{\Delta x'}{\gamma}
-\]</div>
-<p>Con <span class="math notranslate nohighlight">\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)</span>, con <span class="math notranslate nohighlight">\(\beta = \frac{v}{c}\)</span> el módulo de la velocidad relativa entre los dos SRI en unidades de <span class="math notranslate nohighlight">\(c\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>El punto de vista de una partícula</strong></p>
-<p>Los efectos relativistas de contracción espacial y dilatación temporal tienen una aplicación práctica importante cuando el sistema de referencia SRI’ en movimiento está pegado a una partícula que se mueve a velocidad relativista respesto a nuestro sistema de referencia SRI en el laboratorio. <strong>Si el tiempo de vida medio de una partícula es <span class="math notranslate nohighlight">\(t_{1/2}\)</span>, y la partícula se desplaza a velocidad <span class="math notranslate nohighlight">\(v\)</span> medido en SRI, desde SRI el tiempo de vida medio es <span class="math notranslate nohighlight">\(\gamma t_{1/2}\)</span></strong>.</p>
-<p>El efecto de contracción espacial dice que la partícula vería el laboratorio mas corto (<em>en la dirección de su desplazamiento</em>) en el mismo factor <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
-</div>
-<p>Estas transformaciones de distancias y tiempos se pueden poner de forma simétrica como una transformación de coordenadas, conocida como <strong>Transformación de Lorentz</strong>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="materiales-dielectricos-en-regimen-dinamico">
+<h1>Materiales dieléctricos en régimen dinámico<a class="headerlink" href="#materiales-dielectricos-en-regimen-dinamico" title="Link to this heading">#</a></h1>
+<p>Al estudiar los materiales, hemos hecho algunas suposiciones acerca de los tiempos que tardan en estabilizarse, comparados con la escala de tiempos a la que se producen las variaciones de los campos impuestos externamente:</p>
+<ul class="simple">
+<li><p>En los conductores (<em>caracterizados por <span class="math notranslate nohighlight">\(\vec{J_c} = \sigma \vec{E}\)</span></em>) las cargan se aceleran desde el reposo hasta la velocidad final de forma prácticamente instantánea.</p></li>
+<li><p>En los Conductores eléctricos perfectos (<em>CEP</em>) las cargas se reorganizan de forma prácticamente instantánea para que el campo eléctrico sea perpendicular a la superficie y el campo magnético sea tangencial.</p></li>
+<li><p>En los materiales con una determinada permitividad eléctrica, los átomos y moléculas se polarizan microscópicamente de forma prácticamente instantánea. Obsérvese que en todos los caso se ha supuesto una situación de equilibrio para poder calcular la polarizabilidad <span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
+</ul>
+<p>Sin embargo, a frecuencias suficientemente altas y con variaciones externas de os campos suficientemente rápidas, estas aproximaciones pueden dejar de ser válidas: Los conductores eléctricos perfectos pueden dejar de serlo, los conductores no se podrán caracterizar por una conductividad…</p>
+<p>En el caso de los dieléctricos, <strong>los distintos mecanismos de polarización tienen escalas de tiempos y de frecuencias distintos</strong>:</p>
+<ul class="simple">
+<li><p><strong>La polarización por distorsión electrónica</strong>, que solo implica un desplazamiento de los electrones, tiene la escala de tiempos <span class="math notranslate nohighlight">\(\tau_e\)</span> más rápida.</p></li>
+<li><p><strong>La polarización por distorsión iónica</strong> implica el desplazamiento relativo de los iones de una molécula, por lo que tiene una escala de tiempos más lenta <span class="math notranslate nohighlight">\(\tau_i &gt; \tau_e\)</span>. Está relacionada con los estados vibracionales de la molécula.</p></li>
+<li><p><strong>La polarización por orientación</strong> implica la rotación de la molécula para acomodarse a la orientación del campo eléctrico externo, por lo que su escala de tiempos <span class="math notranslate nohighlight">\(\tau_o\)</span> es la más lenta.</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-ct' &amp;= \gamma(ct - \beta x) \\
-x' &amp;= \gamma(x - \beta ct)
+\tau_e &amp;&lt; \tau_i &lt; \tau_o \\
+f_e &amp;&gt; f_i &gt; f_o
 \end{split}\]</div>
-<p>La transformación de Lorentz era conocida antes de los postulados de la relatividad y el trabajo de Einstein: La transformación de Lorentz se dedujo matemáticamente como la transformación necesaria para que la ley de inducción de Faraday fuera independiente del sistema de referencia. El hecho de que se deduzca a partir de los postulados de Einstein da justificación y validez a dichos postulados.</p>
-<p>El último efecto relativista, que es de hecho el más fundamental, es <strong>la rotura de la simultaneidad</strong>. Para verlo, vamos a dibujar el Diagrama de Minkowski, que es simplemente un eje de coordenadas cartesianos en el que la ordenada es el tiempo (<em>multiplicado por c para que tenga unidades de distancia</em>). Es este diagrama, la trayectoria de un haz de luz a velocidad <span class="math notranslate nohighlight">\(c\)</span> es una recta inclinada <span class="math notranslate nohighlight">\(45º\)</span>.</p>
+<p>Vemos que es posible que los cambios externos sean demasiado rápidos, o la frecuencia de la excitación externa demasiado alta, como para que algún mecanismo de polarización tenga tiempo de producirse. En este caso, <strong>dicho fenómeno no contribuye a formar los dipolos microscópicos y la permitividad eléctrica del material responde como si dicho mecanismo no existiera</strong>. En términos de la frecuencia, la polarizabilidad pasa por los siguientes valores:</p>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(f\)</span> suficientemente baja, <span class="math notranslate nohighlight">\(\alpha_T = \alpha_e + \alpha_i + \alpha_o\)</span>.</p></li>
+<li><p>En el rango de microondas, <span class="math notranslate nohighlight">\(f_o \approx 10^{10}\)</span> Hz, las moléculas empiezan a no tener tiempo a orientarse, y  para frecuencias superiores <span class="math notranslate nohighlight">\(f_o \ll f \ll f_i\)</span>, el valor de la polarizabilidad <span class="math notranslate nohighlight">\(\alpha_T \rightarrow \alpha_e + \alpha_i\)</span>.</p></li>
+<li><p>En el rango infrarrojo, <span class="math notranslate nohighlight">\(f_i \approx 10^{13}\)</span> Hz, la masa de los iones impide que se puedan desplazar respecto a su posición de equilibrio, y para frecuencias superiores <span class="math notranslate nohighlight">\(f_i \ll f \ll f_e\)</span>, el valor de la polarizabilidad <span class="math notranslate nohighlight">\(\alpha_T \rightarrow \alpha_e\)</span>.</p></li>
+<li><p>En el rango visible ocurre la última transición, <span class="math notranslate nohighlight">\(f_e \approx 10^{15}\)</span>, y para frecuencias en el ultravioleta, no tiene sentido estudiar los materiales utilizando una permitividad eléctrica del material, ya que <span class="math notranslate nohighlight">\(\alpha_T \rightarrow 0\)</span>.</p></li>
+</ul>
+<p>Para estudiar el rango de frecuencias intermedio, vamos a utilizar <strong>un modelo en el que distinguimos dos fenómenos de polarización, uno rápido <span class="math notranslate nohighlight">\(\tau_1\)</span> y otro lento <span class="math notranslate nohighlight">\(\tau_2\)</span></strong>. Dadas las frecuencias de transición, solo tenemos dos posibilidades:</p>
+<ul class="simple">
+<li><p>En el rango de frecuencias de microondas, <span class="math notranslate nohighlight">\(\tau_1\)</span> sería la polarización por distorsión (<em>electrónica más iónica</em>), y <span class="math notranslate nohighlight">\(\tau_2\)</span> sería la polarización por orientación.</p></li>
+<li><p>En el rango de infrarrojos, <span class="math notranslate nohighlight">\(\tau_1\)</span> sería la polarización por por distorsión electrónica, y <span class="math notranslate nohighlight">\(\tau_2\)</span> sería la polarización por distorsión iónica.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de relajación dieléctrica, respuesta al escalón</strong></p>
+<p>En este modelo, descomponemos la polarización en dos componentes, <span class="math notranslate nohighlight">\(\vec{P} = \vec{P_1} + \vec{P_2}\)</span>, siendo una de ellas suficientemente rápida para considerar que, en el rango de frecuencias del problema:</p>
 <div class="math notranslate nohighlight">
 \[
-ct = x
+\vec{P_1}(t) = \varepsilon_0 \chi_1 \vec{E}(t)
+\]</div>
+<p>La otra componente sigue un sistema de primer orden, en el que las soluciones son exponenciales decreciente:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d} \vec{P_2}(t)}{{\rm d} t} = \frac{\varepsilon_0 \chi_2 \vec{E}(t) - \vec{P_2}(t)}{\tau_2}
+\]</div>
+<p>La solución ante un cambio brusco es una exponencial decreciente, como se puede verificar por sustitución. Para un escalón en el campo eléctrico, <span class="math notranslate nohighlight">\(\vec{E}(t) = \vec{E_0}\)</span> para <span class="math notranslate nohighlight">\(t \ge 0\)</span>, y <span class="math notranslate nohighlight">\(\vec{E}(t) = 0\)</span> para <span class="math notranslate nohighlight">\(t&lt;0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P_2}(t) = \varepsilon_0 \chi_2 \vec{E_0} \left(1 - \exp\left(-\frac{t}{\tau_2} \right) \right)
+\]</div>
+<p>La respuesta total en el tiempo, ante un escalón:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P}(t) = \vec{P_1}(t) + \vec{P_2}(t) = \varepsilon_0 \left( \chi_1 + \chi_2 \left(1 - \exp\left(-\frac{t}{\tau_2} \right) \right) \right) \vec{E_0}
 \]</div>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/minkowski_1.png"><img alt="minkowski_1.png" src="../_images/minkowski_1.png" style="width: 325px;" /></a>
+<a class="reference internal image-reference" href="../_images/mat_8.jpg"><img alt="mat_8.jpg" src="../_images/mat_8.jpg" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Diagrama de Minkowski y haz de luz.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Respuesta al escalón del modelo de relajación dieléctrica.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Los ejes <span class="math notranslate nohighlight">\(x',ct'\)</span> del SRI’ vistos desde el SRI están inclinados. Para obtener la expresión del eje <span class="math notranslate nohighlight">\(ct'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span>, impongo que <span class="math notranslate nohighlight">\(x'=0\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-x' = 0 \Rightarrow ct = \frac{x}{\beta} 
-\]</div>
-<p>Igualmente, obtenemos la expresión del eje <span class="math notranslate nohighlight">\(x'\)</span> en función de <span class="math notranslate nohighlight">\(x,ct\)</span> imponiendo que <span class="math notranslate nohighlight">\(ct'=0\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-ct' = 0 \Rightarrow ct = \beta x
-\]</div>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/minkowski_2.png"><img alt="minkowski_2.png" src="../_images/minkowski_2.png" style="width: 325px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Diagrama de Minkowski y ejes de SRI’.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Ahora es fácil comprobar que <strong>dos eventos que ocurren simultáneamente desde SRI, no ocurren simultáneamente desde SRI’</strong>. Al revés también ocurre, que dos eventos que ocurren simultáneamente desde SRI’, no ocurren simultáneamente desde SRI.</p>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/minkowski_3.png"><img alt="minkowski_3.png" src="../_images/minkowski_3.png" style="width: 625px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Diagrama de Minkowski y simultaneidad.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Con la rotura de la simultaneidad, podemos explicar muchas aparentes paradojas de la relatividad:</p>
+<p><strong>Modelo de relajación dieléctrica, respuesta en frecuencia</strong></p>
+<p>Vamos a resolver las misma ecuaciones, pero esta vez en el dominio de la frecuencia. La ecuación diferencial para <span class="math notranslate nohighlight">\(\vec{P_2}(t)\)</span> se convierte en la siguiente ecuación de fasores:</p>
+<div class="math notranslate nohighlight">
+\[
+j \omega \tau_2 \vec{P_2} = \varepsilon_0 \chi_2 \vec{E} - \vec{P_2}
+\]</div>
+<p>Por lo tanto la relación entre <span class="math notranslate nohighlight">\(\vec{P}\)</span> y <span class="math notranslate nohighlight">\(\vec{E}\)</span> pasa a ser:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = \vec{P_1} + \vec{P_2} = \varepsilon_0 \left( \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right) \vec{E}
+\]</div>
+<p>Vemos que, <strong>cuando estudiamos fasores, tiene sentido hablar de una permitividad eléctrica del material compleja</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right)
+\]</div>
+<p>Esta expresión compleja tiene dos casos límite reales:</p>
 <ul class="simple">
-<li><p>Cuando un objeto <span class="math notranslate nohighlight">\(A\)</span> se mueve con velocidad relativista <span class="math notranslate nohighlight">\(v\)</span> con respecto a otro <span class="math notranslate nohighlight">\(B\)</span>, el segundo, <span class="math notranslate nohighlight">\(B\)</span>, se mueve con velocidad relativista <span class="math notranslate nohighlight">\(-v\)</span> con respecto al primero <span class="math notranslate nohighlight">\(A\)</span>. ¿Cómo es posible que <span class="math notranslate nohighlight">\(A\)</span> vea más corto a <span class="math notranslate nohighlight">\(B\)</span> y <span class="math notranslate nohighlight">\(B\)</span> vea más corto a <span class="math notranslate nohighlight">\(A\)</span>? <strong>Por que los instantes temporales en los que <span class="math notranslate nohighlight">\(A\)</span> mira la parte de delante y de atrás de <span class="math notranslate nohighlight">\(B\)</span> no coinciden con los instantes temporales en los que <span class="math notranslate nohighlight">\(B\)</span> mira sus propios extremos, y viceversa</strong>. Si pusiéramos relojes en los extremos de los objetos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>, La sincronía entre los relojes depende de quién los mira. Claro, entonces <span class="math notranslate nohighlight">\(B\)</span> podría pensar <em>“<span class="math notranslate nohighlight">\(A\)</span> piensa que soy más corto de lo que realmente soy porque mide mal la distancia entre mis extremos”</em>. Pero por el primer postulado de Einstein: <strong>Los dos puntos de vista son válidos y cumplen con todas las leyes de la física</strong>.</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(\omega \ll 1/\tau_2\)</span>, la permitividad compleja es la de los dos mecanismos de polarización:</p></li>
 </ul>
-</div>
-<p>La transformación de Lorentz tiene un último resultado importante: En una transformación de Lorentz, se conserva la siguiente expresión, llamada intervalo:</p>
 <div class="math notranslate nohighlight">
 \[
-c^2t^2 - x^2 = c^2t'^2 - x'^2
+\varepsilon(\omega \tau_2 \ll 1) = \varepsilon_0 \left( 1 + \chi_1 + \chi_2 \right)
 \]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>El punto de vista de una partícula</strong></p>
-<p>El intervalo y la conservación del intervalo en una transformación relativista es muy importante porque el momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> es un vector relativista de componentes <span class="math notranslate nohighlight">\(E/c = \gamma m c\)</span> en la dirección del eje <span class="math notranslate nohighlight">\(ct\)</span>, y <span class="math notranslate nohighlight">\(p = \gamma m v\)</span> en la dirección <span class="math notranslate nohighlight">\(x\)</span> (<em>ver siguiente nota</em>).</p>
-<p>Por lo tanto, en una transformación de Lorentz, lo que se conserva es el intervalo del momento relativista:</p>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(\omega \gg 1/\tau_2\)</span>, la permitividad compleja es la del mecanismo de polarización rápido:</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
-\frac{E^2}{c^2} - p^2 = \frac{E'^2}{c^2} - p'^2
+\varepsilon(\omega \tau_2 \gg 1) = \varepsilon_0 \left( 1 + \chi_1 \right)
 \]</div>
-<p>En particular, desde el SRI’ pegado a la partícula, está en reposo (<em><span class="math notranslate nohighlight">\(p'=0\)</span>, y su energía es la energía de reposo <span class="math notranslate nohighlight">\(E' = E_0 = mc^2\)</span></em>), por lo que:</p>
+<p>En el rango intermedio, la permitividad es compleja, <span class="math notranslate nohighlight">\(\varepsilon = \varepsilon' - j \varepsilon''\)</span> (<em>Obsérvese el signo menos en la parte compleja, por definición</em>). Obviamente,</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{E_0^2}{c^2} = m c
+\frac{\varepsilon'}{\varepsilon_0}  \in [\left( 1 + \chi_1 \right), \left( 1 + \chi_1 + \chi_2 \right)]
 \]</div>
-<p>Si realizamos la transformación relativista para ver la partícula desde nuestro SRI en el laboratorio, obtenemos la siguiente expresión:</p>
+<p>La parte imaginaria se puede sacar de la expresión completa:</p>
 <div class="math notranslate nohighlight">
 \[
-E^2 - p^2 c^2 = m^2 c^4
+\varepsilon = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right) = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2(1 - j \omega \tau_2)}{1 + \omega^2 \tau_2^2} \right)
 \]</div>
-<p><strong>Esta es una de las expresiones más utilizadas en física de partículas relativistas, por que relaciona correctamente magnitudes que podemos medir desde nuestro SRI del laboratorio</strong>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> asociado a una partícula se deduce de la definición de momento en función de la velocidad, y la definición de la velocidad en función del tiempo propio de la partícula, que es el tiempo desde su propio sistema de referencia:</p>
+<p>Por lo que:</p>
 <div class="math notranslate nohighlight">
 \[
-d\tau = dt' = \frac{dt}{\gamma}
+\frac{\varepsilon''}{\varepsilon_0 } = \frac{\chi_2 \omega \tau_2)}{1 + \omega^2 \tau_2^2}
 \]</div>
-<p>La velocidad relativista <span class="math notranslate nohighlight">\(\vec{U}\)</span> es, por tanto:</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{U} = \frac{(cdt, dx)}{d\tau} = \left( c\frac{dt}{d\tau}, \frac{dx}{d\tau} \right) = \left( c\frac{dt}{d\tau}, \frac{dx}{dt}\frac{dt}{d\tau} \right) = ( \gamma c, \gamma v)
-\]</div>
-<p>El momento relativista <span class="math notranslate nohighlight">\(\vec{P}\)</span> se obtiene multiplicando por la masa de la partícula <span class="math notranslate nohighlight">\(\vec{P} = ( \gamma m c, \gamma m v)\)</span>. El uso de la energía <span class="math notranslate nohighlight">\(E/c\)</span> en la coordenada temporal <span class="math notranslate nohighlight">\(\gamma m c\)</span> es una idea que no se puede justificar a priori, pero que da uno de los resultados más conocidos de Einstein (<em>y que de hecho demostraremos después cuando veamos la formulación covariante del electromagnetismo</em>):</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma m c = \frac{E}{c} \Rightarrow E_0 = E_{(v=0)} = mc^2
-\]</div>
-<p>Sin embargo, se justifica bien a posteriori, dado que si llamamos energía cinética a la energía adicional que posee la partícula debido a su movimiento, entonces obtenemos una expresión que se puede aproximar a la energía cinética clásica cuando las velocidades son pequeñas. De esta manera, la definición de la coordenada temporal <span class="math notranslate nohighlight">\(E/c\)</span> del momento relativista está justificada.</p>
+<p>La parte imaginaria de la permitividad eléctrica del material vale 0 en los casos límite antes mencionados, <span class="math notranslate nohighlight">\(\omega \tau_2 \ll 1\)</span> y <span class="math notranslate nohighlight">\(\omega \tau_2 \gg 1\)</span>. En el rango intermedio tiene un máximo, que se puede obtener derivando <span class="math notranslate nohighlight">\(\frac{\varepsilon''}{\varepsilon_0}\)</span> frente a <span class="math notranslate nohighlight">\(\omega \tau_2\)</span> e igualando a 0. Después del cálculo, el máximo está en <span class="math notranslate nohighlight">\(\omega \tau_2 = 1\)</span>, y vale <span class="math notranslate nohighlight">\(\varepsilon'' = \varepsilon_0 \frac{\chi_2}{2}\)</span>. Para esta misma frecuencia, la parte real <span class="math notranslate nohighlight">\(\varepsilon' = \varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right)\)</span>.</p>
+<p>De hecho, si calculamos la distancia entre la permitividad y el punto complejo <span class="math notranslate nohighlight">\(\varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right)\)</span>, da un valor constante, por lo que comprobamos que la permitividad eléctrica traza una circunferencia en el plano complejo.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-E_k &amp;= E - E_0 = \gamma mc^2 - mc^2 \\
-E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
+\left|\varepsilon - \varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right) \right| &amp;= \varepsilon_0 \chi_2 \left| \frac{1}{1 + j \omega \tau_2} -\frac{1}{2} \right| \\
+&amp;= \varepsilon_0 \chi_2 \left| \frac{1 - \frac{1}{2} (1 + j \omega \tau_2)}{1 + j \omega \tau_2}  \right| \\
+&amp;= \frac{\varepsilon_0 \chi_2}{2} \left| \frac{1 - j \omega \tau_2}{1 + j \omega \tau_2}  \right| \\
+&amp;= \frac{\varepsilon_0 \chi_2}{2} \frac{|1 - j \omega \tau_2|}{|1 + j \omega \tau_2|} =  \frac{\varepsilon_0 \chi_2}{2} 
 \end{split}\]</div>
-</div>
-<div class="toctree-wrapper compound">
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/mat_9.png"><img alt="mat_9.png" src="../_images/mat_9.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Respuesta en frecuencia del modelo de relajación dieléctrica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/mat_10.png"><img alt="mat_10.png" src="../_images/mat_10.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Ejemplo de medidas experimentales usando el modelo de relajación dieléctrica.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>¿Qué implicaciones tiene la permitividad compleja? En la ecuación de ondas, la parte compleja de la permitividad tiene la misma función que la conductividad, por lo que también implica unas perdidas, un desfase entre el campo eléctrico y el campo magnético… Vamos a verlo, por ejemplo, en la ecuación fasorial que planteamos para obtener las constantes de fase y de atenuación de una onda plana:</p>
+<div class="math notranslate nohighlight">
+\[
+(j \beta + \alpha)^2 + \mu \varepsilon \omega^2 - j \mu \sigma \omega = 0
+\]</div>
+<p>Vemos que si la permitividad eléctrica del material es una magnitud compleja, lo que hacemos es añadir un término imaginario puro a la conductividad:</p>
+<div class="math notranslate nohighlight">
+\[
+(j \beta + \alpha)^2 + \mu \varepsilon'\omega^2 - j \mu \left(\sigma + \varepsilon'' \omega \right) \omega = 0
+\]</div>
+<p>La conductividad y la parte imaginaria de la permitividad eléctrica del material están sumando. Para frecuencias bajas, <span class="math notranslate nohighlight">\(\omega \ll \frac{\sigma}{\varepsilon''}\)</span>, la conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> es el efecto predominante, pero para frecuencias altas, <span class="math notranslate nohighlight">\(\omega \gg \frac{\sigma}{\varepsilon''}\)</span>, las perdidas por la permitividad compleja superan a la conductividad.</p>
 </div>
 </section>
 
@@ -513,22 +526,13 @@ E_k &amp;\approx \frac{1}{2} m v^2 \quad (v \ll c)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1-5-1-onda.html"
+       href="3-1-dielectricos_estatico.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Ejemplo de onda electromagnética atenuada</p>
+        <p class="prev-next-title">Materiales dieléctricos en régimen estático</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="2-1-1-ej_relatividad.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ejemplos de relatividad especial</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
