@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Materiales dieléctricos en régimen dinámico &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3-2-dielectricos_dinamico';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Materiales dieléctricos en régimen estático" href="3-1-dielectricos_estatico.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-1-repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-2-potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-3-conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-3-1-poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1-4-ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-5-mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-5-1-onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-2-1-ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materiales dieléctricos en régimen dinámico</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/3-2-dielectricos_dinamico.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Materiales dieléctricos en régimen dinámico</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="materiales-dielectricos-en-regimen-dinamico">
+<h1>Materiales dieléctricos en régimen dinámico<a class="headerlink" href="#materiales-dielectricos-en-regimen-dinamico" title="Link to this heading">#</a></h1>
+<p>Al estudiar los materiales, hemos hecho algunas suposiciones acerca de los tiempos que tardan en estabilizarse, comparados con la escala de tiempos a la que se producen las variaciones de los campos impuestos externamente:</p>
+<ul class="simple">
+<li><p>En los conductores (<em>caracterizados por <span class="math notranslate nohighlight">\(\vec{J_c} = \sigma \vec{E}\)</span></em>) las cargan se aceleran desde el reposo hasta la velocidad final de forma prácticamente instantánea.</p></li>
+<li><p>En los Conductores eléctricos perfectos (<em>CEP</em>) las cargas se reorganizan de forma prácticamente instantánea para que el campo eléctrico sea perpendicular a la superficie y el campo magnético sea tangencial.</p></li>
+<li><p>En los materiales con una determinada permitividad eléctrica, los átomos y moléculas se polarizan microscópicamente de forma prácticamente instantánea. Obsérvese que en todos los caso se ha supuesto una situación de equilibrio para poder calcular la polarizabilidad <span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
+</ul>
+<p>Sin embargo, a frecuencias suficientemente altas y con variaciones externas de os campos suficientemente rápidas, estas aproximaciones pueden dejar de ser válidas: Los conductores eléctricos perfectos pueden dejar de serlo, los conductores no se podrán caracterizar por una conductividad…</p>
+<p>En el caso de los dieléctricos, <strong>los distintos mecanismos de polarización tienen escalas de tiempos y de frecuencias distintos</strong>:</p>
+<ul class="simple">
+<li><p><strong>La polarización por distorsión electrónica</strong>, que solo implica un desplazamiento de los electrones, tiene la escala de tiempos <span class="math notranslate nohighlight">\(\tau_e\)</span> más rápida.</p></li>
+<li><p><strong>La polarización por distorsión iónica</strong> implica el desplazamiento relativo de los iones de una molécula, por lo que tiene una escala de tiempos más lenta <span class="math notranslate nohighlight">\(\tau_i &gt; \tau_e\)</span>. Está relacionada con los estados vibracionales de la molécula.</p></li>
+<li><p><strong>La polarización por orientación</strong> implica la rotación de la molécula para acomodarse a la orientación del campo eléctrico externo, por lo que su escala de tiempos <span class="math notranslate nohighlight">\(\tau_o\)</span> es la más lenta.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\tau_e &amp;&lt; \tau_i &lt; \tau_o \\
+f_e &amp;&gt; f_i &gt; f_o
+\end{split}\]</div>
+<p>Vemos que es posible que los cambios externos sean demasiado rápidos, o la frecuencia de la excitación externa demasiado alta, como para que algún mecanismo de polarización tenga tiempo de producirse. En este caso, <strong>dicho fenómeno no contribuye a formar los dipolos microscópicos y la permitividad eléctrica del material responde como si dicho mecanismo no existiera</strong>. En términos de la frecuencia, la polarizabilidad pasa por los siguientes valores:</p>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(f\)</span> suficientemente baja, <span class="math notranslate nohighlight">\(\alpha_T = \alpha_e + \alpha_i + \alpha_o\)</span>.</p></li>
+<li><p>En el rango de microondas, <span class="math notranslate nohighlight">\(f_o \approx 10^{10}\)</span> Hz, las moléculas empiezan a no tener tiempo a orientarse, y  para frecuencias superiores <span class="math notranslate nohighlight">\(f_o \ll f \ll f_i\)</span>, el valor de la polarizabilidad <span class="math notranslate nohighlight">\(\alpha_T \rightarrow \alpha_e + \alpha_i\)</span>.</p></li>
+<li><p>En el rango infrarrojo, <span class="math notranslate nohighlight">\(f_i \approx 10^{13}\)</span> Hz, la masa de los iones impide que se puedan desplazar respecto a su posición de equilibrio, y para frecuencias superiores <span class="math notranslate nohighlight">\(f_i \ll f \ll f_e\)</span>, el valor de la polarizabilidad <span class="math notranslate nohighlight">\(\alpha_T \rightarrow \alpha_e\)</span>.</p></li>
+<li><p>En el rango visible ocurre la última transición, <span class="math notranslate nohighlight">\(f_e \approx 10^{15}\)</span>, y para frecuencias en el ultravioleta, no tiene sentido estudiar los materiales utilizando una permitividad eléctrica del material, ya que <span class="math notranslate nohighlight">\(\alpha_T \rightarrow 0\)</span>.</p></li>
+</ul>
+<p>Para estudiar el rango de frecuencias intermedio, vamos a utilizar <strong>un modelo en el que distinguimos dos fenómenos de polarización, uno rápido <span class="math notranslate nohighlight">\(\tau_1\)</span> y otro lento <span class="math notranslate nohighlight">\(\tau_2\)</span></strong>. Dadas las frecuencias de transición, solo tenemos dos posibilidades:</p>
+<ul class="simple">
+<li><p>En el rango de frecuencias de microondas, <span class="math notranslate nohighlight">\(\tau_1\)</span> sería la polarización por distorsión (<em>electrónica más iónica</em>), y <span class="math notranslate nohighlight">\(\tau_2\)</span> sería la polarización por orientación.</p></li>
+<li><p>En el rango de infrarrojos, <span class="math notranslate nohighlight">\(\tau_1\)</span> sería la polarización por por distorsión electrónica, y <span class="math notranslate nohighlight">\(\tau_2\)</span> sería la polarización por distorsión iónica.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de relajación dieléctrica, respuesta al escalón</strong></p>
+<p>En este modelo, descomponemos la polarización en dos componentes, <span class="math notranslate nohighlight">\(\vec{P} = \vec{P_1} + \vec{P_2}\)</span>, siendo una de ellas suficientemente rápida para considerar que, en el rango de frecuencias del problema:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P_1}(t) = \varepsilon_0 \chi_1 \vec{E}(t)
+\]</div>
+<p>La otra componente sigue un sistema de primer orden, en el que las soluciones son exponenciales decreciente:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d} \vec{P_2}(t)}{{\rm d} t} = \frac{\varepsilon_0 \chi_2 \vec{E}(t) - \vec{P_2}(t)}{\tau_2}
+\]</div>
+<p>La solución ante un cambio brusco es una exponencial decreciente, como se puede verificar por sustitución. Para un escalón en el campo eléctrico, <span class="math notranslate nohighlight">\(\vec{E}(t) = \vec{E_0}\)</span> para <span class="math notranslate nohighlight">\(t \ge 0\)</span>, y <span class="math notranslate nohighlight">\(\vec{E}(t) = 0\)</span> para <span class="math notranslate nohighlight">\(t&lt;0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P_2}(t) = \varepsilon_0 \chi_2 \vec{E_0} \left(1 - \exp\left(-\frac{t}{\tau_2} \right) \right)
+\]</div>
+<p>La respuesta total en el tiempo, ante un escalón:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P}(t) = \vec{P_1}(t) + \vec{P_2}(t) = \varepsilon_0 \left( \chi_1 + \chi_2 \left(1 - \exp\left(-\frac{t}{\tau_2} \right) \right) \right) \vec{E_0}
+\]</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/mat_8.jpg"><img alt="mat_8.jpg" src="../_images/mat_8.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Respuesta al escalón del modelo de relajación dieléctrica.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Modelo de relajación dieléctrica, respuesta en frecuencia</strong></p>
+<p>Vamos a resolver las misma ecuaciones, pero esta vez en el dominio de la frecuencia. La ecuación diferencial para <span class="math notranslate nohighlight">\(\vec{P_2}(t)\)</span> se convierte en la siguiente ecuación de fasores:</p>
+<div class="math notranslate nohighlight">
+\[
+j \omega \tau_2 \vec{P_2} = \varepsilon_0 \chi_2 \vec{E} - \vec{P_2}
+\]</div>
+<p>Por lo tanto la relación entre <span class="math notranslate nohighlight">\(\vec{P}\)</span> y <span class="math notranslate nohighlight">\(\vec{E}\)</span> pasa a ser:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = \vec{P_1} + \vec{P_2} = \varepsilon_0 \left( \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right) \vec{E}
+\]</div>
+<p>Vemos que, <strong>cuando estudiamos fasores, tiene sentido hablar de una permitividad eléctrica del material compleja</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right)
+\]</div>
+<p>Esta expresión compleja tiene dos casos límite reales:</p>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(\omega \ll 1/\tau_2\)</span>, la permitividad compleja es la de los dos mecanismos de polarización:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon(\omega \tau_2 \ll 1) = \varepsilon_0 \left( 1 + \chi_1 + \chi_2 \right)
+\]</div>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(\omega \gg 1/\tau_2\)</span>, la permitividad compleja es la del mecanismo de polarización rápido:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon(\omega \tau_2 \gg 1) = \varepsilon_0 \left( 1 + \chi_1 \right)
+\]</div>
+<p>En el rango intermedio, la permitividad es compleja, <span class="math notranslate nohighlight">\(\varepsilon = \varepsilon' - j \varepsilon''\)</span> (<em>Obsérvese el signo menos en la parte compleja, por definición</em>). Obviamente,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\varepsilon'}{\varepsilon_0}  \in [\left( 1 + \chi_1 \right), \left( 1 + \chi_1 + \chi_2 \right)]
+\]</div>
+<p>La parte imaginaria se puede sacar de la expresión completa:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2}{1 + j \omega \tau_2} \right) = \varepsilon_0 \left( 1 + \chi_1 + \frac{\chi_2(1 - j \omega \tau_2)}{1 + \omega^2 \tau_2^2} \right)
+\]</div>
+<p>Por lo que:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\varepsilon''}{\varepsilon_0 } = \frac{\chi_2 \omega \tau_2)}{1 + \omega^2 \tau_2^2}
+\]</div>
+<p>La parte imaginaria de la permitividad eléctrica del material vale 0 en los casos límite antes mencionados, <span class="math notranslate nohighlight">\(\omega \tau_2 \ll 1\)</span> y <span class="math notranslate nohighlight">\(\omega \tau_2 \gg 1\)</span>. En el rango intermedio tiene un máximo, que se puede obtener derivando <span class="math notranslate nohighlight">\(\frac{\varepsilon''}{\varepsilon_0}\)</span> frente a <span class="math notranslate nohighlight">\(\omega \tau_2\)</span> e igualando a 0. Después del cálculo, el máximo está en <span class="math notranslate nohighlight">\(\omega \tau_2 = 1\)</span>, y vale <span class="math notranslate nohighlight">\(\varepsilon'' = \varepsilon_0 \frac{\chi_2}{2}\)</span>. Para esta misma frecuencia, la parte real <span class="math notranslate nohighlight">\(\varepsilon' = \varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right)\)</span>.</p>
+<p>De hecho, si calculamos la distancia entre la permitividad y el punto complejo <span class="math notranslate nohighlight">\(\varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right)\)</span>, da un valor constante, por lo que comprobamos que la permitividad eléctrica traza una circunferencia en el plano complejo.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left|\varepsilon - \varepsilon_0 \left(1 + \chi_1 + \frac{\chi_2}{2} \right) \right| &amp;= \varepsilon_0 \chi_2 \left| \frac{1}{1 + j \omega \tau_2} -\frac{1}{2} \right| \\
+&amp;= \varepsilon_0 \chi_2 \left| \frac{1 - \frac{1}{2} (1 + j \omega \tau_2)}{1 + j \omega \tau_2}  \right| \\
+&amp;= \frac{\varepsilon_0 \chi_2}{2} \left| \frac{1 - j \omega \tau_2}{1 + j \omega \tau_2}  \right| \\
+&amp;= \frac{\varepsilon_0 \chi_2}{2} \frac{|1 - j \omega \tau_2|}{|1 + j \omega \tau_2|} =  \frac{\varepsilon_0 \chi_2}{2} 
+\end{split}\]</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/mat_9.png"><img alt="mat_9.png" src="../_images/mat_9.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Respuesta en frecuencia del modelo de relajación dieléctrica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/mat_10.png"><img alt="mat_10.png" src="../_images/mat_10.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Ejemplo de medidas experimentales usando el modelo de relajación dieléctrica.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>¿Qué implicaciones tiene la permitividad compleja? En la ecuación de ondas, la parte compleja de la permitividad tiene la misma función que la conductividad, por lo que también implica unas perdidas, un desfase entre el campo eléctrico y el campo magnético… Vamos a verlo, por ejemplo, en la ecuación fasorial que planteamos para obtener las constantes de fase y de atenuación de una onda plana:</p>
+<div class="math notranslate nohighlight">
+\[
+(j \beta + \alpha)^2 + \mu \varepsilon \omega^2 - j \mu \sigma \omega = 0
+\]</div>
+<p>Vemos que si la permitividad eléctrica del material es una magnitud compleja, lo que hacemos es añadir un término imaginario puro a la conductividad:</p>
+<div class="math notranslate nohighlight">
+\[
+(j \beta + \alpha)^2 + \mu \varepsilon'\omega^2 - j \mu \left(\sigma + \varepsilon'' \omega \right) \omega = 0
+\]</div>
+<p>La conductividad y la parte imaginaria de la permitividad eléctrica del material están sumando. Para frecuencias bajas, <span class="math notranslate nohighlight">\(\omega \ll \frac{\sigma}{\varepsilon''}\)</span>, la conductividad <span class="math notranslate nohighlight">\(\sigma\)</span> es el efecto predominante, pero para frecuencias altas, <span class="math notranslate nohighlight">\(\omega \gg \frac{\sigma}{\varepsilon''}\)</span>, las perdidas por la permitividad compleja superan a la conductividad.</p>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3-1-dielectricos_estatico.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Materiales dieléctricos en régimen estático</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

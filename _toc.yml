@@ -34,3 +34,4 @@ parts:
 - caption: Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
   chapters:
   - file: pages/3-1-dielectricos_estatico.ipynb
+  - file: pages/3-2-dielectricos_dinamico.ipynb
