@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Propiedades magnéticas de los medios materiales en régimen estático &#8212; Apuntes de Electromagnetismo II</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3-3-magneticos-estatico';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Materiales dieléctricos en régimen dinámico" href="3-2-dielectricos_dinamico.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Apuntes de Electromagnetismo II - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Apuntes de Electromagnetismo II - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Apuntes de Electromagnetismo II
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Repaso</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-repaso_gauss_ampere.html">Repaso del uso de las simetrías para resolver problemas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque I - El campo electromagnético</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-1-repaso_frontera.html">Condiciones de frontera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-2-potenciales.html">Potenciales electromagnéticos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-3-conservacion.html">Teoremas de conservación</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-3-1-poynting_ejemplo.html">Ejemplos de conservación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="1-4-ec_ondas.html">Ondas electromagnéticas</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-5-mat_conductividad.html">Ondas planas en medios con pérdidas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-5-1-onda.html">Ejemplo de onda electromagnética atenuada</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-2-1-ej_tensores.html">Ejemplos de aplicación</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-2-dielectricos_dinamico.html">Materiales dieléctricos en régimen dinámico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Propiedades magnéticas de los medios materiales en régimen estático</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/3-3-magneticos-estatico.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Propiedades magnéticas de los medios materiales en régimen estático</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Propiedades magnéticas de los medios materiales en régimen estático</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imanacion">Imanación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuentes-del-magnetismo-microscopico">Fuentes del magnetismo microscópico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-diamagneticos">Materiales diamagnéticos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-paramagneticos">Materiales paramagnéticos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dominios-ferromagneticos-y-paredes-de-bloch">Dominios ferromagnéticos y paredes de Bloch</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="propiedades-magneticas-de-los-medios-materiales-en-regimen-estatico">
+<h1>Propiedades magnéticas de los medios materiales en régimen estático<a class="headerlink" href="#propiedades-magneticas-de-los-medios-materiales-en-regimen-estatico" title="Link to this heading">#</a></h1>
+<p>Hasta ahora, desde el punto de vista magnetostático, hemos utilizados distintos tipos de materiales para estudiar el comportamiento del campo magnético <span class="math notranslate nohighlight">\(\vec{B}\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Vacío</strong>: Caracterizado por las ecuaciones de la magnetostática y por la permeabilidad magnética del vacío <span class="math notranslate nohighlight">\(\mu_0\)</span>.</p></li>
+<li><p><strong>Materiales conductores eléctricos perfectos CEP)</strong>: Caracterizados por la presencia de cargas con movilidad infinita (<em>con respecto a la escala de tiempos de los problemas que podemos estudiar</em>). Nos permiten imponer unas condiciones de contorno sobre las ecuaciones de la magnetostática para resolver algunos problemas de forma más sencilla. Recordemos que en el interior, el campo magnético <span class="math notranslate nohighlight">\(\vec{B}\)</span> es nulo y al otro lado de la frontera del CEP, debe ser tangencial a la superficie de la frontera.</p></li>
+<li><p><strong>Materiales conductores</strong>: Los caracterizamos por una densidad de corriente <span class="math notranslate nohighlight">\(\vec{J}\)</span>. Podemos calcular el campo magnético en su entorno mediante la ley de Biot-Savart.</p></li>
+<li><p><strong>Materiales no conductores</strong>: Están constituidos por átomos y moléculas que contienen electrones que describen órbitas, desde el punto de vista clásico, o que pueblan un orbital con un determinado momento angular <span class="math notranslate nohighlight">\(\vec{l}\)</span>. Además, los electrones y algunos núcleos tienen un espín, con otro momento angular intrínseco. Estos momentos angulares implican unas corrientes que llamamos ligadas y por tanto, un momento magnético microscópico <span class="math notranslate nohighlight">\(\vec{m}\)</span>. <em>Se modelan utilizando la permeabilidad magnética del material o su permeabilidad relativa y utilizando la definición de vector <span class="math notranslate nohighlight">\(\vec{H}\)</span></em>. Estas definiciones nos permiten modificar las leyes de la magnetostática para no tener que escribir explícitamente las corrientes ligadas, que quedan modeladas mediante la permeabilidad relativa del material. <strong>Observemos que aún no hemos relacionado la dinámica microscópica de momentos magnéticos microscópicos con el efecto macroscópico</strong>: Este es el objetivo de este tema.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El objetivo de este tema es relacionar la respuesta magnética macroscópica de un material con la respuesta magnética microscópica de las corrientes ligadas y de los momentos magnéticos de las partículas del material.</p>
+</div>
+<p>También vamos a realizar varios <strong>modelos teóricos</strong> para ciertos conceptos, <strong>y vamos a extraer algunas conclusiones a partir de ellos</strong>.</p>
+<section id="imanacion">
+<h2>Imanación<a class="headerlink" href="#imanacion" title="Link to this heading">#</a></h2>
+<p>Vamos a definir la imanación a partir del efecto combinado de los momentos magnéticos microscópicos. <em>Una configuración con un momento magnético se puede simplificar a todos los efectos por un pequeño circuito de forma arbitraria, o dipolo magnético, con superficie <span class="math notranslate nohighlight">\(S\)</span> y por el que pasa una corriente <span class="math notranslate nohighlight">\(I\)</span>. Se le puede asociar un momento magnético dipolar que, para un circuito plano, es perpendicular a dicho plano, de valor <span class="math notranslate nohighlight">\(\vec{m}\)</span></em>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{m} = I S \vec{n}
+\]</div>
+<p>La imanación <span class="math notranslate nohighlight">\(\vec{M}\)</span> se obtiene sumando todos los momentos magnéticos en una región de volumen <span class="math notranslate nohighlight">\(\Delta V\)</span>**:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{M} = \lim_{\Delta V \rightarrow 0} \frac{\sum \vec{m_i}}{\Delta V} = n \left&lt;\vec{m}\right&gt;
+\]</div>
+<p>Observemos que las unidades de la imanación son <span class="math notranslate nohighlight">\(\frac{A}{m}\)</span>, las misma que la del vector <span class="math notranslate nohighlight">\(\vec{H}\)</span>. Esta definición es la más conveniente, porque como también vimos, la imanación de un material se puede sustituir por unas densidades de corrientes ligadas volumétrica <span class="math notranslate nohighlight">\(\vec{J_m}\)</span> y superficial <span class="math notranslate nohighlight">\(\vec{j_m}\)</span>, y resolver los problemas de magnetostática utilizando dichas densidades de corriente. Siendo <span class="math notranslate nohighlight">\(\vec{n}\)</span> el vector saliente de la superficie que envuelve un volumen con imanación <span class="math notranslate nohighlight">\(\vec{M}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{J_m} &amp;= \nabla \times \vec{M} \\
+\vec{j_m} &amp;= \vec{M} \times \vec{n}
+\end{split}\]</div>
+<p>En muchos materiales, la imanación es proporcional al vector <span class="math notranslate nohighlight">\(\vec{H}\)</span>, mediante la constante susceptibilidad magnética del material <span class="math notranslate nohighlight">\(\chi_m\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{M} = \chi_m \vec{H}
+\]</div>
+<p>La definición del vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> es la que surge de la siguiente expresión, de tal forma que las ecuaciones de la magnetostática se escriben sólo en función de las corrientes de conducción externas, y las corrientes ligadas <span class="math notranslate nohighlight">\(\vec{J_m}\)</span> y <span class="math notranslate nohighlight">\(\vec{j_m}\)</span> quedan modeladas a través de la permeabilidad magnética del material o de la permeabilidad relativa.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{B} = \mu_0 \left( \vec{H} + \vec{M} \right) = \mu_0 \left(1 + \chi_m \right) \vec{H} = \mu_0 \mu_r \vec{H} = \mu \vec{H}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>En todo este recordatorio, la única relación entre lo microscópico y lo macroscópico es la que da la expresión:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{M} =  n \left&lt;\vec{m}\right&gt;
+\]</div>
+</div>
+</section>
+<section id="fuentes-del-magnetismo-microscopico">
+<h2>Fuentes del magnetismo microscópico<a class="headerlink" href="#fuentes-del-magnetismo-microscopico" title="Link to this heading">#</a></h2>
+<p>El magnetismo microscópico puede provenir de dos tipos de fuente:</p>
+<ul class="simple">
+<li><p><strong>El espín</strong> intrínseco de algunas partículas, como por ejemplo los electrones.</p></li>
+<li><p><strong>Las órbitas</strong> que describen los electrones en torno a los núcleos atómicos.</p></li>
+</ul>
+<p>Vamos a estudiar los dos tipos de magnetismo microscópico poniendo como ejemplo un tipo de material para el que es relevante.</p>
+<p>En general, el vector <span class="math notranslate nohighlight">\(\vec{H_L}\)</span> local que actúa sobre cada átomo no es el mismo que el que se impone desde el exterior <span class="math notranslate nohighlight">\(\vec{H}\)</span>, o en términos de campo magnético <span class="math notranslate nohighlight">\(\vec{B_L} \neq \vec{B}\)</span>. En este sentido podemos desarrollar varios modelos para relacionar el vector <span class="math notranslate nohighlight">\(\vec{H_L}\)</span> local y el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo.</p>
+<ul class="simple">
+<li><p><strong>Modelo de gas diluido</strong>: Si suponemos que los dipolos magnéticos son suficientemente independientes y no se afectan mutuamente, el vector <span class="math notranslate nohighlight">\(\vec{H_L}\)</span> local es prácticamente el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo y <span class="math notranslate nohighlight">\(\vec{H_L} \approx \vec{H}\)</span>.</p></li>
+<li><p><strong>Modelo de Lorentz</strong>: El material se modela como un conjunto de dipolos orientados en la misma dirección. Para los dipolos cercanos se calcula el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> real que generan, mientras que para los dipolos lejanos, se utilizan las densidades de corriente ligadas. Se define una frontera esférica de radio arbitrario que incluya suficientes dipolos cercanos, llamada la esfera de Lorentz.</p></li>
+<li><p><strong>Otros modelos</strong>: Para conseguir resultados más precisos, en necesario considerar el efecto de los dipolos cercanos, como por ejemplo en el modelo de Ising.</p></li>
+</ul>
+</section>
+<section id="materiales-diamagneticos">
+<h2>Materiales diamagnéticos<a class="headerlink" href="#materiales-diamagneticos" title="Link to this heading">#</a></h2>
+<p>El tipo de materiales con la respuesta más leve se explican correctamente con el modelo de órbita clásica estudiando cómo se afecta ésta por la presencia de una campo magnético local <span class="math notranslate nohighlight">\(\vec{B_L}\)</span>. Consideremos una órbita circular de un electrón en torno a un núcleo, que puede ser descrito mediante un momento magnético.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/mat_11.png"><img alt="mat_11.png" src="../_images/mat_11.png" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Órbita clásica sin campo magnético</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>En una vuelta completa, la corriente <span class="math notranslate nohighlight">\(I\)</span> es simplemente la carga dividida entre el tiempo:</p>
+<div class="math notranslate nohighlight">
+\[
+I = \frac{-e}{T} = -\frac{ev}{2\pi R}
+\]</div>
+<p>Mientras que la superficie de la trayectoria circular es simplemente <span class="math notranslate nohighlight">\(S = \pi R^2\)</span>. Por lo tanto, el momento magnético de esta trayectoria es:</p>
+<div class="math notranslate nohighlight">
+\[
+m = -\frac{evR}{2}
+\]</div>
+<p>Es interesante calcular, por otra parte, el momento angular y relacionarlo, con el momento dipolar magnético:</p>
+<div class="math notranslate nohighlight">
+\[
+l = Rp = m_evR = - \frac{2 m_e}{e} m
+\]</div>
+<p>O a la inversa:</p>
+<div class="math notranslate nohighlight">
+\[
+m = -\frac{e}{2m_e} l
+\]</div>
+</div>
+<p>La fuerza <span class="math notranslate nohighlight">\(F_e\)</span> que le hace girar será eléctrica y se iguala a la fuerza centrípeta de una órbita con velocidad <span class="math notranslate nohighlight">\(v_0\)</span> y radio <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+F_e = m_e \frac{v_0^2}{R}
+\]</div>
+<p>Sin cambiar el radio de la órbita, la fuerza eléctrica es la misma. Si añadimos un campo magnético local <span class="math notranslate nohighlight">\(\vec{B_L}\)</span>, la fuerza magnética de una trayectoria circular es conocida, <span class="math notranslate nohighlight">\(F_B = evB_L\)</span>, y la velocidad debe incrementar para dar cuenta de la mayor fuerza central.</p>
+<div class="math notranslate nohighlight">
+\[
+F_e + F_B = m_e \frac{v^2}{R}
+\]</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/mat_12.png"><img alt="mat_12.png" src="../_images/mat_12.png" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Órbita clásica con campo magnético</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Por lo tanto, despejando <span class="math notranslate nohighlight">\(\Delta(v^2) = v^2 - v_0^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+m_e \Delta(v^2) = evR B_L
+\]</div>
+<p>Si el cambio en la velocidad es suficientemente pequeño, <span class="math notranslate nohighlight">\(\Delta(v^2) = 2v\Delta v\)</span> y por tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta v = \frac{e R B_L}{2 m_e}
+\]</div>
+<p>Finalmente, podemos obtener el cambio en el momento dipolar magnético de la órbita del electrón:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta m = -\frac{e}{2 m_e}\Delta l = -\frac{e}{2 m_e} \left( m_e R \Delta v \right) = -\frac{e}{2 m_e} (m_e R) \frac{e R B_L}{2 m_e} = -\frac{e^2R^2}{4 m_e}B_L
+\]</div>
+<p>En un material con una densidad de átomos <span class="math notranslate nohighlight">\(n\)</span>, si cada átomo tiene <span class="math notranslate nohighlight">\(Z\)</span> electrones con distintas órbitas, tenemos que sumar, para la imanación, la modificación en el momento de cada órbita para todos los electrones.</p>
+<div class="math notranslate nohighlight">
+\[
+M = n \sum_{i=1}^Z \Delta m_i = n \left( \frac{e^2}{4 m_e} \sum_{i=1}^Z r_i^2 \right) B_L = n \left( \frac{e^2 \mu_0}{4 m_e} \sum_{i=1}^Z r_i^2 \right) H_L
+\]</div>
+<p>El factor que multiplica al vector <span class="math notranslate nohighlight">\(H_L\)</span>, si realizamos la operación, da un valor pequeño por lo que podemos suponer que el efecto de las órbitas cercana es nulo y utilizar la hipótesis de gas diluido, <span class="math notranslate nohighlight">\(H_L \approx H\)</span> en un material diamagnético. Por lo tanto, ya tenemos la susceptibilidad magnética <span class="math notranslate nohighlight">\(\chi_m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+M \approx n \left( \frac{e^2 \mu_0}{4m_e} \sum_{i=1}^Z r_i^2 \right) H = \chi_m H
+\]</div>
+<ul class="simple">
+<li><p>La susceptibilidad es negativa.</p></li>
+<li><p>La susceptibilidad es del orden de <span class="math notranslate nohighlight">\(-10^{-5}\)</span>.</p></li>
+</ul>
+</section>
+<section id="materiales-paramagneticos">
+<h2>Materiales paramagnéticos<a class="headerlink" href="#materiales-paramagneticos" title="Link to this heading">#</a></h2>
+<p>En los materiales paramagnéticos, la respuesta magnética es más intensa. Se da en los materiales en los que la orientación de los momentos dipolares magnéticos puede variar. Cuando se impone un campo magnético externo, las distintas orientaciones pasan a tener distinta energía. <strong>La imanación máxima que pueden tener es precisamente la de todos los momentos dipolares magnéticos orientados en la misma dirección</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{M_{max}} = n \vec{m_0}
+\]</div>
+<p>En este caso, la energía de todos los momentos dipolares magnéticos es mínima. Sin embargo, si la sustancia tiene una cierta temperatura, los dipolos magnéticos intentarán orientarse debido al efecto del campo magnético local <span class="math notranslate nohighlight">\(\vec{B_L}\)</span>, pero las colisiones y vibraciones aleatorias producirán una orientación aleatoria. <strong>Debemos utilizar los principios de la Física estadística para obtener la situación de equilibrio, es decir, utilizamos la distribución de Maxwell-Boltzmann</strong>. Para ello, necesitamos la energía de cada dipolo magnético con orientación arbitraria, <span class="math notranslate nohighlight">\(\vec{m}\)</span> con <span class="math notranslate nohighlight">\(m = m_0\)</span>  :</p>
+<div class="math notranslate nohighlight">
+\[
+U_m = -\vec{m} \cdot \vec{B_L}
+\]</div>
+<p>Vamos a estudiar dos posibilidades:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Materiales en los que el momento dipolar magnético puede tener cualquier orientación.</strong></p>
+<p>El número de momentos dipolares <span class="math notranslate nohighlight">\(\vec{m}\)</span> con una orientación determinada en un determinado volumen <span class="math notranslate nohighlight">\(\Delta V\)</span> es proporcional a:</p>
+<div class="math notranslate nohighlight">
+\[
+n(\vec{m}) \propto \exp \left(-\frac{U_m}{k_BT} \right) = \exp \left(\frac{\vec{m} \cdot \vec{B_L}}{k_BT} \right)
+\]</div>
+<p>Si elegimos la orientación del campo magnético local en la dirección <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+n(\vec{m}) \propto \exp \left(\frac{m_0 B_L \cos\theta}{k_BT} \right)
+\]</div>
+<p>Por lo tanto el problema se reduce a plantear, en el espacio <span class="math notranslate nohighlight">\((\theta, \phi)\)</span> de esféricas, la integral de la densidad de partículas en cada dirección multiplicada por el momento magnético en esa dirección.</p>
+<div class="math notranslate nohighlight">
+\[
+\left&lt;M_z\right&gt; = \left&lt; n m_0 \cos\theta \right&gt; = n m_0 \left&lt;\cos\theta \right&gt;
+\]</div>
+<p>Este problema tiene como solución la conocida como función de Langevin <span class="math notranslate nohighlight">\(\mathcal{L}(y) = \coth{y} - \frac{1}{y}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\left&lt;M_z\right&gt; = n m_0 \mathcal{L}\left( \frac{m_0 B_L}{k_BT} \right)
+\]</div>
+<p>En el límite para bajas temperaturas, la función de Langevin tiende a 1, por lo que efectivamente, predice que todos los momentos dipolares magnéticos se orientan en la dirección del campo magnético local <span class="math notranslate nohighlight">\(\vec{B_L}\)</span>. <strong>Para temperaturas suficientemente altas</strong>, la podemos aproximar por <span class="math notranslate nohighlight">\(\mathcal{L}(y) = \coth{y} - \frac{1}{y} \approx \frac{y}{3}\)</span>. De hecho, <strong>en la mayoría de las situaciones, podremos utilizar esta aproximación</strong>.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/mat_4.png"><img alt="mat_4.png" src="../_images/mat_4.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Función de Langevin.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Materiales en los que el momento dipolar magnético está cuantizado.</strong></p>
+<p>Como ejemplo, vamos a utilizar un sistema de espines electrónicos. El momento dipolar magnético asociado al espín del electrón es:</p>
+<div class="math notranslate nohighlight">
+\[
+U_{\uparrow,\downarrow} = \mp m_B B_L
+\]</div>
+<p>El número de electrones con espín en cada dirección en un volumen <span class="math notranslate nohighlight">\(\Delta V\)</span>, es proporcional a:</p>
+<div class="math notranslate nohighlight">
+\[
+n_{\uparrow,\downarrow} \propto \exp \frac{-U_{\uparrow,\downarrow}}{k_BT} \exp \frac{\pm m_B B_L}{k_BT}
+\]</div>
+<p>Claramente, <span class="math notranslate nohighlight">\(n = n_\uparrow + n_\downarrow\)</span>, por lo que la expresión de la imanación:</p>
+<div class="math notranslate nohighlight">
+\[
+\left&lt;M_z\right&gt; = n_\uparrow m_B - n_\downarrow m_B = n \frac{n_\uparrow m_B - n_\downarrow m_B}{n_\uparrow + n_\downarrow} = n m_B \frac{\exp \frac{+m_B B_L}{k_BT}-\exp \frac{-m_B B_L}{k_BT}}{\exp \frac{+m_B B_L}{k_BT}+\exp \frac{-m_B B_L}{k_BT}} = n m_B \tanh \frac{m_B B_L}{k_BT}
+\]</div>
+<p>En el límite para bajas temperaturas, la tangente hiperbólica tiende a 1, por lo que efectivamente, predice que todos los momentos dipolares magnéticos se orientan en la dirección del campo magnético local <span class="math notranslate nohighlight">\(\vec{B_L}\)</span>. <strong>Para temperaturas suficientemente altas</strong>, la podemos aproximar por <span class="math notranslate nohighlight">\(\tanh(y) \approx y\)</span>. De hecho, <strong>en la mayoría de las situaciones, podremos utilizar esta aproximación</strong>.</p>
+</div>
+<p>En ambos casos obtenemos una expresión para <span class="math notranslate nohighlight">\(\chi_m\)</span>, para la aproximación para temperaturas suficientemente altas. Sustituyendo <span class="math notranslate nohighlight">\(\vec{B_L} = \mu_0 \vec{H_L}\)</span>:</p>
+<ul class="simple">
+<li><p>Para materiales en los que el momento dipolar magnético puede tener cualquier orientación.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+M = \frac{n m_0^2 \mu_0}{3 k_BT} H_L \propto \frac{1}{T}
+\]</div>
+<ul class="simple">
+<li><p>Para sistemas de espines electrónicos.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+M = \frac{n m_B^2 \mu_0}{k_BT} H_L \propto \frac{1}{T}
+\]</div>
+<p>En ambos casos, es inversamente proporcional a la temperatura <span class="math notranslate nohighlight">\(T\)</span>. Para terminar los modelos, necesitamos relacionar el vector <span class="math notranslate nohighlight">\(\vec{H_L}\)</span> local con el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo. En sustancias paramagnéticas, en algunas ocasiones, la aproximación del modelo de gas diluido da resultados buenos, pero en general no se puede despreciar el efecto de los dipolos magnéticos próximos.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{H_L} = \vec{H} + \gamma \vec{M}
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(\gamma\)</span> depende del modelo (<em>de Lorentz, de Ising…</em>). En ambos casos, el resultado es el mismo, la ley conocida como Ley de Curie-Weiss, aunque obviamente, el cálculo de la temperatura crítica <span class="math notranslate nohighlight">\(T_c\)</span> será diferente en función del modelo:</p>
+<div class="math notranslate nohighlight">
+\[
+\chi_m = \frac{C}{T - T_c}
+\]</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dominios-ferromagneticos-y-paredes-de-bloch">
+<h1>Dominios ferromagnéticos y paredes de Bloch<a class="headerlink" href="#dominios-ferromagneticos-y-paredes-de-bloch" title="Link to this heading">#</a></h1>
+<p>Por debajo de la temperatura crítica, los momentos dipolares magnéticos tienen tendencia a alinearse en la misma dirección. Si el material es suficientemente homogéneo, es posible que el material entero se oriente en la misma dirección (<em>como los imanes naturales</em>), pero en general, <strong>se van a formar dominios ferromagnéticos con orientaciones aleatorias</strong>. De hecho, el material entero puede tener una imanación neta nula, aunque tenga imanaciones locales.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/mat_13.png"><img alt="mat_13.png" src="../_images/mat_13.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Dominios ferromagnéticos.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>La frontera entre distintos dominios ferromagnéticos son <strong>las paredes de Bloch: Zonas de transición que pueden ser de tan sólo unos cientos de átomos en los que la imanación de las distintas zonas se adapta</strong>. Imaginemos cómo se forman, empezando con el material suficientemente caliente como para no tener imanación espontánea. Cuando se enfría y se acerca a la temperatura crítica, los dipolos magnéticos próximos empiezan a intentar orientarse en la misma dirección. <strong>En distintas zonas del material, pueden empezar a orientarse en direcciones distintas, y estas regiones van creciendo y forman los dominios ferromagnéticos</strong>. Cuando dos dominios ferromagnéticos entran en contacto, se forma la zona de transición que encuentra el equilibrio entre los dominios que intentan crecer y los propios dipolos que prefieren estar alineados.</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/mat_14.png"><img alt="mat_14.png" src="../_images/mat_14.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Paredes de Bloch.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Las paredes de Bloch no son fijas</strong>. Pueden desplazarse por el efecto de un vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo.</p>
+<ul class="simple">
+<li><p><strong>Si el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo es muy intenso</strong>, el material entero se magnetiza en la misma dirección. Dicha magnetización en general se mantiene cuando el campo magnético externo desaparece.</p></li>
+<li><p><strong>Si el vector <span class="math notranslate nohighlight">\(\vec{H}\)</span> externo no es tan intenso</strong>, algunas regiones que estén orientadas con dicho campo magnético, tienen una energía menor que otras, y por lo tanto tendrán tendencia a crecer. Dependiendo del material, puede ser que cada dominio ferromagnético se oriente poco a poco, o puede ser que las paredes de Bloch se desplacen para que los dominios ferromagnéticos con menor energía crezcan.</p></li>
+</ul>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/mat_15.png"><img alt="mat_15.png" src="../_images/mat_15.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Efecto de un vector H externo sobre los dominios ferromagnéticos.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>En el siguiente vinculo se puede ver una imagen producida para poder visualizar los dominios ferromagnéticos cuando se les acerca un imán permanente.</p>
+<p><a href="https://www.youtube.com/watch?v=HzxTqQ40wSU">Video de dominios ferromagnéticos</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3-2-dielectricos_dinamico.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Materiales dieléctricos en régimen dinámico</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Propiedades magnéticas de los medios materiales en régimen estático</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imanacion">Imanación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuentes-del-magnetismo-microscopico">Fuentes del magnetismo microscópico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-diamagneticos">Materiales diamagnéticos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materiales-paramagneticos">Materiales paramagnéticos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dominios-ferromagneticos-y-paredes-de-bloch">Dominios ferromagnéticos y paredes de Bloch</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Guillermo Fernando Regodon Harkness
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
