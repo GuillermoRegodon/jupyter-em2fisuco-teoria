@@ -35,3 +35,4 @@ parts:
   chapters:
   - file: pages/3-1-dielectricos_estatico.ipynb
   - file: pages/3-2-dielectricos_dinamico.ipynb
+  - file: pages/3-3-magneticos-estatico.ipynb
