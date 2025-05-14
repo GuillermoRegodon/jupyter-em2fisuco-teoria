@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Ejemplos de relatividad especial &#8212; Apuntes de Electromagnetismo II</title>
+    <title>Propiedades magnéticas de los medios materiales en régimen dinámico &#8212; Apuntes de Electromagnetismo II</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2-1-1-ej_relatividad';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3-4-magneticos-dinamico';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tensores" href="2-2-tensores.html" />
-    <link rel="prev" title="Principios de relatividad especial" href="2-1-ppios_relatividad.html" />
+    <link rel="prev" title="Propiedades magnéticas de los medios materiales en régimen estático" href="3-3-magneticos-estatico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -189,9 +188,9 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque II - Formulación relativista del electromagnetismo</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ejemplos de relatividad especial</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="2-1-ppios_relatividad.html">Principios de relatividad especial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1-1-ej_relatividad.html">Ejemplos de relatividad especial</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2-2-tensores.html">Tensores</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -201,12 +200,12 @@
 <li class="toctree-l1"><a class="reference internal" href="2-3-relat_tensorial.html">Relatividad en notación tensorial</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bloque III - Respuesta de medios materiales a estímulos electromagnéticos</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="3-1-dielectricos_estatico.html">Materiales dieléctricos en régimen estático</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-2-dielectricos_dinamico.html">Materiales dieléctricos en régimen dinámico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-3-magneticos-estatico.html">Propiedades magnéticas de los medios materiales en régimen estático</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="3-4-magneticos-dinamico.html">Propiedades magnéticas de los medios materiales en régimen dinámico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Propiedades magnéticas de los medios materiales en régimen dinámico</a></li>
 </ul>
 
     </div>
@@ -266,7 +265,7 @@
       
       
       
-      <li><a href="../_sources/pages/2-1-1-ej_relatividad.ipynb" target="_blank"
+      <li><a href="../_sources/pages/3-4-magneticos-dinamico.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +341,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ejemplos de relatividad especial</h1>
+    <h1>Propiedades magnéticas de los medios materiales en régimen dinámico</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,9 +351,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viajar-hasta-el-fin-del-universo">Viajar hasta el fin del universo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-del-granjero-y-su-hija">Paradoja del granjero y su hija</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-de-los-gemelos">Paradoja de los gemelos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-landau-lifshitz">Ecuación de Landau-Lifshitz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-bloch">Ecuaciones de Bloch</a></li>
 </ul>
             </nav>
         </div>
@@ -366,90 +364,138 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ejemplos-de-relatividad-especial">
-<h1>Ejemplos de relatividad especial<a class="headerlink" href="#ejemplos-de-relatividad-especial" title="Link to this heading">#</a></h1>
-<section id="viajar-hasta-el-fin-del-universo">
-<h2>Viajar hasta el fin del universo<a class="headerlink" href="#viajar-hasta-el-fin-del-universo" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="propiedades-magneticas-de-los-medios-materiales-en-regimen-dinamico">
+<h1>Propiedades magnéticas de los medios materiales en régimen dinámico<a class="headerlink" href="#propiedades-magneticas-de-los-medios-materiales-en-regimen-dinamico" title="Link to this heading">#</a></h1>
+<p>Al estudiar los materiales, hemos supuesto que se alcanza un estado de equilibrio de forma suficientemente rápida con respecto a la escala de tiempos de la variación de los campos magnéticos externos. <strong>En este tema, vamos a revisar las ecuaciones de la variación de los dipolos magnéticos</strong> y vamos a resolverlas en algunos casos ilustrativos.</p>
+<section id="ecuacion-de-landau-lifshitz">
+<h2>Ecuación de Landau-Lifshitz<a class="headerlink" href="#ecuacion-de-landau-lifshitz" title="Link to this heading">#</a></h2>
+<p>Un dipolo magnético, caracterizado por su momento dipolar magnético <span class="math notranslate nohighlight">\(\vec{m}\)</span>, inmerso en un campo magnético <span class="math notranslate nohighlight">\(\vec{B}\)</span> sufre un torque <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> que tiende a orientarlo en la misma dirección de <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{\tau} = \vec{m} \times \vec{B}
+\]</div>
+<p>Por una parte, el torque <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> es precisamente la variación del momento angular <span class="math notranslate nohighlight">\(\frac{{\rm d}\vec{l}}{{\rm d}t}\)</span>, que a su vez está relacionado con el momento dipolar magnético <span class="math notranslate nohighlight">\(\vec{m} = -\frac{e}{2m_e} \vec{l} = -\gamma \vec{l}\)</span>. Por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d} \vec{m}}{{\rm d} t} = - \gamma \vec{m} \times \vec{B}
+\]</div>
+<p>En un material, no todos los momentos dipolares magnéticos son de la misma magnitud, por lo que cada uno tendrá una dinámica un poco diferente, pero en primera aproximación podemos suponer que todos son iguales. Por lo tanto, para un volumen <span class="math notranslate nohighlight">\(\Delta V\)</span> de material,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d} \vec{M}}{{\rm d} t} = - \gamma \vec{M} \times \vec{B}
+\]</div>
+<p>Esta ecuación es conocida como la <strong>ecuación de Landau-Lifshitz</strong>. Vamos a resolverla en algunos casos.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Campo magnético constante <span class="math notranslate nohighlight">\(\vec{B} = B_0 \vec{u_z}\)</span></strong></p>
+<p>Estudiando las componentes de la ecuación:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{{\rm d} M_x}{{\rm d} t} &amp;= - \gamma M_y B_0 \\
+\frac{{\rm d} M_y}{{\rm d} t} &amp;= \gamma M_x B_0 \\
+\frac{{\rm d} M_z}{{\rm d} t} &amp;= 0
+\end{split}\]</div>
+<p>La primera conclusión es que <span class="math notranslate nohighlight">\(M_z = M_0\)</span> es constante. La segunda se obtiene desacoplando las dos primeras ecuaciones.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{{\rm d^2} M_x}{{\rm d} t^2} &amp;= - \gamma^2 B_0^2 M_x\\
+\frac{{\rm d^2} M_y}{{\rm d} t^2} &amp;= - \gamma^2 B_0^2 M_y
+\end{split}\]</div>
+<p>Es decir, la imanación en la dirección transversal es una función armónica de frecuencia <span class="math notranslate nohighlight">\(\omega_0 = \gamma B_0\)</span>, conocida como la <strong>frecuencia de Larmor</strong>. Además, la ecuación original demuestra que el desfase entre las direcciones es <span class="math notranslate nohighlight">\(\pi/2\)</span>, por lo que la imanación transversal traza una circunferencia en torno al eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+M_x &amp;= M_1 \cos(\omega_0 t) \\
+M_y &amp;= M_1 \sin(\omega_0 t) \\
+M_z &amp;= M_0
+\end{split}\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Campo magnético rotatorio <span class="math notranslate nohighlight">\(\vec{B} = B_0 \vec{u_z} + B_1 (\cos (\omega t) \vec{u_x} + \sin (\omega t) \vec{u_y})\)</span></strong></p>
+<p>En este caso, las ecuaciones por componentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{{\rm d} M_x}{{\rm d} t} &amp;= - \gamma M_y B_0 + \gamma M_z B_1 \sin (\omega t)\\
+\frac{{\rm d} M_y}{{\rm d} t} &amp;= \gamma M_x B_0 - \gamma M_z B_1 \cos (\omega t)\\
+\frac{{\rm d} M_z}{{\rm d} t} &amp;= \gamma B_1 (M_x \sin (\omega t) - M_y \cos (\omega t))
+\end{split}\]</div>
+<p>Aunque a priori, no tenemos un motivo para ello, vamos a realizar la suposición adicional de que <span class="math notranslate nohighlight">\(M_z = M_0\)</span> constante.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La suposición <span class="math notranslate nohighlight">\(M_z = M_0\)</span> se puede justificar por los fenómenos de relajación que presenta el material y que hacen que la imanación acabe atenuándose, de forma que al final solo quedará la imanación inducida por el campo magnético rotatorio. Sin embargo, este efecto no se puede predecir a partir de la ecuación de Landau-Lifshitz, qie no tiene en cuenta fenómenos de relajación de la imanación.</p>
+</div>
+<p>Con esto, las otras dos ecuaciones se convierten en dos ecuaciones diferenciales de primer orden acopladas, que se pueden desacoplar y resolver:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{M} = M_0 \vec{u_z} + \frac{\gamma M_0}{\omega_0 - \omega}\vec{B_1}
+\]</div>
+<p>Donde, por simplicidad de la expresión, hemos usado <span class="math notranslate nohighlight">\(\vec{B_1} = B_1 (\cos (\omega t) \vec{u_x} + \sin (\omega t) \vec{u_y})\)</span>. Hemos obtenido el resultado de que la magnetización sigue al campo magnético en fase, pero solo puede seguirlo si existe el campo magnético longitudinal <span class="math notranslate nohighlight">\(B_0 \vec{u_z}\)</span> que genera <span class="math notranslate nohighlight">\(M_0\)</span>. Si <span class="math notranslate nohighlight">\(M_0 = 0\)</span>, el material no puede imanarse con este campo.</p>
+<p>Otro resultado interesante es que la imanación puede entrar en resonancia si la frecuencia de la excitación <span class="math notranslate nohighlight">\(\omega\)</span> se acerca a la frecuencia de Larmor <span class="math notranslate nohighlight">\(\omega_0\)</span>.</p>
+</div>
+</section>
+<section id="ecuaciones-de-bloch">
+<h2>Ecuaciones de Bloch<a class="headerlink" href="#ecuaciones-de-bloch" title="Link to this heading">#</a></h2>
+<p>En los materiales imanados, existen fenómenos de relajación que atenúan la imanación. En presencia de una campo magnético constante en la dirección <span class="math notranslate nohighlight">\(z\)</span>, encontramos dos tipos de relajación:</p>
 <ul class="simple">
-<li><p>Supongamos que una viajera quiere llegar a una galaxia que esta a 100 años-luz. Emprende un viaje hasta allí en una nave espacial. Desde el Sistema de Referencia Inercial (SRI) de la tierra de donde parte, pasarán más de 100 años hasta que llegue, debido a que su velocidad <span class="math notranslate nohighlight">\(v\)</span> debe ser inferior a la velocidad de la luz <span class="math notranslate nohighlight">\(c\)</span>. Sin embargo, el trascurso del tiempo en la nave espacial es más lento debido al efecto relativista de dilatación temporal, por lo que cuando el tiempo de la viajera haya trascurrido un año, en el SRI de la tierra habrán transcurrido varios años, dependiendo de la velocidad <span class="math notranslate nohighlight">\(v\)</span> y del valor de <span class="math notranslate nohighlight">\(\gamma\)</span>:</p></li>
+<li><p><strong>Relajación longitudinal</strong>: Ocurre por la diferencia de energía entre los distintos niveles energéticos. Las vibraciones de la red cristalina o del resto del material tienen una probabilidad de intercambiar energía con estos niveles, con un tiempo característico <span class="math notranslate nohighlight">\(\tau_1\)</span>. El estado final sería el estado de equilibrio termodinámico característico de los materiales paramagnéticos, con una imanación final <span class="math notranslate nohighlight">\(M_0\)</span>. Se caracteriza como un sistema de primer orden con un valor final <span class="math notranslate nohighlight">\(M_0\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\Delta t = \gamma \Delta t'
+\frac{{\rm d} M_z}{{\rm d} t} = \frac{M_0 - M_z}{\tau_1}
 \]</div>
+<ul class="simple">
+<li><p><strong>Relajación transversal</strong>: Los materiales que se caracterizan por una imanación <span class="math notranslate nohighlight">\(\vec{M} = n \left&lt;\vec{m}\right&gt;\)</span> están constituidos por distintos momentos dipolares magnéticos que en media valen <span class="math notranslate nohighlight">\(\left&lt;\vec{m}\right&gt;\)</span>. Dado que cada momento dipolar magnético tiene tendencia a precesionar a una frecuencia diferente, el desfase entre estos dipolos magnéticos aumenta. En un tiempo característico <span class="math notranslate nohighlight">\(\tau_2\)</span> los dipolos acaban teniendo orientaciones opuestas y la media se anula, <span class="math notranslate nohighlight">\(\left&lt;\vec{m}\right&gt; \rightarrow 0\)</span>. Se caracteriza como un sistema de primer orden con valor final nulo</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d} M_{x,y}}{{\rm d} t} = -\frac{M_{x,y}}{\tau_2}
+\]</div>
+<p>El sistema global, incluyendo el torque, constituye las ecuaciones de Bloch:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{{\rm d} \vec{M}}{{\rm d} t} = - \gamma \vec{M} \times \vec{B} + \left( \begin{array}{c} -\frac{M_x}{\tau_2} \\ -\frac{M_y}{\tau_2} \\ \frac{M_0 - M_z}{\tau_1} \end{array} \right)
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Campo magnético constante <span class="math notranslate nohighlight">\(\vec{B} = B_0 \vec{u_z}\)</span></strong></p>
+<p>Cuando un material con una determinada imanación se relaja en presencia de una campo magnético constante <span class="math notranslate nohighlight">\(\vec{B} = B_0 \vec{u_z}\)</span>, el material se puede relajar de varias maneras, dependiendo de los valores de los tiempo de relajación, y como se relacionan con la frecuencia de Larmor, pero la solución más común es que se relaje hacia <span class="math notranslate nohighlight">\(\vec{M} \rightarrow M_0 \vec{u_z}\)</span> dando vueltas alrededor del eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/relat_11.png"><img alt="relat_11.png" src="../_images/relat_11.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/mat_16.png"><img alt="mat_16.png" src="../_images/mat_16.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">SRI de la tierra y la galaxia.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Componentes de la imanación en un campo magnético constante según las ecuaciones de Bloch</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Es decir, <strong>para cuando la viajera haya envejecido un año, en la tierra podrían haber pasado muchos años</strong>. Si <span class="math notranslate nohighlight">\(\gamma = 100\)</span>, la viajera habrá recorrido 100 años-luz, percibiendo que ha pasado solo algo más de un año.</p>
-<p>Desde el Sistema de Referencia Inercial de la nave (<em>después de que haya alcanzado su velocidad constante de tal modo que <span class="math notranslate nohighlight">\(\gamma = 100\)</span></em>) es la distancia entre la tierra y la galaxia la que parece haberse recortado. Desde su SRI, son la tierra y la galaxia las que se desplazan. <strong>Desde la tierra parece que la galaxia está a 100 años-luz, mientras que desde la nave parece estar a tan solo un año-luz, debido al efecto relativista de la contracción espacial</strong>.</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta x = \frac{\Delta x'}{\gamma}
-\]</div>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/relat_12.png"><img alt="relat_12.png" src="../_images/relat_12.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/mat_17.png"><img alt="mat_17.png" src="../_images/mat_17.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">SRI de la nave.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Evolución de vector imanación en un campo magnético constante según las ecuaciones de Bloch</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Por lo tanto, si vamos suficientemente rápido, podríamos llegar a cualquier punto del universo antes de morir de viejos, aunque estuvieran a millones de años-luz de distancia. Por supuesto, el tiempo en la tierra seguiría avanzando. Este efecto se ha comprobado experimentalmente, verificando que el tiempo de semidesintegración de las partículas es mayor si se desplazan más rápido.</p>
-</section>
-<section id="paradoja-del-granjero-y-su-hija">
-<h2>Paradoja del granjero y su hija<a class="headerlink" href="#paradoja-del-granjero-y-su-hija" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Un granjero tiene una escalera que, después de entrar en el granero en el que quiere guardarla, sobresale un poco y no permite cerrar la puerta. Con el objetivo de poder cerrar la puerta, le pide a su hija que se aproxime al granero a una velocidad relativista <span class="math notranslate nohighlight">\(v\)</span>, para que desde el Sistema de Referencia Inercial (SRI) del granero en el que él se encuentra, la escalera se acorte por el efecto relativista de contracción espacial, y así él pueda cerrar la puerta.</p></li>
-</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Campo magnético rotatorio <span class="math notranslate nohighlight">\(\vec{B} = B_0 \vec{u_z} + B_1 (\cos (\omega t) \vec{u_x} + \sin (\omega t) \vec{u_y})\)</span></strong></p>
+<p>Cuando la excitación es un campo magnético rotatorio, la solución estacionaria de esta ecuación vectorial es la siguiente:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta x = \frac{\Delta x'}{\gamma}
-\]</div>
+\[\begin{split}
+M_x &amp;= M_1 \cos \varphi \cos (\omega t) + M_1 \sin \varphi \sin (\omega t) = M_1 \cos(\omega t - \varphi) \\
+M_y &amp;= M_1 \cos \varphi \sin (\omega t) - M_1 \sin \varphi \cos (\omega t) = M_1 \sin(\omega t - \varphi) \\
+M_z &amp;= M_0'
+\end{split}\]</div>
+<p>Es decir, la imanación sigue a la excitación con un cierto retraso, y mantiene una imanación transversal rotatoria. Obsérvese que la imanación final longitudinal es menor que en ausencia de campo magnético rotatorio, <span class="math notranslate nohighlight">\(M_0'&lt;M_0\)</span>, y la constante de tiempo de relajación longitudinal <span class="math notranslate nohighlight">\(\tau_1'\)</span> es mayor que en ausencia de campo magnético rotatorio. Las siguientes figuras muestran cómo se alcanza el estacionario después de un determinado tiempo.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/relat_21.png"><img alt="relat_21.png" src="../_images/relat_21.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/mat_18.png"><img alt="mat_16.png" src="../_images/mat_18.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">SRI del granero.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Componentes de la imanación en un campo magnético rotatorio según las ecuaciones de Bloch</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Sin embargo, la hija del granjero le responde que, desde su propio Sistema de Referencia Inercial después de alcanzar la velocidad relativista <span class="math notranslate nohighlight">\(v\)</span> necesaria, es el granero el que se aproxima a ella, por lo que el granero es el que se acorta por efecto relativista de contracción espacial. De esta forma, la escalera no puede entrar en el granero.</p>
 <figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../_images/relat_22.png"><img alt="relat_22.png" src="../_images/relat_22.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/mat_19.png"><img alt="mat_17.png" src="../_images/mat_19.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">SRI de la escalera.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Evolución de vector imanación en un campo magnético rotatorio según las ecuaciones de Bloch</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Ambos tienen razón</strong>. La aparente paradoja ocurre por la rotura de la simultaneidad. Podemos distinguir dos eventos: A) el contacto del extremo derecho de la escalera con el fondo del granero, y B) el paso del principio de la escalera por debajo del umbral de la puerta del granero. Si la escalera entra en el granero a una velocidad no relativista, ambos suceso ocurren prácticamente a la vez. Si pusiéramos dos relojes sincronizados tanto al principio como al final de la escalera, y otro par en la pared y en la puerta del granero, veréamos la rotura de la sincronía:</p>
-<ol class="arabic simple">
-<li><p>Si la escalera se aproxima a velocidad relativista, el granjero desde el SRI del granero ve que el evento B ocurre antes que el A. El granjero verá los relojes del granero sincronizados, pero verá los relojes de la escalera desincronizados.</p></li>
-<li><p>Para la hija, desde el SRI de la escalera, el evento A ocurre antes que el B. Los relojes de la escalera estarán sincronizados pero los relojes del granero estarán desincronizados.</p></li>
-</ol>
-<figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../_images/relat_23.png"><img alt="relat_23.png" src="../_images/relat_23.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">SRIs y simultaneidad.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>El resultado final debemos dejarlo a la imaginación, ya que la colisión ocurrirá seguro, y sus consecuencias dependerán de la resistencia a la rotura y de la flexibilidad de tanto la pared del granero como de la escalera.</p>
-</section>
-<section id="paradoja-de-los-gemelos">
-<h2>Paradoja de los gemelos<a class="headerlink" href="#paradoja-de-los-gemelos" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Un viajero espacial tiene una hermana melliza cuando emprende un viaje a velocidad relativista. Después de haber recorrido una cierta distancia vuelve a la tierra y se reencuentra con su hermana. El viajero ha envejecido menos que su hermana. Mientras que para él ha pasado un año, en la tierra han pasado dos. Esto se explica por el efecto de dilatación temporal. El tiempo que desde el Sistema de Referencia de la nave es un año, desde el Sistema de Referencia Inercial (SRI) de la tierra son 2 años.</p></li>
-</ul>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../_images/relat_31.png"><img alt="relat_31.png" src="../_images/relat_31.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">SRI del granero.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Cabe preguntarse: Desde el Sistema de Referencia de la nave es la tierra la que se aleja y se acerca. ¿Por qué no es el tiempo de la tierra el que pasa más lento? Aquí ocurre una sutileza, y es que la nave ha tenido que dar la vuelta, por lo que en algún punto de su trayectoria, ha tenido que sufrir una aceleración y por lo tanto convertirse en un Sistema de Referencia No Inercial (SRNI).</p>
-<ol class="arabic simple">
-<li><p>Durante la primera parte del trayecto, mientras se aleja a velocidad constante, desde el SRI de la tierra, el tiempo en la nave avanza más lento, mientras que desde el SRI de la nave, el tiempo de la tierra avanza más lento.</p></li>
-<li><p>En la maniobra acelerada para dar la vuelta, el tiempo en la nave transcurre de una manera que no se puede explicar por la teoría de la relatividad especial, que sólo trata con SRI. <strong>El viajero en la nave sabe que está en un SRNI mientras realiza la maniobra, porque percibe fuerzas no inerciales</strong>, mientras que la hermana en la tierra sabe que está en un SRI porque no es capaz de medir fuerzas no inerciales.</p></li>
-<li><p>Durante el retorno a la tierra, vuelve a ocurrir lo mismo que el la primera parte, desde el SRI de la tierra, el tiempo en la nave avanza más lento, mientras que desde el SRI de la nave, el tiempo de la tierra avanza más lento.</p></li>
-</ol>
-<p>Es la aceleración la que rompe la simetría de las trayectorias y es el hermano viajero el que tiene un tiempo que ha avanzado más lento que el de su hermana en la tierra. Este efecto se ha comprobado experimentalmente, poniendo un reloj perfectamente sincronizado con otro y colocando uno de los dos relojes en una nave que va a dar vueltas alrededor de la tierra (<em>movimiento acelerado</em>). Se ha comprobado que el reloj acelerado tuvo un retraso medible con respecto al reloj de la tierra.</p>
+</div>
 </section>
 </section>
 
@@ -484,22 +530,13 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="2-1-ppios_relatividad.html"
+       href="3-3-magneticos-estatico.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Principios de relatividad especial</p>
+        <p class="prev-next-title">Propiedades magnéticas de los medios materiales en régimen estático</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="2-2-tensores.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tensores</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -518,9 +555,8 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viajar-hasta-el-fin-del-universo">Viajar hasta el fin del universo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-del-granjero-y-su-hija">Paradoja del granjero y su hija</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoja-de-los-gemelos">Paradoja de los gemelos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-landau-lifshitz">Ecuación de Landau-Lifshitz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-bloch">Ecuaciones de Bloch</a></li>
 </ul>
   </nav></div>
 
