@@ -1,0 +1,50 @@
+version: 1
+project:
+  title: Apuntes de Electromagnetismo II
+  authors:
+    - name: Guillermo Fernando Regodon Harkness
+  copyright: '2025'
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - title: Repaso
+      children:
+        - file: pages/0-repaso_gauss_ampere.ipynb
+    - title: Bloque I - El campo electromagnético
+      children:
+        - file: pages/1-1-repaso_frontera.ipynb
+        - file: pages/1-2-potenciales.ipynb
+    #     - file: pages/1-3-conservacion.ipynb
+    #       children:
+    #         - file: pages/1-3-1-poynting_ejemplo.ipynb
+    #     - file: pages/1-4-ec_ondas.ipynb
+    #     - file: pages/1-5-mat_conductividad.ipynb
+    #       children:
+    #         - file: pages/1-5-1-onda.ipynb
+    # - title: Bloque II - Formulación relativista del electromagnetismo
+    #   children:
+    #     - file: pages/2-1-ppios_relatividad.ipynb
+    #       children:
+    #         - file: pages/2-1-1-ej_relatividad.ipynb
+    #     - file: pages/2-2-tensores.ipynb
+    #       children:
+    #         - file: pages/2-2-1-ej_tensores.ipynb
+    #     - file: pages/2-3-relat_tensorial.ipynb
+    # - title: >-
+    #     Bloque III - Respuesta de medios materiales a estímulos
+    #     electromagnéticos
+    #   children:
+    #     - file: pages/3-1-dielectricos_estatico.ipynb
+    #     - file: pages/3-2-dielectricos_dinamico.ipynb
+    #     - file: pages/3-3-magneticos-estatico.ipynb
+    #     - file: pages/3-4-magneticos-dinamico.ipynb
+site:
+  options:
+    logo: logo.png
+    folders: true
+  template: book-theme
