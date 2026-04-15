@@ -25,7 +25,8 @@ project:
         - file: pages/1-4-ec_ondas.ipynb
         - file: pages/1-5-mat_conductividad.ipynb
           children:
-           - file: pages/1-5-1-ejemplos.ipynb
+           - file: pages/1-5-1-reflexion_transmision.ipynb
+           - file: pages/1-5-2-ejemplos.ipynb
     - title: Bloque II - Formulación relativista del electromagnetismo
       children:
         - file: pages/2-1-ppios_relatividad.ipynb
