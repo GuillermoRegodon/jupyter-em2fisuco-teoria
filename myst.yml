@@ -32,10 +32,10 @@ project:
         - file: pages/2-1-ppios_relatividad.ipynb
           children:
             - file: pages/2-1-1-ej_relatividad.ipynb
-    #     - file: pages/2-2-tensores.ipynb
-    #       children:
-    #         - file: pages/2-2-1-ej_tensores.ipynb
-    #     - file: pages/2-3-relat_tensorial.ipynb
+        - file: pages/2-2-tensores.ipynb
+          children:
+            - file: pages/2-2-1-ej_tensores.ipynb
+        - file: pages/2-3-relat_tensorial.ipynb
     # - title: >-
     #     Bloque III - Respuesta de medios materiales a estímulos
     #     electromagnéticos
