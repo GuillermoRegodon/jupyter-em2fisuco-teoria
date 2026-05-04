@@ -36,11 +36,12 @@ project:
           children:
             - file: pages/2-2-1-ej_tensores.ipynb
         - file: pages/2-3-relat_tensorial.ipynb
-    # - title: >-
-    #     Bloque III - Respuesta de medios materiales a estímulos
-    #     electromagnéticos
-    #   children:
-    #     - file: pages/3-1-dielectricos_estatico.ipynb
+          children:
+            - file: pages/2-3-1-ej_induccion-final.ipynb
+    - title: >-
+        Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
+      children:
+        - file: pages/3-1-dielectricos_estatico.ipynb
     #     - file: pages/3-2-dielectricos_dinamico.ipynb
     #     - file: pages/3-3-magneticos-estatico.ipynb
     #     - file: pages/3-4-magneticos-dinamico.ipynb
