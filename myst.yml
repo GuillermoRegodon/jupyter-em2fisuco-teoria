@@ -37,7 +37,7 @@ project:
             - file: pages/2-2-1-ej_tensores.ipynb
         - file: pages/2-3-relat_tensorial.ipynb
           children:
-            - file: pages/2-3-1-ej_induccion-final.ipynb
+            - file: pages/2-3-1-ej-induccion-final.ipynb
     - title: >-
         Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
       children:
