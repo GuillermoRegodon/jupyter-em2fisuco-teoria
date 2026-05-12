@@ -42,7 +42,7 @@ project:
         Bloque III - Respuesta de medios materiales a estímulos electromagnéticos
       children:
         - file: pages/3-1-dielectricos_estatico.ipynb
-    #     - file: pages/3-2-dielectricos_dinamico.ipynb
+        - file: pages/3-2-dielectricos_dinamico.ipynb
     #     - file: pages/3-3-magneticos-estatico.ipynb
     #     - file: pages/3-4-magneticos-dinamico.ipynb
 site:
